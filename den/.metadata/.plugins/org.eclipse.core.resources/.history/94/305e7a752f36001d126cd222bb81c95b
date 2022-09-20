@@ -1,0 +1,157 @@
+/**
+ */
+package den.domain.cliente;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Rol</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.cliente.Rol#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}</li>
+ *   <li>{@link den.domain.cliente.Rol#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.cliente.Rol#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.cliente.Rol#getDescripcion <em>Descripcion</em>}</li>
+ *   <li>{@link den.domain.cliente.Rol#getLstPersona <em>Lst Persona</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.cliente.ClientePackage#getRol()
+ * @model
+ * @generated
+ */
+public interface Rol extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Owned By Factory Cliente</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.cliente.FactoryCliente#getLstRol <em>Lst Rol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Factory Cliente</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Factory Cliente</em>' container reference.
+	 * @see #setOwnedByFactoryCliente(FactoryCliente)
+	 * @see den.domain.cliente.ClientePackage#getRol_OwnedByFactoryCliente()
+	 * @see den.domain.cliente.FactoryCliente#getLstRol
+	 * @model opposite="lstRol" transient="false"
+	 * @generated
+	 */
+	FactoryCliente getOwnedByFactoryCliente();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Rol#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Factory Cliente</em>' container reference.
+	 * @see #getOwnedByFactoryCliente()
+	 * @generated
+	 */
+	void setOwnedByFactoryCliente(FactoryCliente value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.cliente.ClientePackage#getRol_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Rol#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see den.domain.cliente.ClientePackage#getRol_Nombre()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getNombre();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Rol#getNombre <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
+	 * @generated
+	 */
+	void setNombre(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Descripcion</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Descripcion</em>' attribute.
+	 * @see #setDescripcion(String)
+	 * @see den.domain.cliente.ClientePackage#getRol_Descripcion()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getDescripcion();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Rol#getDescripcion <em>Descripcion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Descripcion</em>' attribute.
+	 * @see #getDescripcion()
+	 * @generated
+	 */
+	void setDescripcion(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Persona</b></em>' reference list.
+	 * The list contents are of type {@link den.domain.cliente.Persona}.
+	 * It is bidirectional and its opposite is '{@link den.domain.cliente.Persona#getTheRol <em>The Rol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Persona</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Persona</em>' reference list.
+	 * @see den.domain.cliente.ClientePackage#getRol_LstPersona()
+	 * @see den.domain.cliente.Persona#getTheRol
+	 * @model opposite="theRol"
+	 * @generated
+	 */
+	EList<Persona> getLstPersona();
+
+} // Rol

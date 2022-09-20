@@ -1,0 +1,419 @@
+/**
+ */
+package den.domain.cliente.impl;
+
+import den.domain.cliente.ClientePackage;
+import den.domain.cliente.FactoryCliente;
+import den.domain.cliente.Persona;
+import den.domain.cliente.Rol;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Rol</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.cliente.impl.RolImpl#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.RolImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.RolImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.RolImpl#getDescripcion <em>Descripcion</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.RolImpl#getLstPersona <em>Lst Persona</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class RolImpl extends EObjectImpl implements Rol {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescripcion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPCION_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescripcion()
+	 * @generated
+	 * @ordered
+	 */
+	protected String descripcion = DESCRIPCION_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLstPersona() <em>Lst Persona</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstPersona()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Persona> lstPersona;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RolImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return ClientePackage.Literals.ROL;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryCliente getOwnedByFactoryCliente() {
+		if (eContainerFeatureID() != ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE) return null;
+		return (FactoryCliente)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByFactoryCliente(FactoryCliente newOwnedByFactoryCliente, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByFactoryCliente, ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByFactoryCliente(FactoryCliente newOwnedByFactoryCliente) {
+		if (newOwnedByFactoryCliente != eInternalContainer() || (eContainerFeatureID() != ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE && newOwnedByFactoryCliente != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByFactoryCliente))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByFactoryCliente != null)
+				msgs = ((InternalEObject)newOwnedByFactoryCliente).eInverseAdd(this, ClientePackage.FACTORY_CLIENTE__LST_ROL, FactoryCliente.class, msgs);
+			msgs = basicSetOwnedByFactoryCliente(newOwnedByFactoryCliente, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE, newOwnedByFactoryCliente, newOwnedByFactoryCliente));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.ROL__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.ROL__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescripcion(String newDescripcion) {
+		String oldDescripcion = descripcion;
+		descripcion = newDescripcion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.ROL__DESCRIPCION, oldDescripcion, descripcion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Persona> getLstPersona() {
+		if (lstPersona == null) {
+			lstPersona = new EObjectWithInverseResolvingEList<Persona>(Persona.class, this, ClientePackage.ROL__LST_PERSONA, ClientePackage.PERSONA__THE_ROL);
+		}
+		return lstPersona;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByFactoryCliente((FactoryCliente)otherEnd, msgs);
+			case ClientePackage.ROL__LST_PERSONA:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstPersona()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE:
+				return basicSetOwnedByFactoryCliente(null, msgs);
+			case ClientePackage.ROL__LST_PERSONA:
+				return ((InternalEList<?>)getLstPersona()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE:
+				return eInternalContainer().eInverseRemove(this, ClientePackage.FACTORY_CLIENTE__LST_ROL, FactoryCliente.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE:
+				return getOwnedByFactoryCliente();
+			case ClientePackage.ROL__ID:
+				return getId();
+			case ClientePackage.ROL__NOMBRE:
+				return getNombre();
+			case ClientePackage.ROL__DESCRIPCION:
+				return getDescripcion();
+			case ClientePackage.ROL__LST_PERSONA:
+				return getLstPersona();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE:
+				setOwnedByFactoryCliente((FactoryCliente)newValue);
+				return;
+			case ClientePackage.ROL__ID:
+				setId((String)newValue);
+				return;
+			case ClientePackage.ROL__NOMBRE:
+				setNombre((String)newValue);
+				return;
+			case ClientePackage.ROL__DESCRIPCION:
+				setDescripcion((String)newValue);
+				return;
+			case ClientePackage.ROL__LST_PERSONA:
+				getLstPersona().clear();
+				getLstPersona().addAll((Collection<? extends Persona>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE:
+				setOwnedByFactoryCliente((FactoryCliente)null);
+				return;
+			case ClientePackage.ROL__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case ClientePackage.ROL__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case ClientePackage.ROL__DESCRIPCION:
+				setDescripcion(DESCRIPCION_EDEFAULT);
+				return;
+			case ClientePackage.ROL__LST_PERSONA:
+				getLstPersona().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ClientePackage.ROL__OWNED_BY_FACTORY_CLIENTE:
+				return getOwnedByFactoryCliente() != null;
+			case ClientePackage.ROL__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case ClientePackage.ROL__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case ClientePackage.ROL__DESCRIPCION:
+				return DESCRIPCION_EDEFAULT == null ? descripcion != null : !DESCRIPCION_EDEFAULT.equals(descripcion);
+			case ClientePackage.ROL__LST_PERSONA:
+				return lstPersona != null && !lstPersona.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", nombre: ");
+		result.append(nombre);
+		result.append(", descripcion: ");
+		result.append(descripcion);
+		result.append(')');
+		return result.toString();
+	}
+
+} //RolImpl

@@ -1,0 +1,349 @@
+/**
+ */
+package den.domain.cliente;
+
+import den.domain.denuncia.Denuncia;
+
+import den.domain.pedido.Pedido;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Persona</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.cliente.Persona#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getCedula <em>Cedula</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getDireccion <em>Direccion</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getTelefono <em>Telefono</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getEdad <em>Edad</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getFechaNacimeinto <em>Fecha Nacimeinto</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getGenero <em>Genero</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getLstDenuncia <em>Lst Denuncia</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getLstPedido <em>Lst Pedido</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}</li>
+ *   <li>{@link den.domain.cliente.Persona#getTheRol <em>The Rol</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.cliente.ClientePackage#getPersona()
+ * @model
+ * @generated
+ */
+public interface Persona extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.cliente.ClientePackage#getPersona_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see den.domain.cliente.ClientePackage#getPersona_Nombre()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getNombre();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getNombre <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
+	 * @generated
+	 */
+	void setNombre(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Cedula</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cedula</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cedula</em>' attribute.
+	 * @see #setCedula(String)
+	 * @see den.domain.cliente.ClientePackage#getPersona_Cedula()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getCedula();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getCedula <em>Cedula</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cedula</em>' attribute.
+	 * @see #getCedula()
+	 * @generated
+	 */
+	void setCedula(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Direccion</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Direccion</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Direccion</em>' attribute.
+	 * @see #setDireccion(String)
+	 * @see den.domain.cliente.ClientePackage#getPersona_Direccion()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getDireccion();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getDireccion <em>Direccion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Direccion</em>' attribute.
+	 * @see #getDireccion()
+	 * @generated
+	 */
+	void setDireccion(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Telefono</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Telefono</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Telefono</em>' attribute.
+	 * @see #setTelefono(String)
+	 * @see den.domain.cliente.ClientePackage#getPersona_Telefono()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getTelefono();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getTelefono <em>Telefono</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Telefono</em>' attribute.
+	 * @see #getTelefono()
+	 * @generated
+	 */
+	void setTelefono(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Edad</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Edad</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Edad</em>' attribute.
+	 * @see #setEdad(String)
+	 * @see den.domain.cliente.ClientePackage#getPersona_Edad()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getEdad();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getEdad <em>Edad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Edad</em>' attribute.
+	 * @see #getEdad()
+	 * @generated
+	 */
+	void setEdad(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Fecha Nacimeinto</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fecha Nacimeinto</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fecha Nacimeinto</em>' attribute.
+	 * @see #setFechaNacimeinto(String)
+	 * @see den.domain.cliente.ClientePackage#getPersona_FechaNacimeinto()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getFechaNacimeinto();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getFechaNacimeinto <em>Fecha Nacimeinto</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fecha Nacimeinto</em>' attribute.
+	 * @see #getFechaNacimeinto()
+	 * @generated
+	 */
+	void setFechaNacimeinto(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Genero</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Genero</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Genero</em>' attribute.
+	 * @see #setGenero(String)
+	 * @see den.domain.cliente.ClientePackage#getPersona_Genero()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getGenero();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getGenero <em>Genero</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Genero</em>' attribute.
+	 * @see #getGenero()
+	 * @generated
+	 */
+	void setGenero(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Denuncia</b></em>' reference list.
+	 * The list contents are of type {@link den.domain.denuncia.Denuncia}.
+	 * It is bidirectional and its opposite is '{@link den.domain.denuncia.Denuncia#getTheCliente <em>The Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Denuncia</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Denuncia</em>' reference list.
+	 * @see den.domain.cliente.ClientePackage#getPersona_LstDenuncia()
+	 * @see den.domain.denuncia.Denuncia#getTheCliente
+	 * @model opposite="theCliente"
+	 * @generated
+	 */
+	EList<Denuncia> getLstDenuncia();
+
+	/**
+	 * Returns the value of the '<em><b>Lst Pedido</b></em>' reference list.
+	 * The list contents are of type {@link den.domain.pedido.Pedido}.
+	 * It is bidirectional and its opposite is '{@link den.domain.pedido.Pedido#getTheCliente <em>The Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Pedido</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Pedido</em>' reference list.
+	 * @see den.domain.cliente.ClientePackage#getPersona_LstPedido()
+	 * @see den.domain.pedido.Pedido#getTheCliente
+	 * @model opposite="theCliente"
+	 * @generated
+	 */
+	EList<Pedido> getLstPedido();
+
+	/**
+	 * Returns the value of the '<em><b>Owned By Factory Cliente</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.cliente.FactoryCliente#getLstPersona <em>Lst Persona</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Factory Cliente</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Factory Cliente</em>' container reference.
+	 * @see #setOwnedByFactoryCliente(FactoryCliente)
+	 * @see den.domain.cliente.ClientePackage#getPersona_OwnedByFactoryCliente()
+	 * @see den.domain.cliente.FactoryCliente#getLstPersona
+	 * @model opposite="lstPersona" transient="false"
+	 * @generated
+	 */
+	FactoryCliente getOwnedByFactoryCliente();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Factory Cliente</em>' container reference.
+	 * @see #getOwnedByFactoryCliente()
+	 * @generated
+	 */
+	void setOwnedByFactoryCliente(FactoryCliente value);
+
+	/**
+	 * Returns the value of the '<em><b>The Rol</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.cliente.Rol#getLstPersona <em>Lst Persona</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Rol</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Rol</em>' reference.
+	 * @see #setTheRol(Rol)
+	 * @see den.domain.cliente.ClientePackage#getPersona_TheRol()
+	 * @see den.domain.cliente.Rol#getLstPersona
+	 * @model opposite="lstPersona"
+	 * @generated
+	 */
+	Rol getTheRol();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.Persona#getTheRol <em>The Rol</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Rol</em>' reference.
+	 * @see #getTheRol()
+	 * @generated
+	 */
+	void setTheRol(Rol value);
+
+} // Persona

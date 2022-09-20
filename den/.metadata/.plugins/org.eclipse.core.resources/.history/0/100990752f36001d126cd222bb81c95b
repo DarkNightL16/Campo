@@ -1,0 +1,380 @@
+/**
+ */
+package den.domain.denuncia.impl;
+
+import den.denPackage;
+
+import den.domain.DomainPackage;
+
+import den.domain.cliente.ClientePackage;
+
+import den.domain.cliente.impl.ClientePackageImpl;
+
+import den.domain.denuncia.Denuncia;
+import den.domain.denuncia.DenunciaFactory;
+import den.domain.denuncia.DenunciaPackage;
+import den.domain.denuncia.FactoryDenuncias;
+
+import den.domain.impl.DomainPackageImpl;
+
+import den.domain.pedido.PedidoPackage;
+
+import den.domain.pedido.impl.PedidoPackageImpl;
+
+import den.domain.producto.ProductoPackage;
+
+import den.domain.producto.impl.ProductoPackageImpl;
+
+import den.domain.transporte.TransportePackage;
+
+import den.domain.transporte.impl.TransportePackageImpl;
+
+import den.domain.ubicacion.UbicacionPackage;
+
+import den.domain.ubicacion.impl.UbicacionPackageImpl;
+
+import den.impl.denPackageImpl;
+
+import den.ui.UiPackage;
+
+import den.ui.impl.UiPackageImpl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class DenunciaPackageImpl extends EPackageImpl implements DenunciaPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass denunciaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass factoryDenunciasEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see den.domain.denuncia.DenunciaPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private DenunciaPackageImpl() {
+		super(eNS_URI, DenunciaFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * 
+	 * <p>This method is used to initialize {@link DenunciaPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static DenunciaPackage init() {
+		if (isInited) return (DenunciaPackage)EPackage.Registry.INSTANCE.getEPackage(DenunciaPackage.eNS_URI);
+
+		// Obtain or create and register package
+		DenunciaPackageImpl theDenunciaPackage = (DenunciaPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof DenunciaPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new DenunciaPackageImpl());
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		denPackageImpl thedenPackage = (denPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI) instanceof denPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI) : denPackage.eINSTANCE);
+		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
+		ClientePackageImpl theClientePackage = (ClientePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClientePackage.eNS_URI) instanceof ClientePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClientePackage.eNS_URI) : ClientePackage.eINSTANCE);
+		TransportePackageImpl theTransportePackage = (TransportePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TransportePackage.eNS_URI) instanceof TransportePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TransportePackage.eNS_URI) : TransportePackage.eINSTANCE);
+		UbicacionPackageImpl theUbicacionPackage = (UbicacionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI) instanceof UbicacionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI) : UbicacionPackage.eINSTANCE);
+		PedidoPackageImpl thePedidoPackage = (PedidoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI) instanceof PedidoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI) : PedidoPackage.eINSTANCE);
+		ProductoPackageImpl theProductoPackage = (ProductoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ProductoPackage.eNS_URI) instanceof ProductoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ProductoPackage.eNS_URI) : ProductoPackage.eINSTANCE);
+		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theDenunciaPackage.createPackageContents();
+		thedenPackage.createPackageContents();
+		theDomainPackage.createPackageContents();
+		theClientePackage.createPackageContents();
+		theTransportePackage.createPackageContents();
+		theUbicacionPackage.createPackageContents();
+		thePedidoPackage.createPackageContents();
+		theProductoPackage.createPackageContents();
+		theUiPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theDenunciaPackage.initializePackageContents();
+		thedenPackage.initializePackageContents();
+		theDomainPackage.initializePackageContents();
+		theClientePackage.initializePackageContents();
+		theTransportePackage.initializePackageContents();
+		theUbicacionPackage.initializePackageContents();
+		thePedidoPackage.initializePackageContents();
+		theProductoPackage.initializePackageContents();
+		theUiPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theDenunciaPackage.freeze();
+
+  
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(DenunciaPackage.eNS_URI, theDenunciaPackage);
+		return theDenunciaPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDenuncia() {
+		return denunciaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDenuncia_TheCliente() {
+		return (EReference)denunciaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDenuncia_Id() {
+		return (EAttribute)denunciaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDenuncia_Fecha() {
+		return (EAttribute)denunciaEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDenuncia_Motivo() {
+		return (EAttribute)denunciaEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDenuncia_Descripcion() {
+		return (EAttribute)denunciaEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDenuncia_Lugar() {
+		return (EAttribute)denunciaEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDenuncia_Dano() {
+		return (EAttribute)denunciaEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDenuncia_LugarDenuncia() {
+		return (EAttribute)denunciaEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDenuncia_OwnedByFactoryDenuncias() {
+		return (EReference)denunciaEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFactoryDenuncias() {
+		return factoryDenunciasEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryDenuncias_OwnedByDomain() {
+		return (EReference)factoryDenunciasEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFactoryDenuncias_Id() {
+		return (EAttribute)factoryDenunciasEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryDenuncias_LstDenuncia() {
+		return (EReference)factoryDenunciasEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DenunciaFactory getDenunciaFactory() {
+		return (DenunciaFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		denunciaEClass = createEClass(DENUNCIA);
+		createEReference(denunciaEClass, DENUNCIA__THE_CLIENTE);
+		createEAttribute(denunciaEClass, DENUNCIA__ID);
+		createEAttribute(denunciaEClass, DENUNCIA__FECHA);
+		createEAttribute(denunciaEClass, DENUNCIA__MOTIVO);
+		createEAttribute(denunciaEClass, DENUNCIA__DESCRIPCION);
+		createEAttribute(denunciaEClass, DENUNCIA__LUGAR);
+		createEAttribute(denunciaEClass, DENUNCIA__DANO);
+		createEAttribute(denunciaEClass, DENUNCIA__LUGAR_DENUNCIA);
+		createEReference(denunciaEClass, DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS);
+
+		factoryDenunciasEClass = createEClass(FACTORY_DENUNCIAS);
+		createEReference(factoryDenunciasEClass, FACTORY_DENUNCIAS__OWNED_BY_DOMAIN);
+		createEAttribute(factoryDenunciasEClass, FACTORY_DENUNCIAS__ID);
+		createEReference(factoryDenunciasEClass, FACTORY_DENUNCIAS__LST_DENUNCIA);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		ClientePackage theClientePackage = (ClientePackage)EPackage.Registry.INSTANCE.getEPackage(ClientePackage.eNS_URI);
+		denPackage thedenPackage = (denPackage)EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI);
+		DomainPackage theDomainPackage = (DomainPackage)EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+
+		// Initialize classes and features; add operations and parameters
+		initEClass(denunciaEClass, Denuncia.class, "Denuncia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDenuncia_TheCliente(), theClientePackage.getPersona(), theClientePackage.getPersona_LstDenuncia(), "theCliente", null, 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDenuncia_Id(), thedenPackage.getString(), "id", " ", 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDenuncia_Fecha(), thedenPackage.getString(), "fecha", " ", 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDenuncia_Motivo(), thedenPackage.getString(), "motivo", " ", 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDenuncia_Descripcion(), thedenPackage.getString(), "descripcion", " ", 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDenuncia_Lugar(), thedenPackage.getString(), "lugar", " ", 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDenuncia_Dano(), thedenPackage.getString(), "dano", " ", 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDenuncia_LugarDenuncia(), thedenPackage.getString(), "lugarDenuncia", " ", 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDenuncia_OwnedByFactoryDenuncias(), this.getFactoryDenuncias(), this.getFactoryDenuncias_LstDenuncia(), "ownedByFactoryDenuncias", null, 0, 1, Denuncia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(factoryDenunciasEClass, FactoryDenuncias.class, "FactoryDenuncias", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFactoryDenuncias_OwnedByDomain(), theDomainPackage.getDomain(), theDomainPackage.getDomain_TheFactoryDenuncias(), "ownedByDomain", null, 0, 1, FactoryDenuncias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFactoryDenuncias_Id(), thedenPackage.getString(), "id", " ", 0, 1, FactoryDenuncias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFactoryDenuncias_LstDenuncia(), this.getDenuncia(), this.getDenuncia_OwnedByFactoryDenuncias(), "lstDenuncia", null, 0, -1, FactoryDenuncias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	}
+
+} //DenunciaPackageImpl

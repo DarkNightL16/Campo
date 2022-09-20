@@ -1,0 +1,497 @@
+/**
+ */
+package den.domain.denuncia;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see den.domain.denuncia.DenunciaFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface DenunciaPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "denuncia";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http:///den/domain/denuncia.ecore";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "den.domain.denuncia";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	DenunciaPackage eINSTANCE = den.domain.denuncia.impl.DenunciaPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link den.domain.denuncia.impl.DenunciaImpl <em>Denuncia</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see den.domain.denuncia.impl.DenunciaImpl
+	 * @see den.domain.denuncia.impl.DenunciaPackageImpl#getDenuncia()
+	 * @generated
+	 */
+	int DENUNCIA = 0;
+
+	/**
+	 * The feature id for the '<em><b>The Cliente</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__THE_CLIENTE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Fecha</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__FECHA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Motivo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__MOTIVO = 3;
+
+	/**
+	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__DESCRIPCION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Lugar</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__LUGAR = 5;
+
+	/**
+	 * The feature id for the '<em><b>Dano</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__DANO = 6;
+
+	/**
+	 * The feature id for the '<em><b>Lugar Denuncia</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__LUGAR_DENUNCIA = 7;
+
+	/**
+	 * The feature id for the '<em><b>Owned By Factory Denuncias</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS = 8;
+
+	/**
+	 * The number of structural features of the '<em>Denuncia</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DENUNCIA_FEATURE_COUNT = 9;
+
+	/**
+	 * The meta object id for the '{@link den.domain.denuncia.impl.FactoryDenunciasImpl <em>Factory Denuncias</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see den.domain.denuncia.impl.FactoryDenunciasImpl
+	 * @see den.domain.denuncia.impl.DenunciaPackageImpl#getFactoryDenuncias()
+	 * @generated
+	 */
+	int FACTORY_DENUNCIAS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Owned By Domain</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_DENUNCIAS__OWNED_BY_DOMAIN = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_DENUNCIAS__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Lst Denuncia</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_DENUNCIAS__LST_DENUNCIA = 2;
+
+	/**
+	 * The number of structural features of the '<em>Factory Denuncias</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_DENUNCIAS_FEATURE_COUNT = 3;
+
+
+	/**
+	 * Returns the meta object for class '{@link den.domain.denuncia.Denuncia <em>Denuncia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Denuncia</em>'.
+	 * @see den.domain.denuncia.Denuncia
+	 * @generated
+	 */
+	EClass getDenuncia();
+
+	/**
+	 * Returns the meta object for the reference '{@link den.domain.denuncia.Denuncia#getTheCliente <em>The Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>The Cliente</em>'.
+	 * @see den.domain.denuncia.Denuncia#getTheCliente()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EReference getDenuncia_TheCliente();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.denuncia.Denuncia#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see den.domain.denuncia.Denuncia#getId()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EAttribute getDenuncia_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.denuncia.Denuncia#getFecha <em>Fecha</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fecha</em>'.
+	 * @see den.domain.denuncia.Denuncia#getFecha()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EAttribute getDenuncia_Fecha();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.denuncia.Denuncia#getMotivo <em>Motivo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Motivo</em>'.
+	 * @see den.domain.denuncia.Denuncia#getMotivo()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EAttribute getDenuncia_Motivo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.denuncia.Denuncia#getDescripcion <em>Descripcion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Descripcion</em>'.
+	 * @see den.domain.denuncia.Denuncia#getDescripcion()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EAttribute getDenuncia_Descripcion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.denuncia.Denuncia#getLugar <em>Lugar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lugar</em>'.
+	 * @see den.domain.denuncia.Denuncia#getLugar()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EAttribute getDenuncia_Lugar();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.denuncia.Denuncia#getDano <em>Dano</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Dano</em>'.
+	 * @see den.domain.denuncia.Denuncia#getDano()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EAttribute getDenuncia_Dano();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.denuncia.Denuncia#getLugarDenuncia <em>Lugar Denuncia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lugar Denuncia</em>'.
+	 * @see den.domain.denuncia.Denuncia#getLugarDenuncia()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EAttribute getDenuncia_LugarDenuncia();
+
+	/**
+	 * Returns the meta object for the container reference '{@link den.domain.denuncia.Denuncia#getOwnedByFactoryDenuncias <em>Owned By Factory Denuncias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owned By Factory Denuncias</em>'.
+	 * @see den.domain.denuncia.Denuncia#getOwnedByFactoryDenuncias()
+	 * @see #getDenuncia()
+	 * @generated
+	 */
+	EReference getDenuncia_OwnedByFactoryDenuncias();
+
+	/**
+	 * Returns the meta object for class '{@link den.domain.denuncia.FactoryDenuncias <em>Factory Denuncias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Factory Denuncias</em>'.
+	 * @see den.domain.denuncia.FactoryDenuncias
+	 * @generated
+	 */
+	EClass getFactoryDenuncias();
+
+	/**
+	 * Returns the meta object for the container reference '{@link den.domain.denuncia.FactoryDenuncias#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owned By Domain</em>'.
+	 * @see den.domain.denuncia.FactoryDenuncias#getOwnedByDomain()
+	 * @see #getFactoryDenuncias()
+	 * @generated
+	 */
+	EReference getFactoryDenuncias_OwnedByDomain();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.denuncia.FactoryDenuncias#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see den.domain.denuncia.FactoryDenuncias#getId()
+	 * @see #getFactoryDenuncias()
+	 * @generated
+	 */
+	EAttribute getFactoryDenuncias_Id();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link den.domain.denuncia.FactoryDenuncias#getLstDenuncia <em>Lst Denuncia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lst Denuncia</em>'.
+	 * @see den.domain.denuncia.FactoryDenuncias#getLstDenuncia()
+	 * @see #getFactoryDenuncias()
+	 * @generated
+	 */
+	EReference getFactoryDenuncias_LstDenuncia();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	DenunciaFactory getDenunciaFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link den.domain.denuncia.impl.DenunciaImpl <em>Denuncia</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see den.domain.denuncia.impl.DenunciaImpl
+		 * @see den.domain.denuncia.impl.DenunciaPackageImpl#getDenuncia()
+		 * @generated
+		 */
+		EClass DENUNCIA = eINSTANCE.getDenuncia();
+
+		/**
+		 * The meta object literal for the '<em><b>The Cliente</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DENUNCIA__THE_CLIENTE = eINSTANCE.getDenuncia_TheCliente();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DENUNCIA__ID = eINSTANCE.getDenuncia_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Fecha</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DENUNCIA__FECHA = eINSTANCE.getDenuncia_Fecha();
+
+		/**
+		 * The meta object literal for the '<em><b>Motivo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DENUNCIA__MOTIVO = eINSTANCE.getDenuncia_Motivo();
+
+		/**
+		 * The meta object literal for the '<em><b>Descripcion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DENUNCIA__DESCRIPCION = eINSTANCE.getDenuncia_Descripcion();
+
+		/**
+		 * The meta object literal for the '<em><b>Lugar</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DENUNCIA__LUGAR = eINSTANCE.getDenuncia_Lugar();
+
+		/**
+		 * The meta object literal for the '<em><b>Dano</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DENUNCIA__DANO = eINSTANCE.getDenuncia_Dano();
+
+		/**
+		 * The meta object literal for the '<em><b>Lugar Denuncia</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DENUNCIA__LUGAR_DENUNCIA = eINSTANCE.getDenuncia_LugarDenuncia();
+
+		/**
+		 * The meta object literal for the '<em><b>Owned By Factory Denuncias</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS = eINSTANCE.getDenuncia_OwnedByFactoryDenuncias();
+
+		/**
+		 * The meta object literal for the '{@link den.domain.denuncia.impl.FactoryDenunciasImpl <em>Factory Denuncias</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see den.domain.denuncia.impl.FactoryDenunciasImpl
+		 * @see den.domain.denuncia.impl.DenunciaPackageImpl#getFactoryDenuncias()
+		 * @generated
+		 */
+		EClass FACTORY_DENUNCIAS = eINSTANCE.getFactoryDenuncias();
+
+		/**
+		 * The meta object literal for the '<em><b>Owned By Domain</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FACTORY_DENUNCIAS__OWNED_BY_DOMAIN = eINSTANCE.getFactoryDenuncias_OwnedByDomain();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FACTORY_DENUNCIAS__ID = eINSTANCE.getFactoryDenuncias_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Lst Denuncia</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FACTORY_DENUNCIAS__LST_DENUNCIA = eINSTANCE.getFactoryDenuncias_LstDenuncia();
+
+	}
+
+} //DenunciaPackage

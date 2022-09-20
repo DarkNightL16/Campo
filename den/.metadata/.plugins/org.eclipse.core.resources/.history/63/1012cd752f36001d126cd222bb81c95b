@@ -1,0 +1,667 @@
+/**
+ */
+package den.domain.transporte.impl;
+
+import den.domain.Domain;
+import den.domain.DomainPackage;
+
+import den.domain.transporte.FactoryRuta;
+import den.domain.transporte.Ruta;
+import den.domain.transporte.Tarifa;
+import den.domain.transporte.TransportePackage;
+
+import den.domain.ubicacion.Ciudad;
+import den.domain.ubicacion.UbicacionPackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Ruta</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.transporte.impl.RutaImpl#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.RutaImpl#getOwnedByFactoryRuta <em>Owned By Factory Ruta</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.RutaImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.RutaImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.RutaImpl#getLstTarifa <em>Lst Tarifa</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.RutaImpl#getTheCiudadOrigen <em>The Ciudad Origen</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.RutaImpl#getOwnedByCiudad <em>Owned By Ciudad</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.RutaImpl#getTheCiudadDestino <em>The Ciudad Destino</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class RutaImpl extends EObjectImpl implements Ruta {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLstTarifa() <em>Lst Tarifa</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstTarifa()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Tarifa> lstTarifa;
+
+	/**
+	 * The cached value of the '{@link #getTheCiudadOrigen() <em>The Ciudad Origen</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheCiudadOrigen()
+	 * @generated
+	 * @ordered
+	 */
+	protected Ciudad theCiudadOrigen;
+
+	/**
+	 * The cached value of the '{@link #getTheCiudadDestino() <em>The Ciudad Destino</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheCiudadDestino()
+	 * @generated
+	 * @ordered
+	 */
+	protected Ciudad theCiudadDestino;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RutaImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return TransportePackage.Literals.RUTA;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Domain getOwnedByDomain() {
+		if (eContainerFeatureID() != TransportePackage.RUTA__OWNED_BY_DOMAIN) return null;
+		return (Domain)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByDomain(Domain newOwnedByDomain, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByDomain, TransportePackage.RUTA__OWNED_BY_DOMAIN, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByDomain(Domain newOwnedByDomain) {
+		if (newOwnedByDomain != eInternalContainer() || (eContainerFeatureID() != TransportePackage.RUTA__OWNED_BY_DOMAIN && newOwnedByDomain != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByDomain))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByDomain != null)
+				msgs = ((InternalEObject)newOwnedByDomain).eInverseAdd(this, DomainPackage.DOMAIN__THE_RUTA, Domain.class, msgs);
+			msgs = basicSetOwnedByDomain(newOwnedByDomain, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__OWNED_BY_DOMAIN, newOwnedByDomain, newOwnedByDomain));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryRuta getOwnedByFactoryRuta() {
+		if (eContainerFeatureID() != TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA) return null;
+		return (FactoryRuta)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByFactoryRuta(FactoryRuta newOwnedByFactoryRuta, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByFactoryRuta, TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByFactoryRuta(FactoryRuta newOwnedByFactoryRuta) {
+		if (newOwnedByFactoryRuta != eInternalContainer() || (eContainerFeatureID() != TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA && newOwnedByFactoryRuta != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByFactoryRuta))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByFactoryRuta != null)
+				msgs = ((InternalEObject)newOwnedByFactoryRuta).eInverseAdd(this, TransportePackage.FACTORY_RUTA__LST_RUTA, FactoryRuta.class, msgs);
+			msgs = basicSetOwnedByFactoryRuta(newOwnedByFactoryRuta, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA, newOwnedByFactoryRuta, newOwnedByFactoryRuta));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Tarifa> getLstTarifa() {
+		if (lstTarifa == null) {
+			lstTarifa = new EObjectContainmentWithInverseEList<Tarifa>(Tarifa.class, this, TransportePackage.RUTA__LST_TARIFA, TransportePackage.TARIFA__OWNED_BY_RUTA);
+		}
+		return lstTarifa;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ciudad getTheCiudadOrigen() {
+		if (theCiudadOrigen != null && theCiudadOrigen.eIsProxy()) {
+			InternalEObject oldTheCiudadOrigen = (InternalEObject)theCiudadOrigen;
+			theCiudadOrigen = (Ciudad)eResolveProxy(oldTheCiudadOrigen);
+			if (theCiudadOrigen != oldTheCiudadOrigen) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TransportePackage.RUTA__THE_CIUDAD_ORIGEN, oldTheCiudadOrigen, theCiudadOrigen));
+			}
+		}
+		return theCiudadOrigen;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ciudad basicGetTheCiudadOrigen() {
+		return theCiudadOrigen;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheCiudadOrigen(Ciudad newTheCiudadOrigen, NotificationChain msgs) {
+		Ciudad oldTheCiudadOrigen = theCiudadOrigen;
+		theCiudadOrigen = newTheCiudadOrigen;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__THE_CIUDAD_ORIGEN, oldTheCiudadOrigen, newTheCiudadOrigen);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheCiudadOrigen(Ciudad newTheCiudadOrigen) {
+		if (newTheCiudadOrigen != theCiudadOrigen) {
+			NotificationChain msgs = null;
+			if (theCiudadOrigen != null)
+				msgs = ((InternalEObject)theCiudadOrigen).eInverseRemove(this, UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN, Ciudad.class, msgs);
+			if (newTheCiudadOrigen != null)
+				msgs = ((InternalEObject)newTheCiudadOrigen).eInverseAdd(this, UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN, Ciudad.class, msgs);
+			msgs = basicSetTheCiudadOrigen(newTheCiudadOrigen, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__THE_CIUDAD_ORIGEN, newTheCiudadOrigen, newTheCiudadOrigen));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ciudad getOwnedByCiudad() {
+		if (eContainerFeatureID() != TransportePackage.RUTA__OWNED_BY_CIUDAD) return null;
+		return (Ciudad)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByCiudad(Ciudad newOwnedByCiudad, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByCiudad, TransportePackage.RUTA__OWNED_BY_CIUDAD, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByCiudad(Ciudad newOwnedByCiudad) {
+		if (newOwnedByCiudad != eInternalContainer() || (eContainerFeatureID() != TransportePackage.RUTA__OWNED_BY_CIUDAD && newOwnedByCiudad != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByCiudad))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByCiudad != null)
+				msgs = ((InternalEObject)newOwnedByCiudad).eInverseAdd(this, UbicacionPackage.CIUDAD__LST_RUTA, Ciudad.class, msgs);
+			msgs = basicSetOwnedByCiudad(newOwnedByCiudad, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__OWNED_BY_CIUDAD, newOwnedByCiudad, newOwnedByCiudad));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ciudad getTheCiudadDestino() {
+		if (theCiudadDestino != null && theCiudadDestino.eIsProxy()) {
+			InternalEObject oldTheCiudadDestino = (InternalEObject)theCiudadDestino;
+			theCiudadDestino = (Ciudad)eResolveProxy(oldTheCiudadDestino);
+			if (theCiudadDestino != oldTheCiudadDestino) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TransportePackage.RUTA__THE_CIUDAD_DESTINO, oldTheCiudadDestino, theCiudadDestino));
+			}
+		}
+		return theCiudadDestino;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ciudad basicGetTheCiudadDestino() {
+		return theCiudadDestino;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheCiudadDestino(Ciudad newTheCiudadDestino, NotificationChain msgs) {
+		Ciudad oldTheCiudadDestino = theCiudadDestino;
+		theCiudadDestino = newTheCiudadDestino;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__THE_CIUDAD_DESTINO, oldTheCiudadDestino, newTheCiudadDestino);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheCiudadDestino(Ciudad newTheCiudadDestino) {
+		if (newTheCiudadDestino != theCiudadDestino) {
+			NotificationChain msgs = null;
+			if (theCiudadDestino != null)
+				msgs = ((InternalEObject)theCiudadDestino).eInverseRemove(this, UbicacionPackage.CIUDAD__LST_RUTA_DESTINO, Ciudad.class, msgs);
+			if (newTheCiudadDestino != null)
+				msgs = ((InternalEObject)newTheCiudadDestino).eInverseAdd(this, UbicacionPackage.CIUDAD__LST_RUTA_DESTINO, Ciudad.class, msgs);
+			msgs = basicSetTheCiudadDestino(newTheCiudadDestino, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.RUTA__THE_CIUDAD_DESTINO, newTheCiudadDestino, newTheCiudadDestino));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TransportePackage.RUTA__OWNED_BY_DOMAIN:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByDomain((Domain)otherEnd, msgs);
+			case TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByFactoryRuta((FactoryRuta)otherEnd, msgs);
+			case TransportePackage.RUTA__LST_TARIFA:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstTarifa()).basicAdd(otherEnd, msgs);
+			case TransportePackage.RUTA__THE_CIUDAD_ORIGEN:
+				if (theCiudadOrigen != null)
+					msgs = ((InternalEObject)theCiudadOrigen).eInverseRemove(this, UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN, Ciudad.class, msgs);
+				return basicSetTheCiudadOrigen((Ciudad)otherEnd, msgs);
+			case TransportePackage.RUTA__OWNED_BY_CIUDAD:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByCiudad((Ciudad)otherEnd, msgs);
+			case TransportePackage.RUTA__THE_CIUDAD_DESTINO:
+				if (theCiudadDestino != null)
+					msgs = ((InternalEObject)theCiudadDestino).eInverseRemove(this, UbicacionPackage.CIUDAD__LST_RUTA_DESTINO, Ciudad.class, msgs);
+				return basicSetTheCiudadDestino((Ciudad)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TransportePackage.RUTA__OWNED_BY_DOMAIN:
+				return basicSetOwnedByDomain(null, msgs);
+			case TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA:
+				return basicSetOwnedByFactoryRuta(null, msgs);
+			case TransportePackage.RUTA__LST_TARIFA:
+				return ((InternalEList<?>)getLstTarifa()).basicRemove(otherEnd, msgs);
+			case TransportePackage.RUTA__THE_CIUDAD_ORIGEN:
+				return basicSetTheCiudadOrigen(null, msgs);
+			case TransportePackage.RUTA__OWNED_BY_CIUDAD:
+				return basicSetOwnedByCiudad(null, msgs);
+			case TransportePackage.RUTA__THE_CIUDAD_DESTINO:
+				return basicSetTheCiudadDestino(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case TransportePackage.RUTA__OWNED_BY_DOMAIN:
+				return eInternalContainer().eInverseRemove(this, DomainPackage.DOMAIN__THE_RUTA, Domain.class, msgs);
+			case TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA:
+				return eInternalContainer().eInverseRemove(this, TransportePackage.FACTORY_RUTA__LST_RUTA, FactoryRuta.class, msgs);
+			case TransportePackage.RUTA__OWNED_BY_CIUDAD:
+				return eInternalContainer().eInverseRemove(this, UbicacionPackage.CIUDAD__LST_RUTA, Ciudad.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case TransportePackage.RUTA__OWNED_BY_DOMAIN:
+				return getOwnedByDomain();
+			case TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA:
+				return getOwnedByFactoryRuta();
+			case TransportePackage.RUTA__ID:
+				return getId();
+			case TransportePackage.RUTA__NOMBRE:
+				return getNombre();
+			case TransportePackage.RUTA__LST_TARIFA:
+				return getLstTarifa();
+			case TransportePackage.RUTA__THE_CIUDAD_ORIGEN:
+				if (resolve) return getTheCiudadOrigen();
+				return basicGetTheCiudadOrigen();
+			case TransportePackage.RUTA__OWNED_BY_CIUDAD:
+				return getOwnedByCiudad();
+			case TransportePackage.RUTA__THE_CIUDAD_DESTINO:
+				if (resolve) return getTheCiudadDestino();
+				return basicGetTheCiudadDestino();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case TransportePackage.RUTA__OWNED_BY_DOMAIN:
+				setOwnedByDomain((Domain)newValue);
+				return;
+			case TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA:
+				setOwnedByFactoryRuta((FactoryRuta)newValue);
+				return;
+			case TransportePackage.RUTA__ID:
+				setId((String)newValue);
+				return;
+			case TransportePackage.RUTA__NOMBRE:
+				setNombre((String)newValue);
+				return;
+			case TransportePackage.RUTA__LST_TARIFA:
+				getLstTarifa().clear();
+				getLstTarifa().addAll((Collection<? extends Tarifa>)newValue);
+				return;
+			case TransportePackage.RUTA__THE_CIUDAD_ORIGEN:
+				setTheCiudadOrigen((Ciudad)newValue);
+				return;
+			case TransportePackage.RUTA__OWNED_BY_CIUDAD:
+				setOwnedByCiudad((Ciudad)newValue);
+				return;
+			case TransportePackage.RUTA__THE_CIUDAD_DESTINO:
+				setTheCiudadDestino((Ciudad)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case TransportePackage.RUTA__OWNED_BY_DOMAIN:
+				setOwnedByDomain((Domain)null);
+				return;
+			case TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA:
+				setOwnedByFactoryRuta((FactoryRuta)null);
+				return;
+			case TransportePackage.RUTA__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case TransportePackage.RUTA__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case TransportePackage.RUTA__LST_TARIFA:
+				getLstTarifa().clear();
+				return;
+			case TransportePackage.RUTA__THE_CIUDAD_ORIGEN:
+				setTheCiudadOrigen((Ciudad)null);
+				return;
+			case TransportePackage.RUTA__OWNED_BY_CIUDAD:
+				setOwnedByCiudad((Ciudad)null);
+				return;
+			case TransportePackage.RUTA__THE_CIUDAD_DESTINO:
+				setTheCiudadDestino((Ciudad)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case TransportePackage.RUTA__OWNED_BY_DOMAIN:
+				return getOwnedByDomain() != null;
+			case TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA:
+				return getOwnedByFactoryRuta() != null;
+			case TransportePackage.RUTA__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case TransportePackage.RUTA__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case TransportePackage.RUTA__LST_TARIFA:
+				return lstTarifa != null && !lstTarifa.isEmpty();
+			case TransportePackage.RUTA__THE_CIUDAD_ORIGEN:
+				return theCiudadOrigen != null;
+			case TransportePackage.RUTA__OWNED_BY_CIUDAD:
+				return getOwnedByCiudad() != null;
+			case TransportePackage.RUTA__THE_CIUDAD_DESTINO:
+				return theCiudadDestino != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", nombre: ");
+		result.append(nombre);
+		result.append(')');
+		return result.toString();
+	}
+
+} //RutaImpl

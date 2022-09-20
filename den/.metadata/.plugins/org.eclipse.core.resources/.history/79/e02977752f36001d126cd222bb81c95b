@@ -1,0 +1,121 @@
+/**
+ */
+package den.domain.cliente;
+
+import den.domain.Domain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Factory Cliente</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.cliente.FactoryCliente#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.cliente.FactoryCliente#getIdClientes <em>Id Clientes</em>}</li>
+ *   <li>{@link den.domain.cliente.FactoryCliente#getLstPersona <em>Lst Persona</em>}</li>
+ *   <li>{@link den.domain.cliente.FactoryCliente#getLstRol <em>Lst Rol</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.cliente.ClientePackage#getFactoryCliente()
+ * @model
+ * @generated
+ */
+public interface FactoryCliente extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Owned By Domain</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.Domain#getTheFactoryCliente <em>The Factory Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Domain</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #setOwnedByDomain(Domain)
+	 * @see den.domain.cliente.ClientePackage#getFactoryCliente_OwnedByDomain()
+	 * @see den.domain.Domain#getTheFactoryCliente
+	 * @model opposite="theFactoryCliente" transient="false"
+	 * @generated
+	 */
+	Domain getOwnedByDomain();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.FactoryCliente#getOwnedByDomain <em>Owned By Domain</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #getOwnedByDomain()
+	 * @generated
+	 */
+	void setOwnedByDomain(Domain value);
+
+	/**
+	 * Returns the value of the '<em><b>Id Clientes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id Clientes</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id Clientes</em>' attribute.
+	 * @see #setIdClientes(String)
+	 * @see den.domain.cliente.ClientePackage#getFactoryCliente_IdClientes()
+	 * @model dataType="den.String"
+	 * @generated
+	 */
+	String getIdClientes();
+
+	/**
+	 * Sets the value of the '{@link den.domain.cliente.FactoryCliente#getIdClientes <em>Id Clientes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id Clientes</em>' attribute.
+	 * @see #getIdClientes()
+	 * @generated
+	 */
+	void setIdClientes(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Persona</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.cliente.Persona}.
+	 * It is bidirectional and its opposite is '{@link den.domain.cliente.Persona#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Persona</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Persona</em>' containment reference list.
+	 * @see den.domain.cliente.ClientePackage#getFactoryCliente_LstPersona()
+	 * @see den.domain.cliente.Persona#getOwnedByFactoryCliente
+	 * @model opposite="ownedByFactoryCliente" containment="true"
+	 * @generated
+	 */
+	EList<Persona> getLstPersona();
+
+	/**
+	 * Returns the value of the '<em><b>Lst Rol</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.cliente.Rol}.
+	 * It is bidirectional and its opposite is '{@link den.domain.cliente.Rol#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Rol</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Rol</em>' containment reference list.
+	 * @see den.domain.cliente.ClientePackage#getFactoryCliente_LstRol()
+	 * @see den.domain.cliente.Rol#getOwnedByFactoryCliente
+	 * @model opposite="ownedByFactoryCliente" containment="true"
+	 * @generated
+	 */
+	EList<Rol> getLstRol();
+
+} // FactoryCliente

@@ -1,0 +1,313 @@
+/**
+ */
+package den.domain.producto.impl;
+
+import den.domain.Domain;
+import den.domain.DomainPackage;
+
+import den.domain.producto.FactoryProducto;
+import den.domain.producto.Producto;
+import den.domain.producto.ProductoPackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Factory Producto</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.producto.impl.FactoryProductoImpl#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.producto.impl.FactoryProductoImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.producto.impl.FactoryProductoImpl#getLstProducto <em>Lst Producto</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class FactoryProductoImpl extends EObjectImpl implements FactoryProducto {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLstProducto() <em>Lst Producto</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstProducto()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Producto> lstProducto;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FactoryProductoImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return ProductoPackage.Literals.FACTORY_PRODUCTO;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Domain getOwnedByDomain() {
+		if (eContainerFeatureID() != ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN) return null;
+		return (Domain)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByDomain(Domain newOwnedByDomain, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByDomain, ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByDomain(Domain newOwnedByDomain) {
+		if (newOwnedByDomain != eInternalContainer() || (eContainerFeatureID() != ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN && newOwnedByDomain != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByDomain))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByDomain != null)
+				msgs = ((InternalEObject)newOwnedByDomain).eInverseAdd(this, DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO, Domain.class, msgs);
+			msgs = basicSetOwnedByDomain(newOwnedByDomain, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN, newOwnedByDomain, newOwnedByDomain));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProductoPackage.FACTORY_PRODUCTO__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Producto> getLstProducto() {
+		if (lstProducto == null) {
+			lstProducto = new EObjectContainmentWithInverseEList<Producto>(Producto.class, this, ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO, ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO);
+		}
+		return lstProducto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByDomain((Domain)otherEnd, msgs);
+			case ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstProducto()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN:
+				return basicSetOwnedByDomain(null, msgs);
+			case ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO:
+				return ((InternalEList<?>)getLstProducto()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN:
+				return eInternalContainer().eInverseRemove(this, DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO, Domain.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN:
+				return getOwnedByDomain();
+			case ProductoPackage.FACTORY_PRODUCTO__ID:
+				return getId();
+			case ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO:
+				return getLstProducto();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN:
+				setOwnedByDomain((Domain)newValue);
+				return;
+			case ProductoPackage.FACTORY_PRODUCTO__ID:
+				setId((String)newValue);
+				return;
+			case ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO:
+				getLstProducto().clear();
+				getLstProducto().addAll((Collection<? extends Producto>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN:
+				setOwnedByDomain((Domain)null);
+				return;
+			case ProductoPackage.FACTORY_PRODUCTO__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO:
+				getLstProducto().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN:
+				return getOwnedByDomain() != null;
+			case ProductoPackage.FACTORY_PRODUCTO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO:
+				return lstProducto != null && !lstProducto.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(')');
+		return result.toString();
+	}
+
+} //FactoryProductoImpl

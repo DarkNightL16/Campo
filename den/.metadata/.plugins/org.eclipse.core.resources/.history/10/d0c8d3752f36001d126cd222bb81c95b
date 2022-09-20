@@ -1,0 +1,521 @@
+/**
+ */
+package den.domain.transporte.impl;
+
+import den.denPackage;
+
+import den.domain.DomainPackage;
+
+import den.domain.cliente.ClientePackage;
+
+import den.domain.cliente.impl.ClientePackageImpl;
+
+import den.domain.denuncia.DenunciaPackage;
+
+import den.domain.denuncia.impl.DenunciaPackageImpl;
+
+import den.domain.impl.DomainPackageImpl;
+
+import den.domain.pedido.PedidoPackage;
+
+import den.domain.pedido.impl.PedidoPackageImpl;
+
+import den.domain.producto.ProductoPackage;
+
+import den.domain.producto.impl.ProductoPackageImpl;
+
+import den.domain.transporte.FactoryRuta;
+import den.domain.transporte.Ruta;
+import den.domain.transporte.Tarifa;
+import den.domain.transporte.Tramo;
+import den.domain.transporte.TransporteFactory;
+import den.domain.transporte.TransportePackage;
+
+import den.domain.ubicacion.UbicacionPackage;
+
+import den.domain.ubicacion.impl.UbicacionPackageImpl;
+
+import den.impl.denPackageImpl;
+
+import den.ui.UiPackage;
+
+import den.ui.impl.UiPackageImpl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class TransportePackageImpl extends EPackageImpl implements TransportePackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass factoryRutaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rutaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tarifaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tramoEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see den.domain.transporte.TransportePackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private TransportePackageImpl() {
+		super(eNS_URI, TransporteFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * 
+	 * <p>This method is used to initialize {@link TransportePackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static TransportePackage init() {
+		if (isInited) return (TransportePackage)EPackage.Registry.INSTANCE.getEPackage(TransportePackage.eNS_URI);
+
+		// Obtain or create and register package
+		TransportePackageImpl theTransportePackage = (TransportePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TransportePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TransportePackageImpl());
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		denPackageImpl thedenPackage = (denPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI) instanceof denPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI) : denPackage.eINSTANCE);
+		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
+		ClientePackageImpl theClientePackage = (ClientePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClientePackage.eNS_URI) instanceof ClientePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClientePackage.eNS_URI) : ClientePackage.eINSTANCE);
+		DenunciaPackageImpl theDenunciaPackage = (DenunciaPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DenunciaPackage.eNS_URI) instanceof DenunciaPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DenunciaPackage.eNS_URI) : DenunciaPackage.eINSTANCE);
+		UbicacionPackageImpl theUbicacionPackage = (UbicacionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI) instanceof UbicacionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI) : UbicacionPackage.eINSTANCE);
+		PedidoPackageImpl thePedidoPackage = (PedidoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI) instanceof PedidoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI) : PedidoPackage.eINSTANCE);
+		ProductoPackageImpl theProductoPackage = (ProductoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ProductoPackage.eNS_URI) instanceof ProductoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ProductoPackage.eNS_URI) : ProductoPackage.eINSTANCE);
+		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theTransportePackage.createPackageContents();
+		thedenPackage.createPackageContents();
+		theDomainPackage.createPackageContents();
+		theClientePackage.createPackageContents();
+		theDenunciaPackage.createPackageContents();
+		theUbicacionPackage.createPackageContents();
+		thePedidoPackage.createPackageContents();
+		theProductoPackage.createPackageContents();
+		theUiPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theTransportePackage.initializePackageContents();
+		thedenPackage.initializePackageContents();
+		theDomainPackage.initializePackageContents();
+		theClientePackage.initializePackageContents();
+		theDenunciaPackage.initializePackageContents();
+		theUbicacionPackage.initializePackageContents();
+		thePedidoPackage.initializePackageContents();
+		theProductoPackage.initializePackageContents();
+		theUiPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theTransportePackage.freeze();
+
+  
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(TransportePackage.eNS_URI, theTransportePackage);
+		return theTransportePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFactoryRuta() {
+		return factoryRutaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryRuta_OwnedByDomain() {
+		return (EReference)factoryRutaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFactoryRuta_Id() {
+		return (EAttribute)factoryRutaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryRuta_LstRuta() {
+		return (EReference)factoryRutaEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRuta() {
+		return rutaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRuta_OwnedByDomain() {
+		return (EReference)rutaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRuta_OwnedByFactoryRuta() {
+		return (EReference)rutaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRuta_Id() {
+		return (EAttribute)rutaEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRuta_Nombre() {
+		return (EAttribute)rutaEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRuta_LstTarifa() {
+		return (EReference)rutaEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRuta_TheCiudadOrigen() {
+		return (EReference)rutaEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRuta_OwnedByCiudad() {
+		return (EReference)rutaEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRuta_TheCiudadDestino() {
+		return (EReference)rutaEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTarifa() {
+		return tarifaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTarifa_OwnedByRuta() {
+		return (EReference)tarifaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTarifa_Id() {
+		return (EAttribute)tarifaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTarifa_Precio() {
+		return (EAttribute)tarifaEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTarifa_LstTramoOrigen() {
+		return (EReference)tarifaEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTarifa_LstTramoDestino() {
+		return (EReference)tarifaEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTramo() {
+		return tramoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTramo_OwnedByTarifaOrigen() {
+		return (EReference)tramoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTramo_OwnedByTarifaDestino() {
+		return (EReference)tramoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTramo_Id() {
+		return (EAttribute)tramoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTramo_Nombre() {
+		return (EAttribute)tramoEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTramo_Precio() {
+		return (EAttribute)tramoEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransporteFactory getTransporteFactory() {
+		return (TransporteFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		factoryRutaEClass = createEClass(FACTORY_RUTA);
+		createEReference(factoryRutaEClass, FACTORY_RUTA__OWNED_BY_DOMAIN);
+		createEAttribute(factoryRutaEClass, FACTORY_RUTA__ID);
+		createEReference(factoryRutaEClass, FACTORY_RUTA__LST_RUTA);
+
+		rutaEClass = createEClass(RUTA);
+		createEReference(rutaEClass, RUTA__OWNED_BY_DOMAIN);
+		createEReference(rutaEClass, RUTA__OWNED_BY_FACTORY_RUTA);
+		createEAttribute(rutaEClass, RUTA__ID);
+		createEAttribute(rutaEClass, RUTA__NOMBRE);
+		createEReference(rutaEClass, RUTA__LST_TARIFA);
+		createEReference(rutaEClass, RUTA__THE_CIUDAD_ORIGEN);
+		createEReference(rutaEClass, RUTA__OWNED_BY_CIUDAD);
+		createEReference(rutaEClass, RUTA__THE_CIUDAD_DESTINO);
+
+		tarifaEClass = createEClass(TARIFA);
+		createEReference(tarifaEClass, TARIFA__OWNED_BY_RUTA);
+		createEAttribute(tarifaEClass, TARIFA__ID);
+		createEAttribute(tarifaEClass, TARIFA__PRECIO);
+		createEReference(tarifaEClass, TARIFA__LST_TRAMO_ORIGEN);
+		createEReference(tarifaEClass, TARIFA__LST_TRAMO_DESTINO);
+
+		tramoEClass = createEClass(TRAMO);
+		createEReference(tramoEClass, TRAMO__OWNED_BY_TARIFA_ORIGEN);
+		createEReference(tramoEClass, TRAMO__OWNED_BY_TARIFA_DESTINO);
+		createEAttribute(tramoEClass, TRAMO__ID);
+		createEAttribute(tramoEClass, TRAMO__NOMBRE);
+		createEAttribute(tramoEClass, TRAMO__PRECIO);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		DomainPackage theDomainPackage = (DomainPackage)EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI);
+		denPackage thedenPackage = (denPackage)EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI);
+		UbicacionPackage theUbicacionPackage = (UbicacionPackage)EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+
+		// Initialize classes and features; add operations and parameters
+		initEClass(factoryRutaEClass, FactoryRuta.class, "FactoryRuta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFactoryRuta_OwnedByDomain(), theDomainPackage.getDomain(), theDomainPackage.getDomain_TheFactoryRuta(), "ownedByDomain", null, 0, 1, FactoryRuta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFactoryRuta_Id(), thedenPackage.getString(), "id", " ", 0, 1, FactoryRuta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFactoryRuta_LstRuta(), this.getRuta(), this.getRuta_OwnedByFactoryRuta(), "lstRuta", null, 0, -1, FactoryRuta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rutaEClass, Ruta.class, "Ruta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRuta_OwnedByDomain(), theDomainPackage.getDomain(), theDomainPackage.getDomain_TheRuta(), "ownedByDomain", null, 0, 1, Ruta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRuta_OwnedByFactoryRuta(), this.getFactoryRuta(), this.getFactoryRuta_LstRuta(), "ownedByFactoryRuta", null, 0, 1, Ruta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRuta_Id(), thedenPackage.getString(), "id", " ", 0, 1, Ruta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRuta_Nombre(), thedenPackage.getString(), "nombre", " ", 0, 1, Ruta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRuta_LstTarifa(), this.getTarifa(), this.getTarifa_OwnedByRuta(), "lstTarifa", null, 0, -1, Ruta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRuta_TheCiudadOrigen(), theUbicacionPackage.getCiudad(), theUbicacionPackage.getCiudad_LstRutaOrigen(), "theCiudadOrigen", null, 0, 1, Ruta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRuta_OwnedByCiudad(), theUbicacionPackage.getCiudad(), theUbicacionPackage.getCiudad_LstRuta(), "ownedByCiudad", null, 0, 1, Ruta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRuta_TheCiudadDestino(), theUbicacionPackage.getCiudad(), theUbicacionPackage.getCiudad_LstRutaDestino(), "theCiudadDestino", null, 0, 1, Ruta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tarifaEClass, Tarifa.class, "Tarifa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTarifa_OwnedByRuta(), this.getRuta(), this.getRuta_LstTarifa(), "ownedByRuta", null, 0, 1, Tarifa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTarifa_Id(), thedenPackage.getString(), "id", " ", 0, 1, Tarifa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTarifa_Precio(), thedenPackage.getString(), "precio", " ", 0, 1, Tarifa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTarifa_LstTramoOrigen(), this.getTramo(), this.getTramo_OwnedByTarifaOrigen(), "lstTramoOrigen", null, 0, -1, Tarifa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTarifa_LstTramoDestino(), this.getTramo(), this.getTramo_OwnedByTarifaDestino(), "lstTramoDestino", null, 0, -1, Tarifa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tramoEClass, Tramo.class, "Tramo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTramo_OwnedByTarifaOrigen(), this.getTarifa(), this.getTarifa_LstTramoOrigen(), "ownedByTarifaOrigen", null, 0, 1, Tramo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTramo_OwnedByTarifaDestino(), this.getTarifa(), this.getTarifa_LstTramoDestino(), "ownedByTarifaDestino", null, 0, 1, Tramo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTramo_Id(), thedenPackage.getString(), "id", " ", 0, 1, Tramo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTramo_Nombre(), thedenPackage.getString(), "nombre", " ", 0, 1, Tramo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTramo_Precio(), thedenPackage.getString(), "precio", " ", 0, 1, Tramo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	}
+
+} //TransportePackageImpl

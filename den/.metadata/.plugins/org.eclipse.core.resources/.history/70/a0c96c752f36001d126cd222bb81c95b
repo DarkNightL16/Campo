@@ -1,0 +1,309 @@
+/**
+ */
+package den.domain;
+
+import den.ModelFactory;
+
+import den.domain.cliente.FactoryCliente;
+
+import den.domain.denuncia.FactoryDenuncias;
+
+import den.domain.pedido.FactoryPedido;
+
+import den.domain.producto.FactoryProducto;
+
+import den.domain.transporte.FactoryRuta;
+import den.domain.transporte.Ruta;
+
+import den.domain.ubicacion.FactoryUbicacion;
+
+import den.ui.UI;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Domain</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.Domain#getTheModelFactory <em>The Model Factory</em>}</li>
+ *   <li>{@link den.domain.Domain#getTheFactoryCliente <em>The Factory Cliente</em>}</li>
+ *   <li>{@link den.domain.Domain#getTheFactoryDenuncias <em>The Factory Denuncias</em>}</li>
+ *   <li>{@link den.domain.Domain#getTheFactoryUbicacion <em>The Factory Ubicacion</em>}</li>
+ *   <li>{@link den.domain.Domain#getTheRuta <em>The Ruta</em>}</li>
+ *   <li>{@link den.domain.Domain#getTheFactoryRuta <em>The Factory Ruta</em>}</li>
+ *   <li>{@link den.domain.Domain#getTheFactoryPedido <em>The Factory Pedido</em>}</li>
+ *   <li>{@link den.domain.Domain#getTheFactoryProducto <em>The Factory Producto</em>}</li>
+ *   <li>{@link den.domain.Domain#getTheUI <em>The UI</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.DomainPackage#getDomain()
+ * @model
+ * @generated
+ */
+public interface Domain extends EObject {
+	/**
+	 * Returns the value of the '<em><b>The Model Factory</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.ModelFactory#getTheDomain <em>The Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Model Factory</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Model Factory</em>' container reference.
+	 * @see #setTheModelFactory(ModelFactory)
+	 * @see den.domain.DomainPackage#getDomain_TheModelFactory()
+	 * @see den.ModelFactory#getTheDomain
+	 * @model opposite="theDomain" transient="false"
+	 * @generated
+	 */
+	ModelFactory getTheModelFactory();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheModelFactory <em>The Model Factory</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Model Factory</em>' container reference.
+	 * @see #getTheModelFactory()
+	 * @generated
+	 */
+	void setTheModelFactory(ModelFactory value);
+
+	/**
+	 * Returns the value of the '<em><b>The Factory Cliente</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.cliente.FactoryCliente#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Factory Cliente</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Factory Cliente</em>' containment reference.
+	 * @see #setTheFactoryCliente(FactoryCliente)
+	 * @see den.domain.DomainPackage#getDomain_TheFactoryCliente()
+	 * @see den.domain.cliente.FactoryCliente#getOwnedByDomain
+	 * @model opposite="ownedByDomain" containment="true"
+	 * @generated
+	 */
+	FactoryCliente getTheFactoryCliente();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheFactoryCliente <em>The Factory Cliente</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Factory Cliente</em>' containment reference.
+	 * @see #getTheFactoryCliente()
+	 * @generated
+	 */
+	void setTheFactoryCliente(FactoryCliente value);
+
+	/**
+	 * Returns the value of the '<em><b>The Factory Denuncias</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.denuncia.FactoryDenuncias#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Factory Denuncias</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Factory Denuncias</em>' containment reference.
+	 * @see #setTheFactoryDenuncias(FactoryDenuncias)
+	 * @see den.domain.DomainPackage#getDomain_TheFactoryDenuncias()
+	 * @see den.domain.denuncia.FactoryDenuncias#getOwnedByDomain
+	 * @model opposite="ownedByDomain" containment="true"
+	 * @generated
+	 */
+	FactoryDenuncias getTheFactoryDenuncias();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheFactoryDenuncias <em>The Factory Denuncias</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Factory Denuncias</em>' containment reference.
+	 * @see #getTheFactoryDenuncias()
+	 * @generated
+	 */
+	void setTheFactoryDenuncias(FactoryDenuncias value);
+
+	/**
+	 * Returns the value of the '<em><b>The Factory Ubicacion</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.ubicacion.FactoryUbicacion#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Factory Ubicacion</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Factory Ubicacion</em>' containment reference.
+	 * @see #setTheFactoryUbicacion(FactoryUbicacion)
+	 * @see den.domain.DomainPackage#getDomain_TheFactoryUbicacion()
+	 * @see den.domain.ubicacion.FactoryUbicacion#getOwnedByDomain
+	 * @model opposite="ownedByDomain" containment="true"
+	 * @generated
+	 */
+	FactoryUbicacion getTheFactoryUbicacion();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheFactoryUbicacion <em>The Factory Ubicacion</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Factory Ubicacion</em>' containment reference.
+	 * @see #getTheFactoryUbicacion()
+	 * @generated
+	 */
+	void setTheFactoryUbicacion(FactoryUbicacion value);
+
+	/**
+	 * Returns the value of the '<em><b>The Ruta</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.Ruta#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Ruta</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Ruta</em>' containment reference.
+	 * @see #setTheRuta(Ruta)
+	 * @see den.domain.DomainPackage#getDomain_TheRuta()
+	 * @see den.domain.transporte.Ruta#getOwnedByDomain
+	 * @model opposite="ownedByDomain" containment="true"
+	 * @generated
+	 */
+	Ruta getTheRuta();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheRuta <em>The Ruta</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Ruta</em>' containment reference.
+	 * @see #getTheRuta()
+	 * @generated
+	 */
+	void setTheRuta(Ruta value);
+
+	/**
+	 * Returns the value of the '<em><b>The Factory Ruta</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.FactoryRuta#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Factory Ruta</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Factory Ruta</em>' containment reference.
+	 * @see #setTheFactoryRuta(FactoryRuta)
+	 * @see den.domain.DomainPackage#getDomain_TheFactoryRuta()
+	 * @see den.domain.transporte.FactoryRuta#getOwnedByDomain
+	 * @model opposite="ownedByDomain" containment="true"
+	 * @generated
+	 */
+	FactoryRuta getTheFactoryRuta();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheFactoryRuta <em>The Factory Ruta</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Factory Ruta</em>' containment reference.
+	 * @see #getTheFactoryRuta()
+	 * @generated
+	 */
+	void setTheFactoryRuta(FactoryRuta value);
+
+	/**
+	 * Returns the value of the '<em><b>The Factory Pedido</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.pedido.FactoryPedido#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Factory Pedido</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Factory Pedido</em>' containment reference.
+	 * @see #setTheFactoryPedido(FactoryPedido)
+	 * @see den.domain.DomainPackage#getDomain_TheFactoryPedido()
+	 * @see den.domain.pedido.FactoryPedido#getOwnedByDomain
+	 * @model opposite="ownedByDomain" containment="true"
+	 * @generated
+	 */
+	FactoryPedido getTheFactoryPedido();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheFactoryPedido <em>The Factory Pedido</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Factory Pedido</em>' containment reference.
+	 * @see #getTheFactoryPedido()
+	 * @generated
+	 */
+	void setTheFactoryPedido(FactoryPedido value);
+
+	/**
+	 * Returns the value of the '<em><b>The Factory Producto</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.producto.FactoryProducto#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Factory Producto</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Factory Producto</em>' containment reference.
+	 * @see #setTheFactoryProducto(FactoryProducto)
+	 * @see den.domain.DomainPackage#getDomain_TheFactoryProducto()
+	 * @see den.domain.producto.FactoryProducto#getOwnedByDomain
+	 * @model opposite="ownedByDomain" containment="true"
+	 * @generated
+	 */
+	FactoryProducto getTheFactoryProducto();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheFactoryProducto <em>The Factory Producto</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Factory Producto</em>' containment reference.
+	 * @see #getTheFactoryProducto()
+	 * @generated
+	 */
+	void setTheFactoryProducto(FactoryProducto value);
+
+	/**
+	 * Returns the value of the '<em><b>The UI</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link den.ui.UI#getTheDomain <em>The Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The UI</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The UI</em>' reference.
+	 * @see #setTheUI(UI)
+	 * @see den.domain.DomainPackage#getDomain_TheUI()
+	 * @see den.ui.UI#getTheDomain
+	 * @model opposite="theDomain"
+	 * @generated
+	 */
+	UI getTheUI();
+
+	/**
+	 * Sets the value of the '{@link den.domain.Domain#getTheUI <em>The UI</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The UI</em>' reference.
+	 * @see #getTheUI()
+	 * @generated
+	 */
+	void setTheUI(UI value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO implementarModelo\n'"
+	 * @generated
+	 */
+	void implementarModelo();
+
+} // Domain

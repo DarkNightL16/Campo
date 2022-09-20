@@ -1,0 +1,373 @@
+/**
+ */
+package den.domain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see den.domain.DomainFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface DomainPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "domain";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http:///den/domain.ecore";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "den.domain";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	DomainPackage eINSTANCE = den.domain.impl.DomainPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link den.domain.impl.DomainImpl <em>Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see den.domain.impl.DomainImpl
+	 * @see den.domain.impl.DomainPackageImpl#getDomain()
+	 * @generated
+	 */
+	int DOMAIN = 0;
+
+	/**
+	 * The feature id for the '<em><b>The Model Factory</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_MODEL_FACTORY = 0;
+
+	/**
+	 * The feature id for the '<em><b>The Factory Cliente</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_FACTORY_CLIENTE = 1;
+
+	/**
+	 * The feature id for the '<em><b>The Factory Denuncias</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_FACTORY_DENUNCIAS = 2;
+
+	/**
+	 * The feature id for the '<em><b>The Factory Ubicacion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_FACTORY_UBICACION = 3;
+
+	/**
+	 * The feature id for the '<em><b>The Ruta</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_RUTA = 4;
+
+	/**
+	 * The feature id for the '<em><b>The Factory Ruta</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_FACTORY_RUTA = 5;
+
+	/**
+	 * The feature id for the '<em><b>The Factory Pedido</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_FACTORY_PEDIDO = 6;
+
+	/**
+	 * The feature id for the '<em><b>The Factory Producto</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_FACTORY_PRODUCTO = 7;
+
+	/**
+	 * The feature id for the '<em><b>The UI</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__THE_UI = 8;
+
+	/**
+	 * The number of structural features of the '<em>Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_FEATURE_COUNT = 9;
+
+
+	/**
+	 * Returns the meta object for class '{@link den.domain.Domain <em>Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Domain</em>'.
+	 * @see den.domain.Domain
+	 * @generated
+	 */
+	EClass getDomain();
+
+	/**
+	 * Returns the meta object for the container reference '{@link den.domain.Domain#getTheModelFactory <em>The Model Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>The Model Factory</em>'.
+	 * @see den.domain.Domain#getTheModelFactory()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheModelFactory();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link den.domain.Domain#getTheFactoryCliente <em>The Factory Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Factory Cliente</em>'.
+	 * @see den.domain.Domain#getTheFactoryCliente()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheFactoryCliente();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link den.domain.Domain#getTheFactoryDenuncias <em>The Factory Denuncias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Factory Denuncias</em>'.
+	 * @see den.domain.Domain#getTheFactoryDenuncias()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheFactoryDenuncias();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link den.domain.Domain#getTheFactoryUbicacion <em>The Factory Ubicacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Factory Ubicacion</em>'.
+	 * @see den.domain.Domain#getTheFactoryUbicacion()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheFactoryUbicacion();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link den.domain.Domain#getTheRuta <em>The Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Ruta</em>'.
+	 * @see den.domain.Domain#getTheRuta()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheRuta();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link den.domain.Domain#getTheFactoryRuta <em>The Factory Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Factory Ruta</em>'.
+	 * @see den.domain.Domain#getTheFactoryRuta()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheFactoryRuta();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link den.domain.Domain#getTheFactoryPedido <em>The Factory Pedido</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Factory Pedido</em>'.
+	 * @see den.domain.Domain#getTheFactoryPedido()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheFactoryPedido();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link den.domain.Domain#getTheFactoryProducto <em>The Factory Producto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Factory Producto</em>'.
+	 * @see den.domain.Domain#getTheFactoryProducto()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheFactoryProducto();
+
+	/**
+	 * Returns the meta object for the reference '{@link den.domain.Domain#getTheUI <em>The UI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>The UI</em>'.
+	 * @see den.domain.Domain#getTheUI()
+	 * @see #getDomain()
+	 * @generated
+	 */
+	EReference getDomain_TheUI();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	DomainFactory getDomainFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link den.domain.impl.DomainImpl <em>Domain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see den.domain.impl.DomainImpl
+		 * @see den.domain.impl.DomainPackageImpl#getDomain()
+		 * @generated
+		 */
+		EClass DOMAIN = eINSTANCE.getDomain();
+
+		/**
+		 * The meta object literal for the '<em><b>The Model Factory</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_MODEL_FACTORY = eINSTANCE.getDomain_TheModelFactory();
+
+		/**
+		 * The meta object literal for the '<em><b>The Factory Cliente</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_FACTORY_CLIENTE = eINSTANCE.getDomain_TheFactoryCliente();
+
+		/**
+		 * The meta object literal for the '<em><b>The Factory Denuncias</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_FACTORY_DENUNCIAS = eINSTANCE.getDomain_TheFactoryDenuncias();
+
+		/**
+		 * The meta object literal for the '<em><b>The Factory Ubicacion</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_FACTORY_UBICACION = eINSTANCE.getDomain_TheFactoryUbicacion();
+
+		/**
+		 * The meta object literal for the '<em><b>The Ruta</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_RUTA = eINSTANCE.getDomain_TheRuta();
+
+		/**
+		 * The meta object literal for the '<em><b>The Factory Ruta</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_FACTORY_RUTA = eINSTANCE.getDomain_TheFactoryRuta();
+
+		/**
+		 * The meta object literal for the '<em><b>The Factory Pedido</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_FACTORY_PEDIDO = eINSTANCE.getDomain_TheFactoryPedido();
+
+		/**
+		 * The meta object literal for the '<em><b>The Factory Producto</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_FACTORY_PRODUCTO = eINSTANCE.getDomain_TheFactoryProducto();
+
+		/**
+		 * The meta object literal for the '<em><b>The UI</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN__THE_UI = eINSTANCE.getDomain_TheUI();
+
+	}
+
+} //DomainPackage

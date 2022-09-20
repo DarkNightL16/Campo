@@ -1,0 +1,249 @@
+/**
+ */
+package den.domain.transporte;
+
+import den.domain.Domain;
+
+import den.domain.ubicacion.Ciudad;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Ruta</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.transporte.Ruta#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.transporte.Ruta#getOwnedByFactoryRuta <em>Owned By Factory Ruta</em>}</li>
+ *   <li>{@link den.domain.transporte.Ruta#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.transporte.Ruta#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.transporte.Ruta#getLstTarifa <em>Lst Tarifa</em>}</li>
+ *   <li>{@link den.domain.transporte.Ruta#getTheCiudadOrigen <em>The Ciudad Origen</em>}</li>
+ *   <li>{@link den.domain.transporte.Ruta#getOwnedByCiudad <em>Owned By Ciudad</em>}</li>
+ *   <li>{@link den.domain.transporte.Ruta#getTheCiudadDestino <em>The Ciudad Destino</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.transporte.TransportePackage#getRuta()
+ * @model
+ * @generated
+ */
+public interface Ruta extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Owned By Domain</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.Domain#getTheRuta <em>The Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Domain</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #setOwnedByDomain(Domain)
+	 * @see den.domain.transporte.TransportePackage#getRuta_OwnedByDomain()
+	 * @see den.domain.Domain#getTheRuta
+	 * @model opposite="theRuta" transient="false"
+	 * @generated
+	 */
+	Domain getOwnedByDomain();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Ruta#getOwnedByDomain <em>Owned By Domain</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #getOwnedByDomain()
+	 * @generated
+	 */
+	void setOwnedByDomain(Domain value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned By Factory Ruta</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.FactoryRuta#getLstRuta <em>Lst Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Factory Ruta</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Factory Ruta</em>' container reference.
+	 * @see #setOwnedByFactoryRuta(FactoryRuta)
+	 * @see den.domain.transporte.TransportePackage#getRuta_OwnedByFactoryRuta()
+	 * @see den.domain.transporte.FactoryRuta#getLstRuta
+	 * @model opposite="lstRuta" transient="false"
+	 * @generated
+	 */
+	FactoryRuta getOwnedByFactoryRuta();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Ruta#getOwnedByFactoryRuta <em>Owned By Factory Ruta</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Factory Ruta</em>' container reference.
+	 * @see #getOwnedByFactoryRuta()
+	 * @generated
+	 */
+	void setOwnedByFactoryRuta(FactoryRuta value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.transporte.TransportePackage#getRuta_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Ruta#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see den.domain.transporte.TransportePackage#getRuta_Nombre()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getNombre();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Ruta#getNombre <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
+	 * @generated
+	 */
+	void setNombre(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Tarifa</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.transporte.Tarifa}.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.Tarifa#getOwnedByRuta <em>Owned By Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Tarifa</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Tarifa</em>' containment reference list.
+	 * @see den.domain.transporte.TransportePackage#getRuta_LstTarifa()
+	 * @see den.domain.transporte.Tarifa#getOwnedByRuta
+	 * @model opposite="ownedByRuta" containment="true"
+	 * @generated
+	 */
+	EList<Tarifa> getLstTarifa();
+
+	/**
+	 * Returns the value of the '<em><b>The Ciudad Origen</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.ubicacion.Ciudad#getLstRutaOrigen <em>Lst Ruta Origen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Ciudad Origen</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Ciudad Origen</em>' reference.
+	 * @see #setTheCiudadOrigen(Ciudad)
+	 * @see den.domain.transporte.TransportePackage#getRuta_TheCiudadOrigen()
+	 * @see den.domain.ubicacion.Ciudad#getLstRutaOrigen
+	 * @model opposite="lstRutaOrigen"
+	 * @generated
+	 */
+	Ciudad getTheCiudadOrigen();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Ruta#getTheCiudadOrigen <em>The Ciudad Origen</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Ciudad Origen</em>' reference.
+	 * @see #getTheCiudadOrigen()
+	 * @generated
+	 */
+	void setTheCiudadOrigen(Ciudad value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned By Ciudad</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.ubicacion.Ciudad#getLstRuta <em>Lst Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Ciudad</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Ciudad</em>' container reference.
+	 * @see #setOwnedByCiudad(Ciudad)
+	 * @see den.domain.transporte.TransportePackage#getRuta_OwnedByCiudad()
+	 * @see den.domain.ubicacion.Ciudad#getLstRuta
+	 * @model opposite="lstRuta" transient="false"
+	 * @generated
+	 */
+	Ciudad getOwnedByCiudad();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Ruta#getOwnedByCiudad <em>Owned By Ciudad</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Ciudad</em>' container reference.
+	 * @see #getOwnedByCiudad()
+	 * @generated
+	 */
+	void setOwnedByCiudad(Ciudad value);
+
+	/**
+	 * Returns the value of the '<em><b>The Ciudad Destino</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.ubicacion.Ciudad#getLstRutaDestino <em>Lst Ruta Destino</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Ciudad Destino</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Ciudad Destino</em>' reference.
+	 * @see #setTheCiudadDestino(Ciudad)
+	 * @see den.domain.transporte.TransportePackage#getRuta_TheCiudadDestino()
+	 * @see den.domain.ubicacion.Ciudad#getLstRutaDestino
+	 * @model opposite="lstRutaDestino"
+	 * @generated
+	 */
+	Ciudad getTheCiudadDestino();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Ruta#getTheCiudadDestino <em>The Ciudad Destino</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Ciudad Destino</em>' reference.
+	 * @see #getTheCiudadDestino()
+	 * @generated
+	 */
+	void setTheCiudadDestino(Ciudad value);
+
+} // Ruta

@@ -1,0 +1,444 @@
+/**
+ */
+package den.domain.ubicacion.impl;
+
+import den.domain.transporte.Ruta;
+import den.domain.transporte.TransportePackage;
+
+import den.domain.ubicacion.Ciudad;
+import den.domain.ubicacion.Departamento;
+import den.domain.ubicacion.UbicacionPackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Ciudad</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.ubicacion.impl.CiudadImpl#getLstRutaOrigen <em>Lst Ruta Origen</em>}</li>
+ *   <li>{@link den.domain.ubicacion.impl.CiudadImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.ubicacion.impl.CiudadImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.ubicacion.impl.CiudadImpl#getLstRuta <em>Lst Ruta</em>}</li>
+ *   <li>{@link den.domain.ubicacion.impl.CiudadImpl#getLstRutaDestino <em>Lst Ruta Destino</em>}</li>
+ *   <li>{@link den.domain.ubicacion.impl.CiudadImpl#getOwnedByDepartamento <em>Owned By Departamento</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class CiudadImpl extends EObjectImpl implements Ciudad {
+	/**
+	 * The cached value of the '{@link #getLstRutaOrigen() <em>Lst Ruta Origen</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstRutaOrigen()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Ruta> lstRutaOrigen;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLstRuta() <em>Lst Ruta</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Ruta> lstRuta;
+
+	/**
+	 * The cached value of the '{@link #getLstRutaDestino() <em>Lst Ruta Destino</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstRutaDestino()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Ruta> lstRutaDestino;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CiudadImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return UbicacionPackage.Literals.CIUDAD;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Ruta> getLstRutaOrigen() {
+		if (lstRutaOrigen == null) {
+			lstRutaOrigen = new EObjectWithInverseResolvingEList<Ruta>(Ruta.class, this, UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN, TransportePackage.RUTA__THE_CIUDAD_ORIGEN);
+		}
+		return lstRutaOrigen;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UbicacionPackage.CIUDAD__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UbicacionPackage.CIUDAD__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Ruta> getLstRuta() {
+		if (lstRuta == null) {
+			lstRuta = new EObjectContainmentWithInverseEList<Ruta>(Ruta.class, this, UbicacionPackage.CIUDAD__LST_RUTA, TransportePackage.RUTA__OWNED_BY_CIUDAD);
+		}
+		return lstRuta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Ruta> getLstRutaDestino() {
+		if (lstRutaDestino == null) {
+			lstRutaDestino = new EObjectWithInverseResolvingEList<Ruta>(Ruta.class, this, UbicacionPackage.CIUDAD__LST_RUTA_DESTINO, TransportePackage.RUTA__THE_CIUDAD_DESTINO);
+		}
+		return lstRutaDestino;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Departamento getOwnedByDepartamento() {
+		if (eContainerFeatureID() != UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO) return null;
+		return (Departamento)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByDepartamento(Departamento newOwnedByDepartamento, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByDepartamento, UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByDepartamento(Departamento newOwnedByDepartamento) {
+		if (newOwnedByDepartamento != eInternalContainer() || (eContainerFeatureID() != UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO && newOwnedByDepartamento != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByDepartamento))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByDepartamento != null)
+				msgs = ((InternalEObject)newOwnedByDepartamento).eInverseAdd(this, UbicacionPackage.DEPARTAMENTO__LST_CIUDAD, Departamento.class, msgs);
+			msgs = basicSetOwnedByDepartamento(newOwnedByDepartamento, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO, newOwnedByDepartamento, newOwnedByDepartamento));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstRutaOrigen()).basicAdd(otherEnd, msgs);
+			case UbicacionPackage.CIUDAD__LST_RUTA:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstRuta()).basicAdd(otherEnd, msgs);
+			case UbicacionPackage.CIUDAD__LST_RUTA_DESTINO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstRutaDestino()).basicAdd(otherEnd, msgs);
+			case UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByDepartamento((Departamento)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN:
+				return ((InternalEList<?>)getLstRutaOrigen()).basicRemove(otherEnd, msgs);
+			case UbicacionPackage.CIUDAD__LST_RUTA:
+				return ((InternalEList<?>)getLstRuta()).basicRemove(otherEnd, msgs);
+			case UbicacionPackage.CIUDAD__LST_RUTA_DESTINO:
+				return ((InternalEList<?>)getLstRutaDestino()).basicRemove(otherEnd, msgs);
+			case UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO:
+				return basicSetOwnedByDepartamento(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO:
+				return eInternalContainer().eInverseRemove(this, UbicacionPackage.DEPARTAMENTO__LST_CIUDAD, Departamento.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN:
+				return getLstRutaOrigen();
+			case UbicacionPackage.CIUDAD__ID:
+				return getId();
+			case UbicacionPackage.CIUDAD__NOMBRE:
+				return getNombre();
+			case UbicacionPackage.CIUDAD__LST_RUTA:
+				return getLstRuta();
+			case UbicacionPackage.CIUDAD__LST_RUTA_DESTINO:
+				return getLstRutaDestino();
+			case UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO:
+				return getOwnedByDepartamento();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN:
+				getLstRutaOrigen().clear();
+				getLstRutaOrigen().addAll((Collection<? extends Ruta>)newValue);
+				return;
+			case UbicacionPackage.CIUDAD__ID:
+				setId((String)newValue);
+				return;
+			case UbicacionPackage.CIUDAD__NOMBRE:
+				setNombre((String)newValue);
+				return;
+			case UbicacionPackage.CIUDAD__LST_RUTA:
+				getLstRuta().clear();
+				getLstRuta().addAll((Collection<? extends Ruta>)newValue);
+				return;
+			case UbicacionPackage.CIUDAD__LST_RUTA_DESTINO:
+				getLstRutaDestino().clear();
+				getLstRutaDestino().addAll((Collection<? extends Ruta>)newValue);
+				return;
+			case UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO:
+				setOwnedByDepartamento((Departamento)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN:
+				getLstRutaOrigen().clear();
+				return;
+			case UbicacionPackage.CIUDAD__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case UbicacionPackage.CIUDAD__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case UbicacionPackage.CIUDAD__LST_RUTA:
+				getLstRuta().clear();
+				return;
+			case UbicacionPackage.CIUDAD__LST_RUTA_DESTINO:
+				getLstRutaDestino().clear();
+				return;
+			case UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO:
+				setOwnedByDepartamento((Departamento)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case UbicacionPackage.CIUDAD__LST_RUTA_ORIGEN:
+				return lstRutaOrigen != null && !lstRutaOrigen.isEmpty();
+			case UbicacionPackage.CIUDAD__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case UbicacionPackage.CIUDAD__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case UbicacionPackage.CIUDAD__LST_RUTA:
+				return lstRuta != null && !lstRuta.isEmpty();
+			case UbicacionPackage.CIUDAD__LST_RUTA_DESTINO:
+				return lstRutaDestino != null && !lstRutaDestino.isEmpty();
+			case UbicacionPackage.CIUDAD__OWNED_BY_DEPARTAMENTO:
+				return getOwnedByDepartamento() != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", nombre: ");
+		result.append(nombre);
+		result.append(')');
+		return result.toString();
+	}
+
+} //CiudadImpl

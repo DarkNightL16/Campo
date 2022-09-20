@@ -1,0 +1,165 @@
+/**
+ */
+package den.domain.transporte;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Tramo</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.transporte.Tramo#getOwnedByTarifaOrigen <em>Owned By Tarifa Origen</em>}</li>
+ *   <li>{@link den.domain.transporte.Tramo#getOwnedByTarifaDestino <em>Owned By Tarifa Destino</em>}</li>
+ *   <li>{@link den.domain.transporte.Tramo#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.transporte.Tramo#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.transporte.Tramo#getPrecio <em>Precio</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.transporte.TransportePackage#getTramo()
+ * @model
+ * @generated
+ */
+public interface Tramo extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Owned By Tarifa Origen</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.Tarifa#getLstTramoOrigen <em>Lst Tramo Origen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Tarifa Origen</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Tarifa Origen</em>' container reference.
+	 * @see #setOwnedByTarifaOrigen(Tarifa)
+	 * @see den.domain.transporte.TransportePackage#getTramo_OwnedByTarifaOrigen()
+	 * @see den.domain.transporte.Tarifa#getLstTramoOrigen
+	 * @model opposite="lstTramoOrigen" transient="false"
+	 * @generated
+	 */
+	Tarifa getOwnedByTarifaOrigen();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Tramo#getOwnedByTarifaOrigen <em>Owned By Tarifa Origen</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Tarifa Origen</em>' container reference.
+	 * @see #getOwnedByTarifaOrigen()
+	 * @generated
+	 */
+	void setOwnedByTarifaOrigen(Tarifa value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned By Tarifa Destino</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.Tarifa#getLstTramoDestino <em>Lst Tramo Destino</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Tarifa Destino</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Tarifa Destino</em>' container reference.
+	 * @see #setOwnedByTarifaDestino(Tarifa)
+	 * @see den.domain.transporte.TransportePackage#getTramo_OwnedByTarifaDestino()
+	 * @see den.domain.transporte.Tarifa#getLstTramoDestino
+	 * @model opposite="lstTramoDestino" transient="false"
+	 * @generated
+	 */
+	Tarifa getOwnedByTarifaDestino();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Tramo#getOwnedByTarifaDestino <em>Owned By Tarifa Destino</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Tarifa Destino</em>' container reference.
+	 * @see #getOwnedByTarifaDestino()
+	 * @generated
+	 */
+	void setOwnedByTarifaDestino(Tarifa value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.transporte.TransportePackage#getTramo_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Tramo#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see den.domain.transporte.TransportePackage#getTramo_Nombre()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getNombre();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Tramo#getNombre <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
+	 * @generated
+	 */
+	void setNombre(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Precio</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Precio</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Precio</em>' attribute.
+	 * @see #setPrecio(String)
+	 * @see den.domain.transporte.TransportePackage#getTramo_Precio()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getPrecio();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Tramo#getPrecio <em>Precio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Precio</em>' attribute.
+	 * @see #getPrecio()
+	 * @generated
+	 */
+	void setPrecio(String value);
+
+} // Tramo

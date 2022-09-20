@@ -1,0 +1,195 @@
+/**
+ */
+package den.domain.pedido;
+
+import den.domain.producto.Producto;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Detalle Pedido</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.pedido.DetallePedido#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.pedido.DetallePedido#getCantidad <em>Cantidad</em>}</li>
+ *   <li>{@link den.domain.pedido.DetallePedido#getValor <em>Valor</em>}</li>
+ *   <li>{@link den.domain.pedido.DetallePedido#getIva <em>Iva</em>}</li>
+ *   <li>{@link den.domain.pedido.DetallePedido#getTheProducto <em>The Producto</em>}</li>
+ *   <li>{@link den.domain.pedido.DetallePedido#getOwnedByPedido <em>Owned By Pedido</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.pedido.PedidoPackage#getDetallePedido()
+ * @model
+ * @generated
+ */
+public interface DetallePedido extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.pedido.PedidoPackage#getDetallePedido_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.pedido.DetallePedido#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Cantidad</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cantidad</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cantidad</em>' attribute.
+	 * @see #setCantidad(String)
+	 * @see den.domain.pedido.PedidoPackage#getDetallePedido_Cantidad()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getCantidad();
+
+	/**
+	 * Sets the value of the '{@link den.domain.pedido.DetallePedido#getCantidad <em>Cantidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cantidad</em>' attribute.
+	 * @see #getCantidad()
+	 * @generated
+	 */
+	void setCantidad(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Valor</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Valor</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Valor</em>' attribute.
+	 * @see #setValor(String)
+	 * @see den.domain.pedido.PedidoPackage#getDetallePedido_Valor()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getValor();
+
+	/**
+	 * Sets the value of the '{@link den.domain.pedido.DetallePedido#getValor <em>Valor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Valor</em>' attribute.
+	 * @see #getValor()
+	 * @generated
+	 */
+	void setValor(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Iva</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Iva</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Iva</em>' attribute.
+	 * @see #setIva(String)
+	 * @see den.domain.pedido.PedidoPackage#getDetallePedido_Iva()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getIva();
+
+	/**
+	 * Sets the value of the '{@link den.domain.pedido.DetallePedido#getIva <em>Iva</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Iva</em>' attribute.
+	 * @see #getIva()
+	 * @generated
+	 */
+	void setIva(String value);
+
+	/**
+	 * Returns the value of the '<em><b>The Producto</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.producto.Producto#getLstDetallePedido <em>Lst Detalle Pedido</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Producto</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Producto</em>' reference.
+	 * @see #setTheProducto(Producto)
+	 * @see den.domain.pedido.PedidoPackage#getDetallePedido_TheProducto()
+	 * @see den.domain.producto.Producto#getLstDetallePedido
+	 * @model opposite="lstDetallePedido"
+	 * @generated
+	 */
+	Producto getTheProducto();
+
+	/**
+	 * Sets the value of the '{@link den.domain.pedido.DetallePedido#getTheProducto <em>The Producto</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Producto</em>' reference.
+	 * @see #getTheProducto()
+	 * @generated
+	 */
+	void setTheProducto(Producto value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned By Pedido</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.pedido.Pedido#getLstDetallePedido <em>Lst Detalle Pedido</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Pedido</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Pedido</em>' container reference.
+	 * @see #setOwnedByPedido(Pedido)
+	 * @see den.domain.pedido.PedidoPackage#getDetallePedido_OwnedByPedido()
+	 * @see den.domain.pedido.Pedido#getLstDetallePedido
+	 * @model opposite="lstDetallePedido" transient="false"
+	 * @generated
+	 */
+	Pedido getOwnedByPedido();
+
+	/**
+	 * Sets the value of the '{@link den.domain.pedido.DetallePedido#getOwnedByPedido <em>Owned By Pedido</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Pedido</em>' container reference.
+	 * @see #getOwnedByPedido()
+	 * @generated
+	 */
+	void setOwnedByPedido(Pedido value);
+
+} // DetallePedido

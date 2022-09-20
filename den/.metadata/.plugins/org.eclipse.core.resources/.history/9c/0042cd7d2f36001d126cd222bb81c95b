@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den.ecore"
+            class="den.denPackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den/domain.ecore"
+            class="den.domain.DomainPackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den/domain/cliente.ecore"
+            class="den.domain.cliente.ClientePackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den/domain/denuncia.ecore"
+            class="den.domain.denuncia.DenunciaPackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den/domain/transporte.ecore"
+            class="den.domain.transporte.TransportePackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den/domain/ubicacion.ecore"
+            class="den.domain.ubicacion.UbicacionPackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den/domain/pedido.ecore"
+            class="den.domain.pedido.PedidoPackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den/domain/producto.ecore"
+            class="den.domain.producto.ProductoPackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated den -->
+      <package
+            uri="http:///den/ui.ecore"
+            class="den.ui.UiPackage"
+            genModel="model/den.genmodel"/>
+   </extension>
+</plugin>

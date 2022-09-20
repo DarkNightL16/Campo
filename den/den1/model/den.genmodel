@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/den/src" modelPluginID="den" modelName="Model" complianceLevel="6.0" copyrightFields="false" editPluginID="den.edit" editorPluginID="den.editor">
+  <foreignModel>den.ecore</foreignModel>
+  <genPackages prefix="den" disposableProviderFactory="true">
+    <ecorePackage href="den.ecore#/"/>
+    <genDataTypes>
+      <ecoreDataType href="den.ecore#//String"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="den.ecore#//EBooleanObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="den.ecore#//EDoubleObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="den.ecore#//EIntegerObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="den.ecore#//EList"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="den.ecore#//EChar"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="den.ecore#//ArrayList"/>
+    </genDataTypes>
+    <genClasses>
+      <ecoreClass href="den.ecore#//ModelFactory"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//ModelFactory/theDomain"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//ModelFactory/theUI"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="den.ecore#//ModelFactory/cargar"/>
+        <genParameters>
+          <ecoreParameter href="den.ecore#//ModelFactory/cargar/ruta"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="den.ecore#//ModelFactory/salvar"/>
+        <genParameters>
+          <ecoreParameter href="den.ecore#//ModelFactory/salvar/ruta"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="den.ecore#//ModelFactory/implementarModelo"/>
+      </genOperations>
+    </genClasses>
+    <nestedGenPackages prefix="Domain" disposableProviderFactory="true">
+      <ecorePackage href="den.ecore#//domain"/>
+      <genClasses>
+        <ecoreClass href="den.ecore#//domain/Domain"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theModelFactory"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theFactoryCliente"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theFactoryDenuncias"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theFactoryUbicacion"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theRuta"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theFactoryRuta"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theFactoryPedido"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theFactoryProducto"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/Domain/theUI"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="den.ecore#//domain/Domain/implementarModelo"/>
+        </genOperations>
+      </genClasses>
+      <nestedGenPackages prefix="Cliente" disposableProviderFactory="true">
+        <ecorePackage href="den.ecore#//domain/cliente"/>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/cliente/Persona"/>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Persona/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Persona/nombre"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Persona/cedula"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Persona/direccion"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Persona/telefono"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Persona/edad"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Persona/fechaNacimeinto"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Persona/genero"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/Persona/lstDenuncia"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/Persona/lstPedido"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/Persona/ownedByFactoryCliente"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/Persona/theRol"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/cliente/FactoryCliente"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/FactoryCliente/ownedByDomain"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/FactoryCliente/idClientes"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/FactoryCliente/lstPersona"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/FactoryCliente/lstRol"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/cliente/Rol"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/Rol/ownedByFactoryCliente"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Rol/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Rol/nombre"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/cliente/Rol/descripcion"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/cliente/Rol/lstPersona"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Denuncia" disposableProviderFactory="true">
+        <ecorePackage href="den.ecore#//domain/denuncia"/>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/denuncia/Denuncia"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/denuncia/Denuncia/theCliente"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/denuncia/Denuncia/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/denuncia/Denuncia/fecha"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/denuncia/Denuncia/motivo"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/denuncia/Denuncia/descripcion"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/denuncia/Denuncia/lugar"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/denuncia/Denuncia/dano"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/denuncia/Denuncia/lugarDenuncia"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/denuncia/Denuncia/ownedByFactoryDenuncias"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/denuncia/FactoryDenuncias"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/denuncia/FactoryDenuncias/ownedByDomain"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/denuncia/FactoryDenuncias/id"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/denuncia/FactoryDenuncias/lstDenuncia"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Transporte" disposableProviderFactory="true">
+        <ecorePackage href="den.ecore#//domain/transporte"/>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/transporte/FactoryRuta"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/FactoryRuta/ownedByDomain"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/transporte/FactoryRuta/id"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/FactoryRuta/lstRuta"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/transporte/Ruta"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Ruta/ownedByDomain"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Ruta/ownedByFactoryRuta"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/transporte/Ruta/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/transporte/Ruta/nombre"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Ruta/lstTarifa"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Ruta/theCiudadOrigen"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Ruta/ownedByCiudad"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Ruta/theCiudadDestino"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/transporte/Tarifa"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Tarifa/ownedByRuta"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/transporte/Tarifa/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/transporte/Tarifa/precio"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Tarifa/lstTramoOrigen"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Tarifa/lstTramoDestino"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/transporte/Tramo"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Tramo/ownedByTarifaOrigen"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/transporte/Tramo/ownedByTarifaDestino"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/transporte/Tramo/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/transporte/Tramo/nombre"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/transporte/Tramo/precio"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Ubicacion" disposableProviderFactory="true">
+        <ecorePackage href="den.ecore#//domain/ubicacion"/>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/ubicacion/Ciudad"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/Ciudad/lstRutaOrigen"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/ubicacion/Ciudad/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/ubicacion/Ciudad/nombre"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/Ciudad/lstRuta"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/Ciudad/lstRutaDestino"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/Ciudad/ownedByDepartamento"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/ubicacion/Departamento"/>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/ubicacion/Departamento/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/ubicacion/Departamento/nombre"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/Departamento/lstCiudad"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/Departamento/ownedByPais"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/ubicacion/FactoryUbicacion"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/FactoryUbicacion/ownedByDomain"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/ubicacion/FactoryUbicacion/id"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/FactoryUbicacion/lstPais"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/ubicacion/Pais"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/Pais/ownedByFactoryUbicacion"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/ubicacion/Pais/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/ubicacion/Pais/nombre"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/ubicacion/Pais/lstDepartamento"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Pedido" disposableProviderFactory="true">
+        <ecorePackage href="den.ecore#//domain/pedido"/>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/pedido/DetallePedido"/>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/DetallePedido/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/DetallePedido/cantidad"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/DetallePedido/valor"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/DetallePedido/iva"/>
+          </genFeatures>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/pedido/DetallePedido/theProducto"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/pedido/DetallePedido/ownedByPedido"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/pedido/FactoryPedido"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/pedido/FactoryPedido/ownedByDomain"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/FactoryPedido/id"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/pedido/FactoryPedido/lstPedido"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/pedido/Pedido"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/pedido/Pedido/theCliente"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/pedido/Pedido/ownedByFactoryPedido"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/Pedido/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/Pedido/fecha"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/Pedido/total"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/Pedido/subtotal"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/Pedido/iva"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/pedido/Pedido/descuento"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/pedido/Pedido/lstDetallePedido"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Producto" disposableProviderFactory="true">
+        <ecorePackage href="den.ecore#//domain/producto"/>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/producto/FactoryProducto"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/producto/FactoryProducto/ownedByDomain"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/producto/FactoryProducto/id"/>
+          </genFeatures>
+          <genFeatures property="None" children="true" createChild="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/producto/FactoryProducto/lstProducto"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="den.ecore#//domain/producto/Producto"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/producto/Producto/lstDetallePedido"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//domain/producto/Producto/ownedByFactoryProducto"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/producto/Producto/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/producto/Producto/nombre"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/producto/Producto/precio"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/producto/Producto/fecha"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="den.ecore#//domain/producto/Producto/cod"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Ui" disposableProviderFactory="true">
+      <ecorePackage href="den.ecore#//ui"/>
+      <genClasses>
+        <ecoreClass href="den.ecore#//ui/UI"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//ui/UI/theModelFactory"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="den.ecore#//ui/UI/theDomain"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="den.ecore#//ui/UI/implementarModelo"/>
+        </genOperations>
+      </genClasses>
+      <nestedGenPackages prefix="Viewmodels" disposableProviderFactory="true">
+        <ecorePackage href="den.ecore#//ui/viewmodels"/>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

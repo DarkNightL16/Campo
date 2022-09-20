@@ -1,0 +1,517 @@
+/**
+ */
+package den.domain.pedido.impl;
+
+import den.domain.pedido.DetallePedido;
+import den.domain.pedido.Pedido;
+import den.domain.pedido.PedidoPackage;
+
+import den.domain.producto.Producto;
+import den.domain.producto.ProductoPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Detalle Pedido</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.pedido.impl.DetallePedidoImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.DetallePedidoImpl#getCantidad <em>Cantidad</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.DetallePedidoImpl#getValor <em>Valor</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.DetallePedidoImpl#getIva <em>Iva</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.DetallePedidoImpl#getTheProducto <em>The Producto</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.DetallePedidoImpl#getOwnedByPedido <em>Owned By Pedido</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class DetallePedidoImpl extends EObjectImpl implements DetallePedido {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCantidad() <em>Cantidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCantidad()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CANTIDAD_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getCantidad() <em>Cantidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCantidad()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cantidad = CANTIDAD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String VALOR_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getValor() <em>Valor</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValor()
+	 * @generated
+	 * @ordered
+	 */
+	protected String valor = VALOR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIva() <em>Iva</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIva()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IVA_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getIva() <em>Iva</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIva()
+	 * @generated
+	 * @ordered
+	 */
+	protected String iva = IVA_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTheProducto() <em>The Producto</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheProducto()
+	 * @generated
+	 * @ordered
+	 */
+	protected Producto theProducto;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DetallePedidoImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PedidoPackage.Literals.DETALLE_PEDIDO;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.DETALLE_PEDIDO__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCantidad() {
+		return cantidad;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCantidad(String newCantidad) {
+		String oldCantidad = cantidad;
+		cantidad = newCantidad;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.DETALLE_PEDIDO__CANTIDAD, oldCantidad, cantidad));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getValor() {
+		return valor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValor(String newValor) {
+		String oldValor = valor;
+		valor = newValor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.DETALLE_PEDIDO__VALOR, oldValor, valor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getIva() {
+		return iva;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIva(String newIva) {
+		String oldIva = iva;
+		iva = newIva;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.DETALLE_PEDIDO__IVA, oldIva, iva));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Producto getTheProducto() {
+		if (theProducto != null && theProducto.eIsProxy()) {
+			InternalEObject oldTheProducto = (InternalEObject)theProducto;
+			theProducto = (Producto)eResolveProxy(oldTheProducto);
+			if (theProducto != oldTheProducto) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO, oldTheProducto, theProducto));
+			}
+		}
+		return theProducto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Producto basicGetTheProducto() {
+		return theProducto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheProducto(Producto newTheProducto, NotificationChain msgs) {
+		Producto oldTheProducto = theProducto;
+		theProducto = newTheProducto;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO, oldTheProducto, newTheProducto);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheProducto(Producto newTheProducto) {
+		if (newTheProducto != theProducto) {
+			NotificationChain msgs = null;
+			if (theProducto != null)
+				msgs = ((InternalEObject)theProducto).eInverseRemove(this, ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO, Producto.class, msgs);
+			if (newTheProducto != null)
+				msgs = ((InternalEObject)newTheProducto).eInverseAdd(this, ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO, Producto.class, msgs);
+			msgs = basicSetTheProducto(newTheProducto, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO, newTheProducto, newTheProducto));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pedido getOwnedByPedido() {
+		if (eContainerFeatureID() != PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO) return null;
+		return (Pedido)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByPedido(Pedido newOwnedByPedido, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByPedido, PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByPedido(Pedido newOwnedByPedido) {
+		if (newOwnedByPedido != eInternalContainer() || (eContainerFeatureID() != PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO && newOwnedByPedido != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByPedido))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByPedido != null)
+				msgs = ((InternalEObject)newOwnedByPedido).eInverseAdd(this, PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO, Pedido.class, msgs);
+			msgs = basicSetOwnedByPedido(newOwnedByPedido, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO, newOwnedByPedido, newOwnedByPedido));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO:
+				if (theProducto != null)
+					msgs = ((InternalEObject)theProducto).eInverseRemove(this, ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO, Producto.class, msgs);
+				return basicSetTheProducto((Producto)otherEnd, msgs);
+			case PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByPedido((Pedido)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO:
+				return basicSetTheProducto(null, msgs);
+			case PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO:
+				return basicSetOwnedByPedido(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO:
+				return eInternalContainer().eInverseRemove(this, PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO, Pedido.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PedidoPackage.DETALLE_PEDIDO__ID:
+				return getId();
+			case PedidoPackage.DETALLE_PEDIDO__CANTIDAD:
+				return getCantidad();
+			case PedidoPackage.DETALLE_PEDIDO__VALOR:
+				return getValor();
+			case PedidoPackage.DETALLE_PEDIDO__IVA:
+				return getIva();
+			case PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO:
+				if (resolve) return getTheProducto();
+				return basicGetTheProducto();
+			case PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO:
+				return getOwnedByPedido();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PedidoPackage.DETALLE_PEDIDO__ID:
+				setId((String)newValue);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__CANTIDAD:
+				setCantidad((String)newValue);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__VALOR:
+				setValor((String)newValue);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__IVA:
+				setIva((String)newValue);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO:
+				setTheProducto((Producto)newValue);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO:
+				setOwnedByPedido((Pedido)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PedidoPackage.DETALLE_PEDIDO__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__CANTIDAD:
+				setCantidad(CANTIDAD_EDEFAULT);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__VALOR:
+				setValor(VALOR_EDEFAULT);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__IVA:
+				setIva(IVA_EDEFAULT);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO:
+				setTheProducto((Producto)null);
+				return;
+			case PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO:
+				setOwnedByPedido((Pedido)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PedidoPackage.DETALLE_PEDIDO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case PedidoPackage.DETALLE_PEDIDO__CANTIDAD:
+				return CANTIDAD_EDEFAULT == null ? cantidad != null : !CANTIDAD_EDEFAULT.equals(cantidad);
+			case PedidoPackage.DETALLE_PEDIDO__VALOR:
+				return VALOR_EDEFAULT == null ? valor != null : !VALOR_EDEFAULT.equals(valor);
+			case PedidoPackage.DETALLE_PEDIDO__IVA:
+				return IVA_EDEFAULT == null ? iva != null : !IVA_EDEFAULT.equals(iva);
+			case PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO:
+				return theProducto != null;
+			case PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO:
+				return getOwnedByPedido() != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", cantidad: ");
+		result.append(cantidad);
+		result.append(", valor: ");
+		result.append(valor);
+		result.append(", iva: ");
+		result.append(iva);
+		result.append(')');
+		return result.toString();
+	}
+
+} //DetallePedidoImpl

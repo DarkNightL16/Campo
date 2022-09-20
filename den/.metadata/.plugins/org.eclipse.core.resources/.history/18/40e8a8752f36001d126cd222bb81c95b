@@ -1,0 +1,672 @@
+/**
+ */
+package den.domain.pedido.impl;
+
+import den.domain.cliente.ClientePackage;
+import den.domain.cliente.Persona;
+
+import den.domain.pedido.DetallePedido;
+import den.domain.pedido.FactoryPedido;
+import den.domain.pedido.Pedido;
+import den.domain.pedido.PedidoPackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Pedido</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getTheCliente <em>The Cliente</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getOwnedByFactoryPedido <em>Owned By Factory Pedido</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getFecha <em>Fecha</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getTotal <em>Total</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getSubtotal <em>Subtotal</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getIva <em>Iva</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getDescuento <em>Descuento</em>}</li>
+ *   <li>{@link den.domain.pedido.impl.PedidoImpl#getLstDetallePedido <em>Lst Detalle Pedido</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class PedidoImpl extends EObjectImpl implements Pedido {
+	/**
+	 * The cached value of the '{@link #getTheCliente() <em>The Cliente</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheCliente()
+	 * @generated
+	 * @ordered
+	 */
+	protected Persona theCliente;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFecha() <em>Fecha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFecha()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FECHA_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getFecha() <em>Fecha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFecha()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fecha = FECHA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTotal() <em>Total</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TOTAL_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getTotal() <em>Total</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotal()
+	 * @generated
+	 * @ordered
+	 */
+	protected String total = TOTAL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSubtotal() <em>Subtotal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubtotal()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SUBTOTAL_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getSubtotal() <em>Subtotal</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubtotal()
+	 * @generated
+	 * @ordered
+	 */
+	protected String subtotal = SUBTOTAL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIva() <em>Iva</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIva()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String IVA_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getIva() <em>Iva</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIva()
+	 * @generated
+	 * @ordered
+	 */
+	protected String iva = IVA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescuento() <em>Descuento</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescuento()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCUENTO_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getDescuento() <em>Descuento</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescuento()
+	 * @generated
+	 * @ordered
+	 */
+	protected String descuento = DESCUENTO_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLstDetallePedido() <em>Lst Detalle Pedido</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstDetallePedido()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DetallePedido> lstDetallePedido;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PedidoImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return PedidoPackage.Literals.PEDIDO;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Persona getTheCliente() {
+		if (theCliente != null && theCliente.eIsProxy()) {
+			InternalEObject oldTheCliente = (InternalEObject)theCliente;
+			theCliente = (Persona)eResolveProxy(oldTheCliente);
+			if (theCliente != oldTheCliente) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PedidoPackage.PEDIDO__THE_CLIENTE, oldTheCliente, theCliente));
+			}
+		}
+		return theCliente;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Persona basicGetTheCliente() {
+		return theCliente;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheCliente(Persona newTheCliente, NotificationChain msgs) {
+		Persona oldTheCliente = theCliente;
+		theCliente = newTheCliente;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__THE_CLIENTE, oldTheCliente, newTheCliente);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheCliente(Persona newTheCliente) {
+		if (newTheCliente != theCliente) {
+			NotificationChain msgs = null;
+			if (theCliente != null)
+				msgs = ((InternalEObject)theCliente).eInverseRemove(this, ClientePackage.PERSONA__LST_PEDIDO, Persona.class, msgs);
+			if (newTheCliente != null)
+				msgs = ((InternalEObject)newTheCliente).eInverseAdd(this, ClientePackage.PERSONA__LST_PEDIDO, Persona.class, msgs);
+			msgs = basicSetTheCliente(newTheCliente, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__THE_CLIENTE, newTheCliente, newTheCliente));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryPedido getOwnedByFactoryPedido() {
+		if (eContainerFeatureID() != PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO) return null;
+		return (FactoryPedido)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByFactoryPedido(FactoryPedido newOwnedByFactoryPedido, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByFactoryPedido, PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByFactoryPedido(FactoryPedido newOwnedByFactoryPedido) {
+		if (newOwnedByFactoryPedido != eInternalContainer() || (eContainerFeatureID() != PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO && newOwnedByFactoryPedido != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByFactoryPedido))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByFactoryPedido != null)
+				msgs = ((InternalEObject)newOwnedByFactoryPedido).eInverseAdd(this, PedidoPackage.FACTORY_PEDIDO__LST_PEDIDO, FactoryPedido.class, msgs);
+			msgs = basicSetOwnedByFactoryPedido(newOwnedByFactoryPedido, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO, newOwnedByFactoryPedido, newOwnedByFactoryPedido));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFecha() {
+		return fecha;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFecha(String newFecha) {
+		String oldFecha = fecha;
+		fecha = newFecha;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__FECHA, oldFecha, fecha));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTotal() {
+		return total;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTotal(String newTotal) {
+		String oldTotal = total;
+		total = newTotal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__TOTAL, oldTotal, total));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getSubtotal() {
+		return subtotal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSubtotal(String newSubtotal) {
+		String oldSubtotal = subtotal;
+		subtotal = newSubtotal;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__SUBTOTAL, oldSubtotal, subtotal));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getIva() {
+		return iva;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIva(String newIva) {
+		String oldIva = iva;
+		iva = newIva;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__IVA, oldIva, iva));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescuento() {
+		return descuento;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescuento(String newDescuento) {
+		String oldDescuento = descuento;
+		descuento = newDescuento;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PedidoPackage.PEDIDO__DESCUENTO, oldDescuento, descuento));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DetallePedido> getLstDetallePedido() {
+		if (lstDetallePedido == null) {
+			lstDetallePedido = new EObjectContainmentWithInverseEList<DetallePedido>(DetallePedido.class, this, PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO, PedidoPackage.DETALLE_PEDIDO__OWNED_BY_PEDIDO);
+		}
+		return lstDetallePedido;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PedidoPackage.PEDIDO__THE_CLIENTE:
+				if (theCliente != null)
+					msgs = ((InternalEObject)theCliente).eInverseRemove(this, ClientePackage.PERSONA__LST_PEDIDO, Persona.class, msgs);
+				return basicSetTheCliente((Persona)otherEnd, msgs);
+			case PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByFactoryPedido((FactoryPedido)otherEnd, msgs);
+			case PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstDetallePedido()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case PedidoPackage.PEDIDO__THE_CLIENTE:
+				return basicSetTheCliente(null, msgs);
+			case PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO:
+				return basicSetOwnedByFactoryPedido(null, msgs);
+			case PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO:
+				return ((InternalEList<?>)getLstDetallePedido()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO:
+				return eInternalContainer().eInverseRemove(this, PedidoPackage.FACTORY_PEDIDO__LST_PEDIDO, FactoryPedido.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case PedidoPackage.PEDIDO__THE_CLIENTE:
+				if (resolve) return getTheCliente();
+				return basicGetTheCliente();
+			case PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO:
+				return getOwnedByFactoryPedido();
+			case PedidoPackage.PEDIDO__ID:
+				return getId();
+			case PedidoPackage.PEDIDO__FECHA:
+				return getFecha();
+			case PedidoPackage.PEDIDO__TOTAL:
+				return getTotal();
+			case PedidoPackage.PEDIDO__SUBTOTAL:
+				return getSubtotal();
+			case PedidoPackage.PEDIDO__IVA:
+				return getIva();
+			case PedidoPackage.PEDIDO__DESCUENTO:
+				return getDescuento();
+			case PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO:
+				return getLstDetallePedido();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case PedidoPackage.PEDIDO__THE_CLIENTE:
+				setTheCliente((Persona)newValue);
+				return;
+			case PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO:
+				setOwnedByFactoryPedido((FactoryPedido)newValue);
+				return;
+			case PedidoPackage.PEDIDO__ID:
+				setId((String)newValue);
+				return;
+			case PedidoPackage.PEDIDO__FECHA:
+				setFecha((String)newValue);
+				return;
+			case PedidoPackage.PEDIDO__TOTAL:
+				setTotal((String)newValue);
+				return;
+			case PedidoPackage.PEDIDO__SUBTOTAL:
+				setSubtotal((String)newValue);
+				return;
+			case PedidoPackage.PEDIDO__IVA:
+				setIva((String)newValue);
+				return;
+			case PedidoPackage.PEDIDO__DESCUENTO:
+				setDescuento((String)newValue);
+				return;
+			case PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO:
+				getLstDetallePedido().clear();
+				getLstDetallePedido().addAll((Collection<? extends DetallePedido>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case PedidoPackage.PEDIDO__THE_CLIENTE:
+				setTheCliente((Persona)null);
+				return;
+			case PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO:
+				setOwnedByFactoryPedido((FactoryPedido)null);
+				return;
+			case PedidoPackage.PEDIDO__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case PedidoPackage.PEDIDO__FECHA:
+				setFecha(FECHA_EDEFAULT);
+				return;
+			case PedidoPackage.PEDIDO__TOTAL:
+				setTotal(TOTAL_EDEFAULT);
+				return;
+			case PedidoPackage.PEDIDO__SUBTOTAL:
+				setSubtotal(SUBTOTAL_EDEFAULT);
+				return;
+			case PedidoPackage.PEDIDO__IVA:
+				setIva(IVA_EDEFAULT);
+				return;
+			case PedidoPackage.PEDIDO__DESCUENTO:
+				setDescuento(DESCUENTO_EDEFAULT);
+				return;
+			case PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO:
+				getLstDetallePedido().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case PedidoPackage.PEDIDO__THE_CLIENTE:
+				return theCliente != null;
+			case PedidoPackage.PEDIDO__OWNED_BY_FACTORY_PEDIDO:
+				return getOwnedByFactoryPedido() != null;
+			case PedidoPackage.PEDIDO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case PedidoPackage.PEDIDO__FECHA:
+				return FECHA_EDEFAULT == null ? fecha != null : !FECHA_EDEFAULT.equals(fecha);
+			case PedidoPackage.PEDIDO__TOTAL:
+				return TOTAL_EDEFAULT == null ? total != null : !TOTAL_EDEFAULT.equals(total);
+			case PedidoPackage.PEDIDO__SUBTOTAL:
+				return SUBTOTAL_EDEFAULT == null ? subtotal != null : !SUBTOTAL_EDEFAULT.equals(subtotal);
+			case PedidoPackage.PEDIDO__IVA:
+				return IVA_EDEFAULT == null ? iva != null : !IVA_EDEFAULT.equals(iva);
+			case PedidoPackage.PEDIDO__DESCUENTO:
+				return DESCUENTO_EDEFAULT == null ? descuento != null : !DESCUENTO_EDEFAULT.equals(descuento);
+			case PedidoPackage.PEDIDO__LST_DETALLE_PEDIDO:
+				return lstDetallePedido != null && !lstDetallePedido.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", fecha: ");
+		result.append(fecha);
+		result.append(", total: ");
+		result.append(total);
+		result.append(", subtotal: ");
+		result.append(subtotal);
+		result.append(", iva: ");
+		result.append(iva);
+		result.append(", descuento: ");
+		result.append(descuento);
+		result.append(')');
+		return result.toString();
+	}
+
+} //PedidoImpl

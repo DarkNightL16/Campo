@@ -1,0 +1,215 @@
+/**
+ */
+package den.domain.producto;
+
+import den.domain.pedido.DetallePedido;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Producto</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.producto.Producto#getLstDetallePedido <em>Lst Detalle Pedido</em>}</li>
+ *   <li>{@link den.domain.producto.Producto#getOwnedByFactoryProducto <em>Owned By Factory Producto</em>}</li>
+ *   <li>{@link den.domain.producto.Producto#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.producto.Producto#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.producto.Producto#getPrecio <em>Precio</em>}</li>
+ *   <li>{@link den.domain.producto.Producto#getFecha <em>Fecha</em>}</li>
+ *   <li>{@link den.domain.producto.Producto#getCod <em>Cod</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.producto.ProductoPackage#getProducto()
+ * @model
+ * @generated
+ */
+public interface Producto extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Lst Detalle Pedido</b></em>' reference list.
+	 * The list contents are of type {@link den.domain.pedido.DetallePedido}.
+	 * It is bidirectional and its opposite is '{@link den.domain.pedido.DetallePedido#getTheProducto <em>The Producto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Detalle Pedido</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Detalle Pedido</em>' reference list.
+	 * @see den.domain.producto.ProductoPackage#getProducto_LstDetallePedido()
+	 * @see den.domain.pedido.DetallePedido#getTheProducto
+	 * @model opposite="theProducto"
+	 * @generated
+	 */
+	EList<DetallePedido> getLstDetallePedido();
+
+	/**
+	 * Returns the value of the '<em><b>Owned By Factory Producto</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.producto.FactoryProducto#getLstProducto <em>Lst Producto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Factory Producto</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Factory Producto</em>' container reference.
+	 * @see #setOwnedByFactoryProducto(FactoryProducto)
+	 * @see den.domain.producto.ProductoPackage#getProducto_OwnedByFactoryProducto()
+	 * @see den.domain.producto.FactoryProducto#getLstProducto
+	 * @model opposite="lstProducto" transient="false"
+	 * @generated
+	 */
+	FactoryProducto getOwnedByFactoryProducto();
+
+	/**
+	 * Sets the value of the '{@link den.domain.producto.Producto#getOwnedByFactoryProducto <em>Owned By Factory Producto</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Factory Producto</em>' container reference.
+	 * @see #getOwnedByFactoryProducto()
+	 * @generated
+	 */
+	void setOwnedByFactoryProducto(FactoryProducto value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.producto.ProductoPackage#getProducto_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.producto.Producto#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see den.domain.producto.ProductoPackage#getProducto_Nombre()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getNombre();
+
+	/**
+	 * Sets the value of the '{@link den.domain.producto.Producto#getNombre <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
+	 * @generated
+	 */
+	void setNombre(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Precio</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Precio</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Precio</em>' attribute.
+	 * @see #setPrecio(String)
+	 * @see den.domain.producto.ProductoPackage#getProducto_Precio()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getPrecio();
+
+	/**
+	 * Sets the value of the '{@link den.domain.producto.Producto#getPrecio <em>Precio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Precio</em>' attribute.
+	 * @see #getPrecio()
+	 * @generated
+	 */
+	void setPrecio(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Fecha</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fecha</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fecha</em>' attribute.
+	 * @see #setFecha(String)
+	 * @see den.domain.producto.ProductoPackage#getProducto_Fecha()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getFecha();
+
+	/**
+	 * Sets the value of the '{@link den.domain.producto.Producto#getFecha <em>Fecha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fecha</em>' attribute.
+	 * @see #getFecha()
+	 * @generated
+	 */
+	void setFecha(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Cod</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cod</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cod</em>' attribute.
+	 * @see #setCod(String)
+	 * @see den.domain.producto.ProductoPackage#getProducto_Cod()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getCod();
+
+	/**
+	 * Sets the value of the '{@link den.domain.producto.Producto#getCod <em>Cod</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cod</em>' attribute.
+	 * @see #getCod()
+	 * @generated
+	 */
+	void setCod(String value);
+
+} // Producto

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="den" nsURI="http:///den.ecore" nsPrefix="den">
+  <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EBooleanObject" instanceClassName="java.lang.Boolean"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EDoubleObject" instanceClassName="java.lang.Double"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EIntegerObject" instanceClassName="java.lang.Integer"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EList" instanceClassName="org.eclipse.emf.common.util.EList"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EChar" instanceClassName="char"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ArrayList" instanceClassName="java.util.ArrayList"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelFactory">
+    <eOperations name="cargar" eType="#//ModelFactory">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="ModelFactory modelFactory = null;&#xA;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xA;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xA;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xA;try {&#xA;resource.load(java.util.Collections.EMPTY_MAP);&#xA;modelFactory = (ModelFactory) resource.getContents().get(0);&#xA;} catch (java.io.IOException e) {&#xA;// TO-DO Auto-generated catch block&#xA;e.printStackTrace();&#xA;}&#xA;&#xA;return modelFactory;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="ruta" eType="#//String"/>
+    </eOperations>
+    <eOperations name="salvar">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="ModelFactory modelFactory = this;&#xA;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xA;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xA;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xA;resource.getContents().add(modelFactory);&#xA;try {&#xA;resource.save(java.util.Collections.EMPTY_MAP);&#xA;} catch (java.io.IOException e) {&#xA;// TO-DO Auto-generated catch block&#xA;e.printStackTrace();&#xA;}&#xA;&#xA;return;&#xA;"/>
+      </eAnnotations>
+      <eParameters name="ruta" eType="#//String"/>
+    </eOperations>
+    <eOperations name="implementarModelo">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="//TODO implementarModelo&#xA;"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="theDomain" eType="#//domain/Domain"
+        containment="true" eOpposite="#//domain/Domain/theModelFactory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="theUI" eType="#//ui/UI"
+        containment="true" eOpposite="#//ui/UI/theModelFactory"/>
+  </eClassifiers>
+  <eSubpackages name="domain" nsURI="http:///den/domain.ecore" nsPrefix="den.domain">
+    <eClassifiers xsi:type="ecore:EClass" name="Domain">
+      <eOperations name="implementarModelo">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="//TODO implementarModelo&#xA;"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theModelFactory" eType="#//ModelFactory"
+          eOpposite="#//ModelFactory/theDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstFactoryUbicacion"
+          eType="#//domain/ubicacion/FactoryUbicacion" containment="true" eOpposite="#//domain/ubicacion/FactoryUbicacion/owenedByDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstFactoryPedido" eType="#//domain/pedido/FactoryPedido"
+          containment="true" eOpposite="#//domain/pedido/FactoryPedido/owenedByDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstFactoryTransporte"
+          eType="#//domain/transporte/FactoryTransporte" containment="true" eOpposite="#//domain/transporte/FactoryTransporte/owenedByDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstFactoryPersona" eType="#//domain/persona/FactoryPersona"
+          containment="true" eOpposite="#//domain/persona/FactoryPersona/owenedByDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstFactoryProducto" eType="#//domain/producto/FactoryProducto"
+          containment="true" eOpposite="#//domain/producto/FactoryProducto/owenedByDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstFactoryEnvio" eType="#//domain/envio/FactoryEnvio"
+          containment="true" eOpposite="#//domain/envio/FactoryEnvio/owenedByDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstFactoryRuta" eType="#//domain/ruta/FactoryRuta"
+          containment="true" eOpposite="#//domain/ruta/FactoryRuta/owenedByDomain"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theUI" eType="#//ui/UI"
+          eOpposite="#//ui/UI/theDomain"/>
+    </eClassifiers>
+    <eSubpackages name="ubicacion" nsURI="http:///den/domain/ubicacion.ecore" nsPrefix="den.domain.ubicacion">
+      <eClassifiers xsi:type="ecore:EClass" name="Ciudad">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idCiudad" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="coordenadas" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedDepartamento"
+            eType="#//domain/ubicacion/Departamento" eOpposite="#//domain/ubicacion/Departamento/lstCiudad"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstRutaOrigen" upperBound="-1"
+            eType="#//domain/ruta/Ruta" eOpposite="#//domain/ruta/Ruta/lstCiudadOrigen"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstRutaDestino" upperBound="-1"
+            eType="#//domain/ruta/Ruta" eOpposite="#//domain/ruta/Ruta/lstCiudadDestino"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="theEnvioOrigen" eType="#//domain/envio/Envio"
+            eOpposite="#//domain/envio/Envio/theCiudadOrigen"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="theEnvioDestino" eType="#//domain/envio/Envio"
+            eOpposite="#//domain/envio/Envio/theCiudadDestino"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstRuta" upperBound="-1"
+            eType="#//domain/ruta/Ruta" containment="true" eOpposite="#//domain/ruta/Ruta/owenedByCiudad"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Departamento">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstCiudad" upperBound="-1"
+            eType="#//domain/ubicacion/Ciudad" containment="true" eOpposite="#//domain/ubicacion/Ciudad/owenedDepartamento"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idDepartamento" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="capital" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefijoTelefonico"
+            eType="#//String" defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="coordenadas" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByPais" eType="#//domain/ubicacion/Pais"
+            eOpposite="#//domain/ubicacion/Pais/lstDepartamento"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FactoryUbicacion">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByDomain" eType="#//domain/Domain"
+            eOpposite="#//domain/Domain/lstFactoryUbicacion"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstPais" upperBound="-1"
+            eType="#//domain/ubicacion/Pais" containment="true" eOpposite="#//domain/ubicacion/Pais/owenedByUbicacion"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Pais">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstDepartamento" upperBound="-1"
+            eType="#//domain/ubicacion/Departamento" containment="true" eOpposite="#//domain/ubicacion/Departamento/owenedByPais"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPais" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="capital" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="codigoInternacional"
+            eType="#//String" defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idioma" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="coordenadas" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByUbicacion"
+            eType="#//domain/ubicacion/FactoryUbicacion" eOpposite="#//domain/ubicacion/FactoryUbicacion/lstPais"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="pedido" nsURI="http:///den/domain/pedido.ecore" nsPrefix="den.domain.pedido">
+      <eClassifiers xsi:type="ecore:EClass" name="DetallePedido">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPedido" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorUnitario" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorTotal" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iva" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="totalPagar" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="cantidadKilos" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByPedido" eType="#//domain/pedido/Pedido"
+            eOpposite="#//domain/pedido/Pedido/lstDetallePedido"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstProducto" upperBound="-1"
+            eType="#//domain/producto/Producto" eOpposite="#//domain/producto/Producto/lstDetallePedido"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FactoryPedido">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPedido" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByDomain" eType="#//domain/Domain"
+            eOpposite="#//domain/Domain/lstFactoryPedido"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstPedido" upperBound="-1"
+            eType="#//domain/pedido/Pedido" containment="true" eOpposite="#//domain/pedido/Pedido/owenedByFactoryPedido"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Pedido">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fecha" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="total" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="subTotal" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="iva" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="descuento" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstDetallePedido" upperBound="-1"
+            eType="#//domain/pedido/DetallePedido" containment="true" eOpposite="#//domain/pedido/DetallePedido/owenedByPedido"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByFactoryPedido"
+            eType="#//domain/pedido/FactoryPedido" eOpposite="#//domain/pedido/FactoryPedido/lstPedido"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstPersona" eType="#//domain/persona/Persona"
+            eOpposite="#//domain/persona/Persona/lstPedido"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="theEnvio" eType="#//domain/envio/Envio"
+            eOpposite="#//domain/envio/Envio/lstPedido"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="transporte" nsURI="http:///den/domain/transporte.ecore" nsPrefix="den.domain.transporte">
+      <eClassifiers xsi:type="ecore:EClass" name="FactoryTransporte">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idTransporte" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByDomain" eType="#//domain/Domain"
+            eOpposite="#//domain/Domain/lstFactoryTransporte"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstTransporte" upperBound="-1"
+            eType="#//domain/transporte/Transporte" containment="true" eOpposite="#//domain/transporte/Transporte/owenedByFactoryTransporte"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Transporte">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeroPoliza" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="matricula" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="tarjetaPropiedad" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByFactoryTransporte"
+            eType="#//domain/transporte/FactoryTransporte" eOpposite="#//domain/transporte/FactoryTransporte/lstTransporte"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstProducto" upperBound="-1"
+            eType="#//domain/producto/Producto" eOpposite="#//domain/producto/Producto/lstTransporte"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstEnvio" eType="#//domain/envio/Envio"
+            eOpposite="#//domain/envio/Envio/lstTransporte"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstConductor" eType="#//domain/persona/Conductor"
+            eOpposite="#//domain/persona/Conductor/lstTransporte"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstPersona" eType="#//domain/persona/Persona"
+            eOpposite="#//domain/persona/Persona/lstTransporte"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="persona" nsURI="http:///den/domain/persona.ecore" nsPrefix="den.domain.persona">
+      <eClassifiers xsi:type="ecore:EClass" name="Cliente">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idCliente" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByPersona" eType="#//domain/persona/Persona"
+            eOpposite="#//domain/persona/Persona/lstCliente"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Conductor">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstTransporte" eType="#//domain/transporte/Transporte"
+            eOpposite="#//domain/transporte/Transporte/lstConductor"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idConductor" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="categoriaLicencia"
+            eType="#//String" defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="codigoLicencia" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByPersona" eType="#//domain/persona/Persona"
+            eOpposite="#//domain/persona/Persona/lstConductor"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Empleado">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idEmpleado" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaInicioContrato"
+            eType="#//String" defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaTerminacionContrato"
+            eType="#//String" defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="cargo" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="salario" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByPersona" eType="#//domain/persona/Persona"
+            eOpposite="#//domain/persona/Persona/lstEmpleado"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FactoryPersona">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPersona" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByDomain" eType="#//domain/Domain"
+            eOpposite="#//domain/Domain/lstFactoryPersona"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstPersona" upperBound="-1"
+            eType="#//domain/persona/Persona" containment="true" eOpposite="#//domain/persona/Persona/owenedByFactoryPersona"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Persona">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstCliente" eType="#//domain/persona/Cliente"
+            containment="true" eOpposite="#//domain/persona/Cliente/owenedByPersona"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstConductor" eType="#//domain/persona/Conductor"
+            containment="true" eOpposite="#//domain/persona/Conductor/owenedByPersona"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstEmpleado" eType="#//domain/persona/Empleado"
+            containment="true" eOpposite="#//domain/persona/Empleado/owenedByPersona"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPersona" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeroDocumento" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDocumento" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaNacimiento" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="genero" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccionResidencia"
+            eType="#//String" defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="telefono" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="lugarResidencia" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstPedido" lowerBound="1"
+            upperBound="-1" eType="#//domain/pedido/Pedido" eOpposite="#//domain/pedido/Pedido/lstPersona"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstTransporte" eType="#//domain/transporte/Transporte"
+            eOpposite="#//domain/transporte/Transporte/lstPersona"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByFactoryPersona"
+            eType="#//domain/persona/FactoryPersona" eOpposite="#//domain/persona/FactoryPersona/lstPersona"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="producto" nsURI="http:///den/domain/producto.ecore" nsPrefix="den.domain.producto">
+      <eClassifiers xsi:type="ecore:EClass" name="FactoryProducto">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idProducto" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByDomain" eType="#//domain/Domain"
+            eOpposite="#//domain/Domain/lstFactoryProducto"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstProducto" upperBound="-1"
+            eType="#//domain/producto/Producto" containment="true" eOpposite="#//domain/producto/Producto/owenedFactoryProducto"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Producto">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstTransporte" eType="#//domain/transporte/Transporte"
+            eOpposite="#//domain/transporte/Transporte/lstProducto"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idProducto" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="codigoProducto" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="pesoNeto" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaVencimiento" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaElaboracion" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="pesoBruto" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="Precio" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstDetallePedido" upperBound="-1"
+            eType="#//domain/pedido/DetallePedido" eOpposite="#//domain/pedido/DetallePedido/lstProducto"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedFactoryProducto"
+            eType="#//domain/producto/FactoryProducto" eOpposite="#//domain/producto/FactoryProducto/lstProducto"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="envio" nsURI="http:///den/domain/envio.ecore" nsPrefix="den.domain.envio">
+      <eClassifiers xsi:type="ecore:EClass" name="DetallePedido">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="cantidad" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorUnitario" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByEnvio" eType="#//domain/envio/Envio"
+            eOpposite="#//domain/envio/Envio/lstDetallePedido"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Envio">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="theCiudadOrigen" eType="#//domain/ubicacion/Ciudad"
+            eOpposite="#//domain/ubicacion/Ciudad/theEnvioOrigen"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstTransporte" eType="#//domain/transporte/Transporte"
+            eOpposite="#//domain/transporte/Transporte/lstEnvio"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstDetallePedido" eType="#//domain/envio/DetallePedido"
+            containment="true" eOpposite="#//domain/envio/DetallePedido/owenedByEnvio"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="nitEmpresa" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccionEmpresa" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idFactura" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaEnvio" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaVencimiento" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="theCiudadDestino" eType="#//domain/ubicacion/Ciudad"
+            eOpposite="#//domain/ubicacion/Ciudad/theEnvioDestino"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstPedido" eType="#//domain/pedido/Pedido"
+            eOpposite="#//domain/pedido/Pedido/theEnvio"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByFactoryEnvio"
+            eType="#//domain/envio/FactoryEnvio" eOpposite="#//domain/envio/FactoryEnvio/lstEnvio"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstRuta" eType="#//domain/ruta/Ruta"
+            eOpposite="#//domain/ruta/Ruta/lstEnvio"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FactoryEnvio">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstEnvio" upperBound="-1"
+            eType="#//domain/envio/Envio" containment="true" eOpposite="#//domain/envio/Envio/owenedByFactoryEnvio"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idEnvio" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByDomain" eType="#//domain/Domain"
+            eOpposite="#//domain/Domain/lstFactoryEnvio"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="ruta" nsURI="http:///den/domain/ruta.ecore" nsPrefix="den.domain.ruta">
+      <eClassifiers xsi:type="ecore:EClass" name="FactoryRuta">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="idRuta" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByDomain" eType="#//domain/Domain"
+            eOpposite="#//domain/Domain/lstFactoryRuta"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstRuta" upperBound="-1"
+            eType="#//domain/ruta/Ruta" containment="true" eOpposite="#//domain/ruta/Ruta/owenedByFactoryRuta"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Ruta">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstCiudadOrigen" eType="#//domain/ubicacion/Ciudad"
+            eOpposite="#//domain/ubicacion/Ciudad/lstRutaOrigen"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstCiudadDestino" eType="#//domain/ubicacion/Ciudad"
+            eOpposite="#//domain/ubicacion/Ciudad/lstRutaDestino"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="km" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByCiudad" eType="#//domain/ubicacion/Ciudad"
+            eOpposite="#//domain/ubicacion/Ciudad/lstRuta"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstEnvio" eType="#//domain/envio/Envio"
+            eOpposite="#//domain/envio/Envio/lstRuta"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByFactoryRuta"
+            eType="#//domain/ruta/FactoryRuta" eOpposite="#//domain/ruta/FactoryRuta/lstRuta"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="lstTarifa" upperBound="-1"
+            eType="#//domain/ruta/Tarifa" containment="true" eOpposite="#//domain/ruta/Tarifa/owenedByRuta"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Tarifa">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="precio" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="owenedByRuta" eType="#//domain/ruta/Ruta"
+            eOpposite="#//domain/ruta/Ruta/lstTarifa"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="ui" nsURI="http:///den/ui.ecore" nsPrefix="den.ui">
+    <eClassifiers xsi:type="ecore:EClass" name="UI">
+      <eOperations name="implementarModelo">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="//TODO implementarModelo&#xA;"/>
+        </eAnnotations>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theModelFactory" eType="#//ModelFactory"
+          eOpposite="#//ModelFactory/theUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theDomain" eType="#//domain/Domain"
+          eOpposite="#//domain/Domain/theUI"/>
+    </eClassifiers>
+    <eSubpackages name="viewmodels" nsURI="http:///den/ui/viewmodels.ecore" nsPrefix="den.ui.viewmodels"/>
+  </eSubpackages>
+</ecore:EPackage>

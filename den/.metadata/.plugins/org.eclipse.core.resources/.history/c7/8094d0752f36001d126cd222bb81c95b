@@ -1,0 +1,432 @@
+/**
+ */
+package den.domain.transporte.impl;
+
+import den.domain.transporte.Tarifa;
+import den.domain.transporte.Tramo;
+import den.domain.transporte.TransportePackage;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Tramo</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.transporte.impl.TramoImpl#getOwnedByTarifaOrigen <em>Owned By Tarifa Origen</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.TramoImpl#getOwnedByTarifaDestino <em>Owned By Tarifa Destino</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.TramoImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.TramoImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.TramoImpl#getPrecio <em>Precio</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class TramoImpl extends EObjectImpl implements Tramo {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrecio() <em>Precio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrecio()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PRECIO_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getPrecio() <em>Precio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrecio()
+	 * @generated
+	 * @ordered
+	 */
+	protected String precio = PRECIO_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TramoImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return TransportePackage.Literals.TRAMO;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tarifa getOwnedByTarifaOrigen() {
+		if (eContainerFeatureID() != TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN) return null;
+		return (Tarifa)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByTarifaOrigen(Tarifa newOwnedByTarifaOrigen, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByTarifaOrigen, TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByTarifaOrigen(Tarifa newOwnedByTarifaOrigen) {
+		if (newOwnedByTarifaOrigen != eInternalContainer() || (eContainerFeatureID() != TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN && newOwnedByTarifaOrigen != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByTarifaOrigen))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByTarifaOrigen != null)
+				msgs = ((InternalEObject)newOwnedByTarifaOrigen).eInverseAdd(this, TransportePackage.TARIFA__LST_TRAMO_ORIGEN, Tarifa.class, msgs);
+			msgs = basicSetOwnedByTarifaOrigen(newOwnedByTarifaOrigen, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN, newOwnedByTarifaOrigen, newOwnedByTarifaOrigen));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tarifa getOwnedByTarifaDestino() {
+		if (eContainerFeatureID() != TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO) return null;
+		return (Tarifa)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByTarifaDestino(Tarifa newOwnedByTarifaDestino, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByTarifaDestino, TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByTarifaDestino(Tarifa newOwnedByTarifaDestino) {
+		if (newOwnedByTarifaDestino != eInternalContainer() || (eContainerFeatureID() != TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO && newOwnedByTarifaDestino != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByTarifaDestino))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByTarifaDestino != null)
+				msgs = ((InternalEObject)newOwnedByTarifaDestino).eInverseAdd(this, TransportePackage.TARIFA__LST_TRAMO_DESTINO, Tarifa.class, msgs);
+			msgs = basicSetOwnedByTarifaDestino(newOwnedByTarifaDestino, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO, newOwnedByTarifaDestino, newOwnedByTarifaDestino));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.TRAMO__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.TRAMO__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPrecio() {
+		return precio;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrecio(String newPrecio) {
+		String oldPrecio = precio;
+		precio = newPrecio;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.TRAMO__PRECIO, oldPrecio, precio));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByTarifaOrigen((Tarifa)otherEnd, msgs);
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByTarifaDestino((Tarifa)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN:
+				return basicSetOwnedByTarifaOrigen(null, msgs);
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO:
+				return basicSetOwnedByTarifaDestino(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN:
+				return eInternalContainer().eInverseRemove(this, TransportePackage.TARIFA__LST_TRAMO_ORIGEN, Tarifa.class, msgs);
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO:
+				return eInternalContainer().eInverseRemove(this, TransportePackage.TARIFA__LST_TRAMO_DESTINO, Tarifa.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN:
+				return getOwnedByTarifaOrigen();
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO:
+				return getOwnedByTarifaDestino();
+			case TransportePackage.TRAMO__ID:
+				return getId();
+			case TransportePackage.TRAMO__NOMBRE:
+				return getNombre();
+			case TransportePackage.TRAMO__PRECIO:
+				return getPrecio();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN:
+				setOwnedByTarifaOrigen((Tarifa)newValue);
+				return;
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO:
+				setOwnedByTarifaDestino((Tarifa)newValue);
+				return;
+			case TransportePackage.TRAMO__ID:
+				setId((String)newValue);
+				return;
+			case TransportePackage.TRAMO__NOMBRE:
+				setNombre((String)newValue);
+				return;
+			case TransportePackage.TRAMO__PRECIO:
+				setPrecio((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN:
+				setOwnedByTarifaOrigen((Tarifa)null);
+				return;
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO:
+				setOwnedByTarifaDestino((Tarifa)null);
+				return;
+			case TransportePackage.TRAMO__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case TransportePackage.TRAMO__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case TransportePackage.TRAMO__PRECIO:
+				setPrecio(PRECIO_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_ORIGEN:
+				return getOwnedByTarifaOrigen() != null;
+			case TransportePackage.TRAMO__OWNED_BY_TARIFA_DESTINO:
+				return getOwnedByTarifaDestino() != null;
+			case TransportePackage.TRAMO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case TransportePackage.TRAMO__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case TransportePackage.TRAMO__PRECIO:
+				return PRECIO_EDEFAULT == null ? precio != null : !PRECIO_EDEFAULT.equals(precio);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", nombre: ");
+		result.append(nombre);
+		result.append(", precio: ");
+		result.append(precio);
+		result.append(')');
+		return result.toString();
+	}
+
+} //TramoImpl

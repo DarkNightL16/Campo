@@ -1,0 +1,501 @@
+/**
+ */
+package den.domain.cliente.impl;
+
+import den.denPackage;
+
+import den.domain.DomainPackage;
+
+import den.domain.cliente.ClienteFactory;
+import den.domain.cliente.ClientePackage;
+import den.domain.cliente.FactoryCliente;
+import den.domain.cliente.Persona;
+import den.domain.cliente.Rol;
+
+import den.domain.denuncia.DenunciaPackage;
+
+import den.domain.denuncia.impl.DenunciaPackageImpl;
+
+import den.domain.impl.DomainPackageImpl;
+
+import den.domain.pedido.PedidoPackage;
+
+import den.domain.pedido.impl.PedidoPackageImpl;
+
+import den.domain.producto.ProductoPackage;
+
+import den.domain.producto.impl.ProductoPackageImpl;
+
+import den.domain.transporte.TransportePackage;
+
+import den.domain.transporte.impl.TransportePackageImpl;
+
+import den.domain.ubicacion.UbicacionPackage;
+
+import den.domain.ubicacion.impl.UbicacionPackageImpl;
+
+import den.impl.denPackageImpl;
+
+import den.ui.UiPackage;
+
+import den.ui.impl.UiPackageImpl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class ClientePackageImpl extends EPackageImpl implements ClientePackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass personaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass factoryClienteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rolEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see den.domain.cliente.ClientePackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private ClientePackageImpl() {
+		super(eNS_URI, ClienteFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * 
+	 * <p>This method is used to initialize {@link ClientePackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static ClientePackage init() {
+		if (isInited) return (ClientePackage)EPackage.Registry.INSTANCE.getEPackage(ClientePackage.eNS_URI);
+
+		// Obtain or create and register package
+		ClientePackageImpl theClientePackage = (ClientePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ClientePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ClientePackageImpl());
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		denPackageImpl thedenPackage = (denPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI) instanceof denPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI) : denPackage.eINSTANCE);
+		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
+		DenunciaPackageImpl theDenunciaPackage = (DenunciaPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DenunciaPackage.eNS_URI) instanceof DenunciaPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DenunciaPackage.eNS_URI) : DenunciaPackage.eINSTANCE);
+		TransportePackageImpl theTransportePackage = (TransportePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TransportePackage.eNS_URI) instanceof TransportePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TransportePackage.eNS_URI) : TransportePackage.eINSTANCE);
+		UbicacionPackageImpl theUbicacionPackage = (UbicacionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI) instanceof UbicacionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI) : UbicacionPackage.eINSTANCE);
+		PedidoPackageImpl thePedidoPackage = (PedidoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI) instanceof PedidoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI) : PedidoPackage.eINSTANCE);
+		ProductoPackageImpl theProductoPackage = (ProductoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ProductoPackage.eNS_URI) instanceof ProductoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ProductoPackage.eNS_URI) : ProductoPackage.eINSTANCE);
+		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theClientePackage.createPackageContents();
+		thedenPackage.createPackageContents();
+		theDomainPackage.createPackageContents();
+		theDenunciaPackage.createPackageContents();
+		theTransportePackage.createPackageContents();
+		theUbicacionPackage.createPackageContents();
+		thePedidoPackage.createPackageContents();
+		theProductoPackage.createPackageContents();
+		theUiPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theClientePackage.initializePackageContents();
+		thedenPackage.initializePackageContents();
+		theDomainPackage.initializePackageContents();
+		theDenunciaPackage.initializePackageContents();
+		theTransportePackage.initializePackageContents();
+		theUbicacionPackage.initializePackageContents();
+		thePedidoPackage.initializePackageContents();
+		theProductoPackage.initializePackageContents();
+		theUiPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theClientePackage.freeze();
+
+  
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(ClientePackage.eNS_URI, theClientePackage);
+		return theClientePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPersona() {
+		return personaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersona_Id() {
+		return (EAttribute)personaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersona_Nombre() {
+		return (EAttribute)personaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersona_Cedula() {
+		return (EAttribute)personaEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersona_Direccion() {
+		return (EAttribute)personaEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersona_Telefono() {
+		return (EAttribute)personaEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersona_Edad() {
+		return (EAttribute)personaEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersona_FechaNacimeinto() {
+		return (EAttribute)personaEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPersona_Genero() {
+		return (EAttribute)personaEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPersona_LstDenuncia() {
+		return (EReference)personaEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPersona_LstPedido() {
+		return (EReference)personaEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPersona_OwnedByFactoryCliente() {
+		return (EReference)personaEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPersona_TheRol() {
+		return (EReference)personaEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFactoryCliente() {
+		return factoryClienteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryCliente_OwnedByDomain() {
+		return (EReference)factoryClienteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFactoryCliente_IdClientes() {
+		return (EAttribute)factoryClienteEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryCliente_LstPersona() {
+		return (EReference)factoryClienteEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryCliente_LstRol() {
+		return (EReference)factoryClienteEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRol() {
+		return rolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRol_OwnedByFactoryCliente() {
+		return (EReference)rolEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRol_Id() {
+		return (EAttribute)rolEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRol_Nombre() {
+		return (EAttribute)rolEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRol_Descripcion() {
+		return (EAttribute)rolEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRol_LstPersona() {
+		return (EReference)rolEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ClienteFactory getClienteFactory() {
+		return (ClienteFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		personaEClass = createEClass(PERSONA);
+		createEAttribute(personaEClass, PERSONA__ID);
+		createEAttribute(personaEClass, PERSONA__NOMBRE);
+		createEAttribute(personaEClass, PERSONA__CEDULA);
+		createEAttribute(personaEClass, PERSONA__DIRECCION);
+		createEAttribute(personaEClass, PERSONA__TELEFONO);
+		createEAttribute(personaEClass, PERSONA__EDAD);
+		createEAttribute(personaEClass, PERSONA__FECHA_NACIMEINTO);
+		createEAttribute(personaEClass, PERSONA__GENERO);
+		createEReference(personaEClass, PERSONA__LST_DENUNCIA);
+		createEReference(personaEClass, PERSONA__LST_PEDIDO);
+		createEReference(personaEClass, PERSONA__OWNED_BY_FACTORY_CLIENTE);
+		createEReference(personaEClass, PERSONA__THE_ROL);
+
+		factoryClienteEClass = createEClass(FACTORY_CLIENTE);
+		createEReference(factoryClienteEClass, FACTORY_CLIENTE__OWNED_BY_DOMAIN);
+		createEAttribute(factoryClienteEClass, FACTORY_CLIENTE__ID_CLIENTES);
+		createEReference(factoryClienteEClass, FACTORY_CLIENTE__LST_PERSONA);
+		createEReference(factoryClienteEClass, FACTORY_CLIENTE__LST_ROL);
+
+		rolEClass = createEClass(ROL);
+		createEReference(rolEClass, ROL__OWNED_BY_FACTORY_CLIENTE);
+		createEAttribute(rolEClass, ROL__ID);
+		createEAttribute(rolEClass, ROL__NOMBRE);
+		createEAttribute(rolEClass, ROL__DESCRIPCION);
+		createEReference(rolEClass, ROL__LST_PERSONA);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		denPackage thedenPackage = (denPackage)EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI);
+		DenunciaPackage theDenunciaPackage = (DenunciaPackage)EPackage.Registry.INSTANCE.getEPackage(DenunciaPackage.eNS_URI);
+		PedidoPackage thePedidoPackage = (PedidoPackage)EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI);
+		DomainPackage theDomainPackage = (DomainPackage)EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+
+		// Initialize classes and features; add operations and parameters
+		initEClass(personaEClass, Persona.class, "Persona", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPersona_Id(), thedenPackage.getString(), "id", " ", 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersona_Nombre(), thedenPackage.getString(), "nombre", " ", 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersona_Cedula(), thedenPackage.getString(), "cedula", " ", 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersona_Direccion(), thedenPackage.getString(), "direccion", " ", 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersona_Telefono(), thedenPackage.getString(), "telefono", " ", 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersona_Edad(), thedenPackage.getString(), "edad", " ", 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersona_FechaNacimeinto(), thedenPackage.getString(), "fechaNacimeinto", " ", 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersona_Genero(), thedenPackage.getString(), "genero", " ", 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPersona_LstDenuncia(), theDenunciaPackage.getDenuncia(), theDenunciaPackage.getDenuncia_TheCliente(), "lstDenuncia", null, 0, -1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPersona_LstPedido(), thePedidoPackage.getPedido(), thePedidoPackage.getPedido_TheCliente(), "lstPedido", null, 0, -1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPersona_OwnedByFactoryCliente(), this.getFactoryCliente(), this.getFactoryCliente_LstPersona(), "ownedByFactoryCliente", null, 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPersona_TheRol(), this.getRol(), this.getRol_LstPersona(), "theRol", null, 0, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(factoryClienteEClass, FactoryCliente.class, "FactoryCliente", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFactoryCliente_OwnedByDomain(), theDomainPackage.getDomain(), theDomainPackage.getDomain_TheFactoryCliente(), "ownedByDomain", null, 0, 1, FactoryCliente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFactoryCliente_IdClientes(), thedenPackage.getString(), "idClientes", null, 0, 1, FactoryCliente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFactoryCliente_LstPersona(), this.getPersona(), this.getPersona_OwnedByFactoryCliente(), "lstPersona", null, 0, -1, FactoryCliente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFactoryCliente_LstRol(), this.getRol(), this.getRol_OwnedByFactoryCliente(), "lstRol", null, 0, -1, FactoryCliente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rolEClass, Rol.class, "Rol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRol_OwnedByFactoryCliente(), this.getFactoryCliente(), this.getFactoryCliente_LstRol(), "ownedByFactoryCliente", null, 0, 1, Rol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRol_Id(), thedenPackage.getString(), "id", " ", 0, 1, Rol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRol_Nombre(), thedenPackage.getString(), "nombre", " ", 0, 1, Rol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRol_Descripcion(), thedenPackage.getString(), "descripcion", " ", 0, 1, Rol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRol_LstPersona(), this.getPersona(), this.getPersona_TheRol(), "lstPersona", null, 0, -1, Rol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	}
+
+} //ClientePackageImpl

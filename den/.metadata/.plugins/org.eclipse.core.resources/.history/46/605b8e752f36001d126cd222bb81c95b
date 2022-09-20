@@ -1,0 +1,679 @@
+/**
+ */
+package den.domain.denuncia.impl;
+
+import den.domain.cliente.ClientePackage;
+import den.domain.cliente.Persona;
+
+import den.domain.denuncia.Denuncia;
+import den.domain.denuncia.DenunciaPackage;
+import den.domain.denuncia.FactoryDenuncias;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Denuncia</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getTheCliente <em>The Cliente</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getFecha <em>Fecha</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getMotivo <em>Motivo</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getDescripcion <em>Descripcion</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getLugar <em>Lugar</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getDano <em>Dano</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getLugarDenuncia <em>Lugar Denuncia</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.DenunciaImpl#getOwnedByFactoryDenuncias <em>Owned By Factory Denuncias</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class DenunciaImpl extends EObjectImpl implements Denuncia {
+	/**
+	 * The cached value of the '{@link #getTheCliente() <em>The Cliente</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheCliente()
+	 * @generated
+	 * @ordered
+	 */
+	protected Persona theCliente;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFecha() <em>Fecha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFecha()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FECHA_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getFecha() <em>Fecha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFecha()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fecha = FECHA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMotivo() <em>Motivo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMotivo()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MOTIVO_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getMotivo() <em>Motivo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMotivo()
+	 * @generated
+	 * @ordered
+	 */
+	protected String motivo = MOTIVO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescripcion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPCION_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescripcion()
+	 * @generated
+	 * @ordered
+	 */
+	protected String descripcion = DESCRIPCION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLugar() <em>Lugar</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLugar()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LUGAR_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getLugar() <em>Lugar</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLugar()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lugar = LUGAR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDano() <em>Dano</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDano()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DANO_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getDano() <em>Dano</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDano()
+	 * @generated
+	 * @ordered
+	 */
+	protected String dano = DANO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLugarDenuncia() <em>Lugar Denuncia</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLugarDenuncia()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LUGAR_DENUNCIA_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getLugarDenuncia() <em>Lugar Denuncia</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLugarDenuncia()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lugarDenuncia = LUGAR_DENUNCIA_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DenunciaImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return DenunciaPackage.Literals.DENUNCIA;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Persona getTheCliente() {
+		if (theCliente != null && theCliente.eIsProxy()) {
+			InternalEObject oldTheCliente = (InternalEObject)theCliente;
+			theCliente = (Persona)eResolveProxy(oldTheCliente);
+			if (theCliente != oldTheCliente) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DenunciaPackage.DENUNCIA__THE_CLIENTE, oldTheCliente, theCliente));
+			}
+		}
+		return theCliente;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Persona basicGetTheCliente() {
+		return theCliente;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheCliente(Persona newTheCliente, NotificationChain msgs) {
+		Persona oldTheCliente = theCliente;
+		theCliente = newTheCliente;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__THE_CLIENTE, oldTheCliente, newTheCliente);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheCliente(Persona newTheCliente) {
+		if (newTheCliente != theCliente) {
+			NotificationChain msgs = null;
+			if (theCliente != null)
+				msgs = ((InternalEObject)theCliente).eInverseRemove(this, ClientePackage.PERSONA__LST_DENUNCIA, Persona.class, msgs);
+			if (newTheCliente != null)
+				msgs = ((InternalEObject)newTheCliente).eInverseAdd(this, ClientePackage.PERSONA__LST_DENUNCIA, Persona.class, msgs);
+			msgs = basicSetTheCliente(newTheCliente, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__THE_CLIENTE, newTheCliente, newTheCliente));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFecha() {
+		return fecha;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFecha(String newFecha) {
+		String oldFecha = fecha;
+		fecha = newFecha;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__FECHA, oldFecha, fecha));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getMotivo() {
+		return motivo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMotivo(String newMotivo) {
+		String oldMotivo = motivo;
+		motivo = newMotivo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__MOTIVO, oldMotivo, motivo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescripcion(String newDescripcion) {
+		String oldDescripcion = descripcion;
+		descripcion = newDescripcion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__DESCRIPCION, oldDescripcion, descripcion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLugar() {
+		return lugar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLugar(String newLugar) {
+		String oldLugar = lugar;
+		lugar = newLugar;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__LUGAR, oldLugar, lugar));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDano() {
+		return dano;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDano(String newDano) {
+		String oldDano = dano;
+		dano = newDano;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__DANO, oldDano, dano));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLugarDenuncia() {
+		return lugarDenuncia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLugarDenuncia(String newLugarDenuncia) {
+		String oldLugarDenuncia = lugarDenuncia;
+		lugarDenuncia = newLugarDenuncia;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__LUGAR_DENUNCIA, oldLugarDenuncia, lugarDenuncia));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryDenuncias getOwnedByFactoryDenuncias() {
+		if (eContainerFeatureID() != DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS) return null;
+		return (FactoryDenuncias)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByFactoryDenuncias(FactoryDenuncias newOwnedByFactoryDenuncias, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByFactoryDenuncias, DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByFactoryDenuncias(FactoryDenuncias newOwnedByFactoryDenuncias) {
+		if (newOwnedByFactoryDenuncias != eInternalContainer() || (eContainerFeatureID() != DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS && newOwnedByFactoryDenuncias != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByFactoryDenuncias))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByFactoryDenuncias != null)
+				msgs = ((InternalEObject)newOwnedByFactoryDenuncias).eInverseAdd(this, DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA, FactoryDenuncias.class, msgs);
+			msgs = basicSetOwnedByFactoryDenuncias(newOwnedByFactoryDenuncias, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS, newOwnedByFactoryDenuncias, newOwnedByFactoryDenuncias));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DenunciaPackage.DENUNCIA__THE_CLIENTE:
+				if (theCliente != null)
+					msgs = ((InternalEObject)theCliente).eInverseRemove(this, ClientePackage.PERSONA__LST_DENUNCIA, Persona.class, msgs);
+				return basicSetTheCliente((Persona)otherEnd, msgs);
+			case DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByFactoryDenuncias((FactoryDenuncias)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DenunciaPackage.DENUNCIA__THE_CLIENTE:
+				return basicSetTheCliente(null, msgs);
+			case DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS:
+				return basicSetOwnedByFactoryDenuncias(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS:
+				return eInternalContainer().eInverseRemove(this, DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA, FactoryDenuncias.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case DenunciaPackage.DENUNCIA__THE_CLIENTE:
+				if (resolve) return getTheCliente();
+				return basicGetTheCliente();
+			case DenunciaPackage.DENUNCIA__ID:
+				return getId();
+			case DenunciaPackage.DENUNCIA__FECHA:
+				return getFecha();
+			case DenunciaPackage.DENUNCIA__MOTIVO:
+				return getMotivo();
+			case DenunciaPackage.DENUNCIA__DESCRIPCION:
+				return getDescripcion();
+			case DenunciaPackage.DENUNCIA__LUGAR:
+				return getLugar();
+			case DenunciaPackage.DENUNCIA__DANO:
+				return getDano();
+			case DenunciaPackage.DENUNCIA__LUGAR_DENUNCIA:
+				return getLugarDenuncia();
+			case DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS:
+				return getOwnedByFactoryDenuncias();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case DenunciaPackage.DENUNCIA__THE_CLIENTE:
+				setTheCliente((Persona)newValue);
+				return;
+			case DenunciaPackage.DENUNCIA__ID:
+				setId((String)newValue);
+				return;
+			case DenunciaPackage.DENUNCIA__FECHA:
+				setFecha((String)newValue);
+				return;
+			case DenunciaPackage.DENUNCIA__MOTIVO:
+				setMotivo((String)newValue);
+				return;
+			case DenunciaPackage.DENUNCIA__DESCRIPCION:
+				setDescripcion((String)newValue);
+				return;
+			case DenunciaPackage.DENUNCIA__LUGAR:
+				setLugar((String)newValue);
+				return;
+			case DenunciaPackage.DENUNCIA__DANO:
+				setDano((String)newValue);
+				return;
+			case DenunciaPackage.DENUNCIA__LUGAR_DENUNCIA:
+				setLugarDenuncia((String)newValue);
+				return;
+			case DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS:
+				setOwnedByFactoryDenuncias((FactoryDenuncias)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case DenunciaPackage.DENUNCIA__THE_CLIENTE:
+				setTheCliente((Persona)null);
+				return;
+			case DenunciaPackage.DENUNCIA__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case DenunciaPackage.DENUNCIA__FECHA:
+				setFecha(FECHA_EDEFAULT);
+				return;
+			case DenunciaPackage.DENUNCIA__MOTIVO:
+				setMotivo(MOTIVO_EDEFAULT);
+				return;
+			case DenunciaPackage.DENUNCIA__DESCRIPCION:
+				setDescripcion(DESCRIPCION_EDEFAULT);
+				return;
+			case DenunciaPackage.DENUNCIA__LUGAR:
+				setLugar(LUGAR_EDEFAULT);
+				return;
+			case DenunciaPackage.DENUNCIA__DANO:
+				setDano(DANO_EDEFAULT);
+				return;
+			case DenunciaPackage.DENUNCIA__LUGAR_DENUNCIA:
+				setLugarDenuncia(LUGAR_DENUNCIA_EDEFAULT);
+				return;
+			case DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS:
+				setOwnedByFactoryDenuncias((FactoryDenuncias)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case DenunciaPackage.DENUNCIA__THE_CLIENTE:
+				return theCliente != null;
+			case DenunciaPackage.DENUNCIA__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case DenunciaPackage.DENUNCIA__FECHA:
+				return FECHA_EDEFAULT == null ? fecha != null : !FECHA_EDEFAULT.equals(fecha);
+			case DenunciaPackage.DENUNCIA__MOTIVO:
+				return MOTIVO_EDEFAULT == null ? motivo != null : !MOTIVO_EDEFAULT.equals(motivo);
+			case DenunciaPackage.DENUNCIA__DESCRIPCION:
+				return DESCRIPCION_EDEFAULT == null ? descripcion != null : !DESCRIPCION_EDEFAULT.equals(descripcion);
+			case DenunciaPackage.DENUNCIA__LUGAR:
+				return LUGAR_EDEFAULT == null ? lugar != null : !LUGAR_EDEFAULT.equals(lugar);
+			case DenunciaPackage.DENUNCIA__DANO:
+				return DANO_EDEFAULT == null ? dano != null : !DANO_EDEFAULT.equals(dano);
+			case DenunciaPackage.DENUNCIA__LUGAR_DENUNCIA:
+				return LUGAR_DENUNCIA_EDEFAULT == null ? lugarDenuncia != null : !LUGAR_DENUNCIA_EDEFAULT.equals(lugarDenuncia);
+			case DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS:
+				return getOwnedByFactoryDenuncias() != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", fecha: ");
+		result.append(fecha);
+		result.append(", motivo: ");
+		result.append(motivo);
+		result.append(", descripcion: ");
+		result.append(descripcion);
+		result.append(", lugar: ");
+		result.append(lugar);
+		result.append(", dano: ");
+		result.append(dano);
+		result.append(", lugarDenuncia: ");
+		result.append(lugarDenuncia);
+		result.append(')');
+		return result.toString();
+	}
+
+} //DenunciaImpl

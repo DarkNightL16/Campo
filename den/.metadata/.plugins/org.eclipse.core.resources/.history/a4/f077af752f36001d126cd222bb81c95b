@@ -1,0 +1,103 @@
+/**
+ */
+package den.domain.producto;
+
+import den.domain.Domain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Factory Producto</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.producto.FactoryProducto#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.producto.FactoryProducto#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.producto.FactoryProducto#getLstProducto <em>Lst Producto</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.producto.ProductoPackage#getFactoryProducto()
+ * @model
+ * @generated
+ */
+public interface FactoryProducto extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Owned By Domain</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.Domain#getTheFactoryProducto <em>The Factory Producto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Domain</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #setOwnedByDomain(Domain)
+	 * @see den.domain.producto.ProductoPackage#getFactoryProducto_OwnedByDomain()
+	 * @see den.domain.Domain#getTheFactoryProducto
+	 * @model opposite="theFactoryProducto" transient="false"
+	 * @generated
+	 */
+	Domain getOwnedByDomain();
+
+	/**
+	 * Sets the value of the '{@link den.domain.producto.FactoryProducto#getOwnedByDomain <em>Owned By Domain</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #getOwnedByDomain()
+	 * @generated
+	 */
+	void setOwnedByDomain(Domain value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.producto.ProductoPackage#getFactoryProducto_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.producto.FactoryProducto#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Producto</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.producto.Producto}.
+	 * It is bidirectional and its opposite is '{@link den.domain.producto.Producto#getOwnedByFactoryProducto <em>Owned By Factory Producto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Producto</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Producto</em>' containment reference list.
+	 * @see den.domain.producto.ProductoPackage#getFactoryProducto_LstProducto()
+	 * @see den.domain.producto.Producto#getOwnedByFactoryProducto
+	 * @model opposite="ownedByFactoryProducto" containment="true"
+	 * @generated
+	 */
+	EList<Producto> getLstProducto();
+
+} // FactoryProducto

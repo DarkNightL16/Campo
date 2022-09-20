@@ -1,0 +1,51 @@
+/**
+ */
+package den.domain.denuncia;
+
+import org.eclipse.emf.ecore.EFactory;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Factory</b> for the model.
+ * It provides a create method for each non-abstract class of the model.
+ * <!-- end-user-doc -->
+ * @see den.domain.denuncia.DenunciaPackage
+ * @generated
+ */
+public interface DenunciaFactory extends EFactory {
+	/**
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	DenunciaFactory eINSTANCE = den.domain.denuncia.impl.DenunciaFactoryImpl.init();
+
+	/**
+	 * Returns a new object of class '<em>Denuncia</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Denuncia</em>'.
+	 * @generated
+	 */
+	Denuncia createDenuncia();
+
+	/**
+	 * Returns a new object of class '<em>Factory Denuncias</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Factory Denuncias</em>'.
+	 * @generated
+	 */
+	FactoryDenuncias createFactoryDenuncias();
+
+	/**
+	 * Returns the package supported by this factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the package supported by this factory.
+	 * @generated
+	 */
+	DenunciaPackage getDenunciaPackage();
+
+} //DenunciaFactory

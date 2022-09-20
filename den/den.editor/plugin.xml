@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.presentation.denModelWizardID"
+            name="%_UI_denModelWizard_label"
+            class="den.presentation.denModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/denModelFile.gif">
+         <description>%_UI_denModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.presentation.denEditorID"
+            name="%_UI_denEditor_label"
+            icon="icons/full/obj16/denModelFile.gif"
+            extensions="den"
+            class="den.presentation.denEditor"
+            contributorClass="den.presentation.denActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.domain.presentation.DomainModelWizardID"
+            name="%_UI_DomainModelWizard_label"
+            class="den.domain.presentation.DomainModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DomainModelFile.gif">
+         <description>%_UI_DomainModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.domain.presentation.DomainEditorID"
+            name="%_UI_DomainEditor_label"
+            icon="icons/full/obj16/DomainModelFile.gif"
+            extensions="domain"
+            class="den.domain.presentation.DomainEditor"
+            contributorClass="den.domain.presentation.DomainActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.domain.ubicacion.presentation.UbicacionModelWizardID"
+            name="%_UI_UbicacionModelWizard_label"
+            class="den.domain.ubicacion.presentation.UbicacionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UbicacionModelFile.gif">
+         <description>%_UI_UbicacionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.domain.ubicacion.presentation.UbicacionEditorID"
+            name="%_UI_UbicacionEditor_label"
+            icon="icons/full/obj16/UbicacionModelFile.gif"
+            extensions="ubicacion"
+            class="den.domain.ubicacion.presentation.UbicacionEditor"
+            contributorClass="den.domain.ubicacion.presentation.UbicacionActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.domain.pedido.presentation.PedidoModelWizardID"
+            name="%_UI_PedidoModelWizard_label"
+            class="den.domain.pedido.presentation.PedidoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PedidoModelFile.gif">
+         <description>%_UI_PedidoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.domain.pedido.presentation.PedidoEditorID"
+            name="%_UI_PedidoEditor_label"
+            icon="icons/full/obj16/PedidoModelFile.gif"
+            extensions="pedido"
+            class="den.domain.pedido.presentation.PedidoEditor"
+            contributorClass="den.domain.pedido.presentation.PedidoActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.domain.transporte.presentation.TransporteModelWizardID"
+            name="%_UI_TransporteModelWizard_label"
+            class="den.domain.transporte.presentation.TransporteModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TransporteModelFile.gif">
+         <description>%_UI_TransporteModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.domain.transporte.presentation.TransporteEditorID"
+            name="%_UI_TransporteEditor_label"
+            icon="icons/full/obj16/TransporteModelFile.gif"
+            extensions="transporte"
+            class="den.domain.transporte.presentation.TransporteEditor"
+            contributorClass="den.domain.transporte.presentation.TransporteActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.domain.persona.presentation.PersonaModelWizardID"
+            name="%_UI_PersonaModelWizard_label"
+            class="den.domain.persona.presentation.PersonaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PersonaModelFile.gif">
+         <description>%_UI_PersonaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.domain.persona.presentation.PersonaEditorID"
+            name="%_UI_PersonaEditor_label"
+            icon="icons/full/obj16/PersonaModelFile.gif"
+            extensions="persona"
+            class="den.domain.persona.presentation.PersonaEditor"
+            contributorClass="den.domain.persona.presentation.PersonaActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.domain.producto.presentation.ProductoModelWizardID"
+            name="%_UI_ProductoModelWizard_label"
+            class="den.domain.producto.presentation.ProductoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProductoModelFile.gif">
+         <description>%_UI_ProductoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.domain.producto.presentation.ProductoEditorID"
+            name="%_UI_ProductoEditor_label"
+            icon="icons/full/obj16/ProductoModelFile.gif"
+            extensions="producto"
+            class="den.domain.producto.presentation.ProductoEditor"
+            contributorClass="den.domain.producto.presentation.ProductoActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.domain.envio.presentation.EnvioModelWizardID"
+            name="%_UI_EnvioModelWizard_label"
+            class="den.domain.envio.presentation.EnvioModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EnvioModelFile.gif">
+         <description>%_UI_EnvioModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.domain.envio.presentation.EnvioEditorID"
+            name="%_UI_EnvioEditor_label"
+            icon="icons/full/obj16/EnvioModelFile.gif"
+            extensions="envio"
+            class="den.domain.envio.presentation.EnvioEditor"
+            contributorClass="den.domain.envio.presentation.EnvioActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.domain.ruta.presentation.RutaModelWizardID"
+            name="%_UI_RutaModelWizard_label"
+            class="den.domain.ruta.presentation.RutaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RutaModelFile.gif">
+         <description>%_UI_RutaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.domain.ruta.presentation.RutaEditorID"
+            name="%_UI_RutaEditor_label"
+            icon="icons/full/obj16/RutaModelFile.gif"
+            extensions="ruta"
+            class="den.domain.ruta.presentation.RutaEditor"
+            contributorClass="den.domain.ruta.presentation.RutaActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated den -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="den.ui.presentation.UiModelWizardID"
+            name="%_UI_UiModelWizard_label"
+            class="den.ui.presentation.UiModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UiModelFile.gif">
+         <description>%_UI_UiModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated den -->
+      <editor
+            id="den.ui.presentation.UiEditorID"
+            name="%_UI_UiEditor_label"
+            icon="icons/full/obj16/UiModelFile.gif"
+            extensions="ui"
+            class="den.ui.presentation.UiEditor"
+            contributorClass="den.ui.presentation.UiActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

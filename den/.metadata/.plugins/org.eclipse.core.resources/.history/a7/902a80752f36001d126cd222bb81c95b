@@ -1,0 +1,821 @@
+/**
+ */
+package den.domain.cliente.impl;
+
+import den.domain.cliente.ClientePackage;
+import den.domain.cliente.FactoryCliente;
+import den.domain.cliente.Persona;
+import den.domain.cliente.Rol;
+
+import den.domain.denuncia.Denuncia;
+import den.domain.denuncia.DenunciaPackage;
+
+import den.domain.pedido.Pedido;
+import den.domain.pedido.PedidoPackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Persona</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getCedula <em>Cedula</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getDireccion <em>Direccion</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getTelefono <em>Telefono</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getEdad <em>Edad</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getFechaNacimeinto <em>Fecha Nacimeinto</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getGenero <em>Genero</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getLstDenuncia <em>Lst Denuncia</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getLstPedido <em>Lst Pedido</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}</li>
+ *   <li>{@link den.domain.cliente.impl.PersonaImpl#getTheRol <em>The Rol</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class PersonaImpl extends EObjectImpl implements Persona {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCedula() <em>Cedula</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCedula()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CEDULA_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getCedula() <em>Cedula</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCedula()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cedula = CEDULA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDireccion() <em>Direccion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDireccion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DIRECCION_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getDireccion() <em>Direccion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDireccion()
+	 * @generated
+	 * @ordered
+	 */
+	protected String direccion = DIRECCION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTelefono() <em>Telefono</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTelefono()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TELEFONO_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getTelefono() <em>Telefono</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTelefono()
+	 * @generated
+	 * @ordered
+	 */
+	protected String telefono = TELEFONO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEdad() <em>Edad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEdad()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EDAD_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getEdad() <em>Edad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEdad()
+	 * @generated
+	 * @ordered
+	 */
+	protected String edad = EDAD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFechaNacimeinto() <em>Fecha Nacimeinto</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFechaNacimeinto()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FECHA_NACIMEINTO_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getFechaNacimeinto() <em>Fecha Nacimeinto</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFechaNacimeinto()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fechaNacimeinto = FECHA_NACIMEINTO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGenero() <em>Genero</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGenero()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GENERO_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getGenero() <em>Genero</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGenero()
+	 * @generated
+	 * @ordered
+	 */
+	protected String genero = GENERO_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLstDenuncia() <em>Lst Denuncia</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstDenuncia()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Denuncia> lstDenuncia;
+
+	/**
+	 * The cached value of the '{@link #getLstPedido() <em>Lst Pedido</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstPedido()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Pedido> lstPedido;
+
+	/**
+	 * The cached value of the '{@link #getTheRol() <em>The Rol</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheRol()
+	 * @generated
+	 * @ordered
+	 */
+	protected Rol theRol;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PersonaImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return ClientePackage.Literals.PERSONA;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCedula() {
+		return cedula;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCedula(String newCedula) {
+		String oldCedula = cedula;
+		cedula = newCedula;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__CEDULA, oldCedula, cedula));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDireccion() {
+		return direccion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDireccion(String newDireccion) {
+		String oldDireccion = direccion;
+		direccion = newDireccion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__DIRECCION, oldDireccion, direccion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTelefono() {
+		return telefono;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTelefono(String newTelefono) {
+		String oldTelefono = telefono;
+		telefono = newTelefono;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__TELEFONO, oldTelefono, telefono));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getEdad() {
+		return edad;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEdad(String newEdad) {
+		String oldEdad = edad;
+		edad = newEdad;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__EDAD, oldEdad, edad));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFechaNacimeinto() {
+		return fechaNacimeinto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFechaNacimeinto(String newFechaNacimeinto) {
+		String oldFechaNacimeinto = fechaNacimeinto;
+		fechaNacimeinto = newFechaNacimeinto;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__FECHA_NACIMEINTO, oldFechaNacimeinto, fechaNacimeinto));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getGenero() {
+		return genero;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenero(String newGenero) {
+		String oldGenero = genero;
+		genero = newGenero;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__GENERO, oldGenero, genero));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Denuncia> getLstDenuncia() {
+		if (lstDenuncia == null) {
+			lstDenuncia = new EObjectWithInverseResolvingEList<Denuncia>(Denuncia.class, this, ClientePackage.PERSONA__LST_DENUNCIA, DenunciaPackage.DENUNCIA__THE_CLIENTE);
+		}
+		return lstDenuncia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Pedido> getLstPedido() {
+		if (lstPedido == null) {
+			lstPedido = new EObjectWithInverseResolvingEList<Pedido>(Pedido.class, this, ClientePackage.PERSONA__LST_PEDIDO, PedidoPackage.PEDIDO__THE_CLIENTE);
+		}
+		return lstPedido;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryCliente getOwnedByFactoryCliente() {
+		if (eContainerFeatureID() != ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE) return null;
+		return (FactoryCliente)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByFactoryCliente(FactoryCliente newOwnedByFactoryCliente, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByFactoryCliente, ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByFactoryCliente(FactoryCliente newOwnedByFactoryCliente) {
+		if (newOwnedByFactoryCliente != eInternalContainer() || (eContainerFeatureID() != ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE && newOwnedByFactoryCliente != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByFactoryCliente))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByFactoryCliente != null)
+				msgs = ((InternalEObject)newOwnedByFactoryCliente).eInverseAdd(this, ClientePackage.FACTORY_CLIENTE__LST_PERSONA, FactoryCliente.class, msgs);
+			msgs = basicSetOwnedByFactoryCliente(newOwnedByFactoryCliente, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE, newOwnedByFactoryCliente, newOwnedByFactoryCliente));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Rol getTheRol() {
+		if (theRol != null && theRol.eIsProxy()) {
+			InternalEObject oldTheRol = (InternalEObject)theRol;
+			theRol = (Rol)eResolveProxy(oldTheRol);
+			if (theRol != oldTheRol) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ClientePackage.PERSONA__THE_ROL, oldTheRol, theRol));
+			}
+		}
+		return theRol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Rol basicGetTheRol() {
+		return theRol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheRol(Rol newTheRol, NotificationChain msgs) {
+		Rol oldTheRol = theRol;
+		theRol = newTheRol;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__THE_ROL, oldTheRol, newTheRol);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheRol(Rol newTheRol) {
+		if (newTheRol != theRol) {
+			NotificationChain msgs = null;
+			if (theRol != null)
+				msgs = ((InternalEObject)theRol).eInverseRemove(this, ClientePackage.ROL__LST_PERSONA, Rol.class, msgs);
+			if (newTheRol != null)
+				msgs = ((InternalEObject)newTheRol).eInverseAdd(this, ClientePackage.ROL__LST_PERSONA, Rol.class, msgs);
+			msgs = basicSetTheRol(newTheRol, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClientePackage.PERSONA__THE_ROL, newTheRol, newTheRol));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ClientePackage.PERSONA__LST_DENUNCIA:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstDenuncia()).basicAdd(otherEnd, msgs);
+			case ClientePackage.PERSONA__LST_PEDIDO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstPedido()).basicAdd(otherEnd, msgs);
+			case ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByFactoryCliente((FactoryCliente)otherEnd, msgs);
+			case ClientePackage.PERSONA__THE_ROL:
+				if (theRol != null)
+					msgs = ((InternalEObject)theRol).eInverseRemove(this, ClientePackage.ROL__LST_PERSONA, Rol.class, msgs);
+				return basicSetTheRol((Rol)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ClientePackage.PERSONA__LST_DENUNCIA:
+				return ((InternalEList<?>)getLstDenuncia()).basicRemove(otherEnd, msgs);
+			case ClientePackage.PERSONA__LST_PEDIDO:
+				return ((InternalEList<?>)getLstPedido()).basicRemove(otherEnd, msgs);
+			case ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE:
+				return basicSetOwnedByFactoryCliente(null, msgs);
+			case ClientePackage.PERSONA__THE_ROL:
+				return basicSetTheRol(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE:
+				return eInternalContainer().eInverseRemove(this, ClientePackage.FACTORY_CLIENTE__LST_PERSONA, FactoryCliente.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ClientePackage.PERSONA__ID:
+				return getId();
+			case ClientePackage.PERSONA__NOMBRE:
+				return getNombre();
+			case ClientePackage.PERSONA__CEDULA:
+				return getCedula();
+			case ClientePackage.PERSONA__DIRECCION:
+				return getDireccion();
+			case ClientePackage.PERSONA__TELEFONO:
+				return getTelefono();
+			case ClientePackage.PERSONA__EDAD:
+				return getEdad();
+			case ClientePackage.PERSONA__FECHA_NACIMEINTO:
+				return getFechaNacimeinto();
+			case ClientePackage.PERSONA__GENERO:
+				return getGenero();
+			case ClientePackage.PERSONA__LST_DENUNCIA:
+				return getLstDenuncia();
+			case ClientePackage.PERSONA__LST_PEDIDO:
+				return getLstPedido();
+			case ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE:
+				return getOwnedByFactoryCliente();
+			case ClientePackage.PERSONA__THE_ROL:
+				if (resolve) return getTheRol();
+				return basicGetTheRol();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ClientePackage.PERSONA__ID:
+				setId((String)newValue);
+				return;
+			case ClientePackage.PERSONA__NOMBRE:
+				setNombre((String)newValue);
+				return;
+			case ClientePackage.PERSONA__CEDULA:
+				setCedula((String)newValue);
+				return;
+			case ClientePackage.PERSONA__DIRECCION:
+				setDireccion((String)newValue);
+				return;
+			case ClientePackage.PERSONA__TELEFONO:
+				setTelefono((String)newValue);
+				return;
+			case ClientePackage.PERSONA__EDAD:
+				setEdad((String)newValue);
+				return;
+			case ClientePackage.PERSONA__FECHA_NACIMEINTO:
+				setFechaNacimeinto((String)newValue);
+				return;
+			case ClientePackage.PERSONA__GENERO:
+				setGenero((String)newValue);
+				return;
+			case ClientePackage.PERSONA__LST_DENUNCIA:
+				getLstDenuncia().clear();
+				getLstDenuncia().addAll((Collection<? extends Denuncia>)newValue);
+				return;
+			case ClientePackage.PERSONA__LST_PEDIDO:
+				getLstPedido().clear();
+				getLstPedido().addAll((Collection<? extends Pedido>)newValue);
+				return;
+			case ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE:
+				setOwnedByFactoryCliente((FactoryCliente)newValue);
+				return;
+			case ClientePackage.PERSONA__THE_ROL:
+				setTheRol((Rol)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ClientePackage.PERSONA__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case ClientePackage.PERSONA__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case ClientePackage.PERSONA__CEDULA:
+				setCedula(CEDULA_EDEFAULT);
+				return;
+			case ClientePackage.PERSONA__DIRECCION:
+				setDireccion(DIRECCION_EDEFAULT);
+				return;
+			case ClientePackage.PERSONA__TELEFONO:
+				setTelefono(TELEFONO_EDEFAULT);
+				return;
+			case ClientePackage.PERSONA__EDAD:
+				setEdad(EDAD_EDEFAULT);
+				return;
+			case ClientePackage.PERSONA__FECHA_NACIMEINTO:
+				setFechaNacimeinto(FECHA_NACIMEINTO_EDEFAULT);
+				return;
+			case ClientePackage.PERSONA__GENERO:
+				setGenero(GENERO_EDEFAULT);
+				return;
+			case ClientePackage.PERSONA__LST_DENUNCIA:
+				getLstDenuncia().clear();
+				return;
+			case ClientePackage.PERSONA__LST_PEDIDO:
+				getLstPedido().clear();
+				return;
+			case ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE:
+				setOwnedByFactoryCliente((FactoryCliente)null);
+				return;
+			case ClientePackage.PERSONA__THE_ROL:
+				setTheRol((Rol)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ClientePackage.PERSONA__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case ClientePackage.PERSONA__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case ClientePackage.PERSONA__CEDULA:
+				return CEDULA_EDEFAULT == null ? cedula != null : !CEDULA_EDEFAULT.equals(cedula);
+			case ClientePackage.PERSONA__DIRECCION:
+				return DIRECCION_EDEFAULT == null ? direccion != null : !DIRECCION_EDEFAULT.equals(direccion);
+			case ClientePackage.PERSONA__TELEFONO:
+				return TELEFONO_EDEFAULT == null ? telefono != null : !TELEFONO_EDEFAULT.equals(telefono);
+			case ClientePackage.PERSONA__EDAD:
+				return EDAD_EDEFAULT == null ? edad != null : !EDAD_EDEFAULT.equals(edad);
+			case ClientePackage.PERSONA__FECHA_NACIMEINTO:
+				return FECHA_NACIMEINTO_EDEFAULT == null ? fechaNacimeinto != null : !FECHA_NACIMEINTO_EDEFAULT.equals(fechaNacimeinto);
+			case ClientePackage.PERSONA__GENERO:
+				return GENERO_EDEFAULT == null ? genero != null : !GENERO_EDEFAULT.equals(genero);
+			case ClientePackage.PERSONA__LST_DENUNCIA:
+				return lstDenuncia != null && !lstDenuncia.isEmpty();
+			case ClientePackage.PERSONA__LST_PEDIDO:
+				return lstPedido != null && !lstPedido.isEmpty();
+			case ClientePackage.PERSONA__OWNED_BY_FACTORY_CLIENTE:
+				return getOwnedByFactoryCliente() != null;
+			case ClientePackage.PERSONA__THE_ROL:
+				return theRol != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", nombre: ");
+		result.append(nombre);
+		result.append(", cedula: ");
+		result.append(cedula);
+		result.append(", direccion: ");
+		result.append(direccion);
+		result.append(", telefono: ");
+		result.append(telefono);
+		result.append(", edad: ");
+		result.append(edad);
+		result.append(", fechaNacimeinto: ");
+		result.append(fechaNacimeinto);
+		result.append(", genero: ");
+		result.append(genero);
+		result.append(')');
+		return result.toString();
+	}
+
+} //PersonaImpl

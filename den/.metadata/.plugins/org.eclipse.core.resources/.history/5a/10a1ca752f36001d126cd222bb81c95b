@@ -1,0 +1,313 @@
+/**
+ */
+package den.domain.transporte.impl;
+
+import den.domain.Domain;
+import den.domain.DomainPackage;
+
+import den.domain.transporte.FactoryRuta;
+import den.domain.transporte.Ruta;
+import den.domain.transporte.TransportePackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Factory Ruta</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.transporte.impl.FactoryRutaImpl#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.FactoryRutaImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.transporte.impl.FactoryRutaImpl#getLstRuta <em>Lst Ruta</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class FactoryRutaImpl extends EObjectImpl implements FactoryRuta {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLstRuta() <em>Lst Ruta</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Ruta> lstRuta;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FactoryRutaImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return TransportePackage.Literals.FACTORY_RUTA;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Domain getOwnedByDomain() {
+		if (eContainerFeatureID() != TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN) return null;
+		return (Domain)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByDomain(Domain newOwnedByDomain, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByDomain, TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByDomain(Domain newOwnedByDomain) {
+		if (newOwnedByDomain != eInternalContainer() || (eContainerFeatureID() != TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN && newOwnedByDomain != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByDomain))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByDomain != null)
+				msgs = ((InternalEObject)newOwnedByDomain).eInverseAdd(this, DomainPackage.DOMAIN__THE_FACTORY_RUTA, Domain.class, msgs);
+			msgs = basicSetOwnedByDomain(newOwnedByDomain, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN, newOwnedByDomain, newOwnedByDomain));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TransportePackage.FACTORY_RUTA__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Ruta> getLstRuta() {
+		if (lstRuta == null) {
+			lstRuta = new EObjectContainmentWithInverseEList<Ruta>(Ruta.class, this, TransportePackage.FACTORY_RUTA__LST_RUTA, TransportePackage.RUTA__OWNED_BY_FACTORY_RUTA);
+		}
+		return lstRuta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByDomain((Domain)otherEnd, msgs);
+			case TransportePackage.FACTORY_RUTA__LST_RUTA:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstRuta()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN:
+				return basicSetOwnedByDomain(null, msgs);
+			case TransportePackage.FACTORY_RUTA__LST_RUTA:
+				return ((InternalEList<?>)getLstRuta()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN:
+				return eInternalContainer().eInverseRemove(this, DomainPackage.DOMAIN__THE_FACTORY_RUTA, Domain.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN:
+				return getOwnedByDomain();
+			case TransportePackage.FACTORY_RUTA__ID:
+				return getId();
+			case TransportePackage.FACTORY_RUTA__LST_RUTA:
+				return getLstRuta();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN:
+				setOwnedByDomain((Domain)newValue);
+				return;
+			case TransportePackage.FACTORY_RUTA__ID:
+				setId((String)newValue);
+				return;
+			case TransportePackage.FACTORY_RUTA__LST_RUTA:
+				getLstRuta().clear();
+				getLstRuta().addAll((Collection<? extends Ruta>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN:
+				setOwnedByDomain((Domain)null);
+				return;
+			case TransportePackage.FACTORY_RUTA__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case TransportePackage.FACTORY_RUTA__LST_RUTA:
+				getLstRuta().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN:
+				return getOwnedByDomain() != null;
+			case TransportePackage.FACTORY_RUTA__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case TransportePackage.FACTORY_RUTA__LST_RUTA:
+				return lstRuta != null && !lstRuta.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(')');
+		return result.toString();
+	}
+
+} //FactoryRutaImpl

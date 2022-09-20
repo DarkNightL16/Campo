@@ -1,0 +1,279 @@
+/**
+ */
+package den.domain.denuncia;
+
+import den.domain.cliente.Persona;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Denuncia</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.denuncia.Denuncia#getTheCliente <em>The Cliente</em>}</li>
+ *   <li>{@link den.domain.denuncia.Denuncia#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.denuncia.Denuncia#getFecha <em>Fecha</em>}</li>
+ *   <li>{@link den.domain.denuncia.Denuncia#getMotivo <em>Motivo</em>}</li>
+ *   <li>{@link den.domain.denuncia.Denuncia#getDescripcion <em>Descripcion</em>}</li>
+ *   <li>{@link den.domain.denuncia.Denuncia#getLugar <em>Lugar</em>}</li>
+ *   <li>{@link den.domain.denuncia.Denuncia#getDano <em>Dano</em>}</li>
+ *   <li>{@link den.domain.denuncia.Denuncia#getLugarDenuncia <em>Lugar Denuncia</em>}</li>
+ *   <li>{@link den.domain.denuncia.Denuncia#getOwnedByFactoryDenuncias <em>Owned By Factory Denuncias</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.denuncia.DenunciaPackage#getDenuncia()
+ * @model
+ * @generated
+ */
+public interface Denuncia extends EObject {
+	/**
+	 * Returns the value of the '<em><b>The Cliente</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.cliente.Persona#getLstDenuncia <em>Lst Denuncia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Cliente</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Cliente</em>' reference.
+	 * @see #setTheCliente(Persona)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_TheCliente()
+	 * @see den.domain.cliente.Persona#getLstDenuncia
+	 * @model opposite="lstDenuncia"
+	 * @generated
+	 */
+	Persona getTheCliente();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getTheCliente <em>The Cliente</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Cliente</em>' reference.
+	 * @see #getTheCliente()
+	 * @generated
+	 */
+	void setTheCliente(Persona value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Fecha</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fecha</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fecha</em>' attribute.
+	 * @see #setFecha(String)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_Fecha()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getFecha();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getFecha <em>Fecha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fecha</em>' attribute.
+	 * @see #getFecha()
+	 * @generated
+	 */
+	void setFecha(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Motivo</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Motivo</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Motivo</em>' attribute.
+	 * @see #setMotivo(String)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_Motivo()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getMotivo();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getMotivo <em>Motivo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Motivo</em>' attribute.
+	 * @see #getMotivo()
+	 * @generated
+	 */
+	void setMotivo(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Descripcion</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Descripcion</em>' attribute.
+	 * @see #setDescripcion(String)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_Descripcion()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getDescripcion();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getDescripcion <em>Descripcion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Descripcion</em>' attribute.
+	 * @see #getDescripcion()
+	 * @generated
+	 */
+	void setDescripcion(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lugar</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lugar</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lugar</em>' attribute.
+	 * @see #setLugar(String)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_Lugar()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getLugar();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getLugar <em>Lugar</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Lugar</em>' attribute.
+	 * @see #getLugar()
+	 * @generated
+	 */
+	void setLugar(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Dano</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dano</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dano</em>' attribute.
+	 * @see #setDano(String)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_Dano()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getDano();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getDano <em>Dano</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Dano</em>' attribute.
+	 * @see #getDano()
+	 * @generated
+	 */
+	void setDano(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lugar Denuncia</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lugar Denuncia</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lugar Denuncia</em>' attribute.
+	 * @see #setLugarDenuncia(String)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_LugarDenuncia()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getLugarDenuncia();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getLugarDenuncia <em>Lugar Denuncia</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Lugar Denuncia</em>' attribute.
+	 * @see #getLugarDenuncia()
+	 * @generated
+	 */
+	void setLugarDenuncia(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned By Factory Denuncias</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.denuncia.FactoryDenuncias#getLstDenuncia <em>Lst Denuncia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Factory Denuncias</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Factory Denuncias</em>' container reference.
+	 * @see #setOwnedByFactoryDenuncias(FactoryDenuncias)
+	 * @see den.domain.denuncia.DenunciaPackage#getDenuncia_OwnedByFactoryDenuncias()
+	 * @see den.domain.denuncia.FactoryDenuncias#getLstDenuncia
+	 * @model opposite="lstDenuncia" transient="false"
+	 * @generated
+	 */
+	FactoryDenuncias getOwnedByFactoryDenuncias();
+
+	/**
+	 * Sets the value of the '{@link den.domain.denuncia.Denuncia#getOwnedByFactoryDenuncias <em>Owned By Factory Denuncias</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Factory Denuncias</em>' container reference.
+	 * @see #getOwnedByFactoryDenuncias()
+	 * @generated
+	 */
+	void setOwnedByFactoryDenuncias(FactoryDenuncias value);
+
+} // Denuncia

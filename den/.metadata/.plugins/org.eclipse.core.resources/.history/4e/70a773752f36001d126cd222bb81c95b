@@ -1,0 +1,60 @@
+/**
+ */
+package den.domain.cliente;
+
+import org.eclipse.emf.ecore.EFactory;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Factory</b> for the model.
+ * It provides a create method for each non-abstract class of the model.
+ * <!-- end-user-doc -->
+ * @see den.domain.cliente.ClientePackage
+ * @generated
+ */
+public interface ClienteFactory extends EFactory {
+	/**
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	ClienteFactory eINSTANCE = den.domain.cliente.impl.ClienteFactoryImpl.init();
+
+	/**
+	 * Returns a new object of class '<em>Persona</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Persona</em>'.
+	 * @generated
+	 */
+	Persona createPersona();
+
+	/**
+	 * Returns a new object of class '<em>Factory Cliente</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Factory Cliente</em>'.
+	 * @generated
+	 */
+	FactoryCliente createFactoryCliente();
+
+	/**
+	 * Returns a new object of class '<em>Rol</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rol</em>'.
+	 * @generated
+	 */
+	Rol createRol();
+
+	/**
+	 * Returns the package supported by this factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the package supported by this factory.
+	 * @generated
+	 */
+	ClientePackage getClientePackage();
+
+} //ClienteFactory

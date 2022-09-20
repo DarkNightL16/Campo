@@ -1,0 +1,313 @@
+/**
+ */
+package den.domain.denuncia.impl;
+
+import den.domain.Domain;
+import den.domain.DomainPackage;
+
+import den.domain.denuncia.Denuncia;
+import den.domain.denuncia.DenunciaPackage;
+import den.domain.denuncia.FactoryDenuncias;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Factory Denuncias</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.denuncia.impl.FactoryDenunciasImpl#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.FactoryDenunciasImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.denuncia.impl.FactoryDenunciasImpl#getLstDenuncia <em>Lst Denuncia</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class FactoryDenunciasImpl extends EObjectImpl implements FactoryDenuncias {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLstDenuncia() <em>Lst Denuncia</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstDenuncia()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Denuncia> lstDenuncia;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FactoryDenunciasImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return DenunciaPackage.Literals.FACTORY_DENUNCIAS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Domain getOwnedByDomain() {
+		if (eContainerFeatureID() != DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN) return null;
+		return (Domain)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByDomain(Domain newOwnedByDomain, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByDomain, DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByDomain(Domain newOwnedByDomain) {
+		if (newOwnedByDomain != eInternalContainer() || (eContainerFeatureID() != DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN && newOwnedByDomain != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByDomain))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByDomain != null)
+				msgs = ((InternalEObject)newOwnedByDomain).eInverseAdd(this, DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS, Domain.class, msgs);
+			msgs = basicSetOwnedByDomain(newOwnedByDomain, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN, newOwnedByDomain, newOwnedByDomain));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DenunciaPackage.FACTORY_DENUNCIAS__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Denuncia> getLstDenuncia() {
+		if (lstDenuncia == null) {
+			lstDenuncia = new EObjectContainmentWithInverseEList<Denuncia>(Denuncia.class, this, DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA, DenunciaPackage.DENUNCIA__OWNED_BY_FACTORY_DENUNCIAS);
+		}
+		return lstDenuncia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByDomain((Domain)otherEnd, msgs);
+			case DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstDenuncia()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN:
+				return basicSetOwnedByDomain(null, msgs);
+			case DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA:
+				return ((InternalEList<?>)getLstDenuncia()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN:
+				return eInternalContainer().eInverseRemove(this, DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS, Domain.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN:
+				return getOwnedByDomain();
+			case DenunciaPackage.FACTORY_DENUNCIAS__ID:
+				return getId();
+			case DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA:
+				return getLstDenuncia();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN:
+				setOwnedByDomain((Domain)newValue);
+				return;
+			case DenunciaPackage.FACTORY_DENUNCIAS__ID:
+				setId((String)newValue);
+				return;
+			case DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA:
+				getLstDenuncia().clear();
+				getLstDenuncia().addAll((Collection<? extends Denuncia>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN:
+				setOwnedByDomain((Domain)null);
+				return;
+			case DenunciaPackage.FACTORY_DENUNCIAS__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA:
+				getLstDenuncia().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN:
+				return getOwnedByDomain() != null;
+			case DenunciaPackage.FACTORY_DENUNCIAS__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case DenunciaPackage.FACTORY_DENUNCIAS__LST_DENUNCIA:
+				return lstDenuncia != null && !lstDenuncia.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(')');
+		return result.toString();
+	}
+
+} //FactoryDenunciasImpl

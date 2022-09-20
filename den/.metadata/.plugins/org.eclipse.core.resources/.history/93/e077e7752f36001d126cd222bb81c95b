@@ -1,0 +1,129 @@
+/**
+ */
+package den.domain.ubicacion;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Departamento</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.ubicacion.Departamento#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.ubicacion.Departamento#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.ubicacion.Departamento#getLstCiudad <em>Lst Ciudad</em>}</li>
+ *   <li>{@link den.domain.ubicacion.Departamento#getOwnedByPais <em>Owned By Pais</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.ubicacion.UbicacionPackage#getDepartamento()
+ * @model
+ * @generated
+ */
+public interface Departamento extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.ubicacion.UbicacionPackage#getDepartamento_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.ubicacion.Departamento#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nombre</em>' attribute.
+	 * @see #setNombre(String)
+	 * @see den.domain.ubicacion.UbicacionPackage#getDepartamento_Nombre()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getNombre();
+
+	/**
+	 * Sets the value of the '{@link den.domain.ubicacion.Departamento#getNombre <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nombre</em>' attribute.
+	 * @see #getNombre()
+	 * @generated
+	 */
+	void setNombre(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Ciudad</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.ubicacion.Ciudad}.
+	 * It is bidirectional and its opposite is '{@link den.domain.ubicacion.Ciudad#getOwnedByDepartamento <em>Owned By Departamento</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Ciudad</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Ciudad</em>' containment reference list.
+	 * @see den.domain.ubicacion.UbicacionPackage#getDepartamento_LstCiudad()
+	 * @see den.domain.ubicacion.Ciudad#getOwnedByDepartamento
+	 * @model opposite="ownedByDepartamento" containment="true"
+	 * @generated
+	 */
+	EList<Ciudad> getLstCiudad();
+
+	/**
+	 * Returns the value of the '<em><b>Owned By Pais</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.ubicacion.Pais#getLstDepartamento <em>Lst Departamento</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Pais</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Pais</em>' container reference.
+	 * @see #setOwnedByPais(Pais)
+	 * @see den.domain.ubicacion.UbicacionPackage#getDepartamento_OwnedByPais()
+	 * @see den.domain.ubicacion.Pais#getLstDepartamento
+	 * @model opposite="lstDepartamento" transient="false"
+	 * @generated
+	 */
+	Pais getOwnedByPais();
+
+	/**
+	 * Sets the value of the '{@link den.domain.ubicacion.Departamento#getOwnedByPais <em>Owned By Pais</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Pais</em>' container reference.
+	 * @see #getOwnedByPais()
+	 * @generated
+	 */
+	void setOwnedByPais(Pais value);
+
+} // Departamento

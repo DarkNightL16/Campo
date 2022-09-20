@@ -1,0 +1,788 @@
+/**
+ */
+package den.domain.cliente;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see den.domain.cliente.ClienteFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface ClientePackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "cliente";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http:///den/domain/cliente.ecore";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "den.domain.cliente";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	ClientePackage eINSTANCE = den.domain.cliente.impl.ClientePackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link den.domain.cliente.impl.PersonaImpl <em>Persona</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see den.domain.cliente.impl.PersonaImpl
+	 * @see den.domain.cliente.impl.ClientePackageImpl#getPersona()
+	 * @generated
+	 */
+	int PERSONA = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__NOMBRE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Cedula</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__CEDULA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Direccion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__DIRECCION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Telefono</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__TELEFONO = 4;
+
+	/**
+	 * The feature id for the '<em><b>Edad</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__EDAD = 5;
+
+	/**
+	 * The feature id for the '<em><b>Fecha Nacimeinto</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__FECHA_NACIMEINTO = 6;
+
+	/**
+	 * The feature id for the '<em><b>Genero</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__GENERO = 7;
+
+	/**
+	 * The feature id for the '<em><b>Lst Denuncia</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__LST_DENUNCIA = 8;
+
+	/**
+	 * The feature id for the '<em><b>Lst Pedido</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__LST_PEDIDO = 9;
+
+	/**
+	 * The feature id for the '<em><b>Owned By Factory Cliente</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__OWNED_BY_FACTORY_CLIENTE = 10;
+
+	/**
+	 * The feature id for the '<em><b>The Rol</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA__THE_ROL = 11;
+
+	/**
+	 * The number of structural features of the '<em>Persona</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONA_FEATURE_COUNT = 12;
+
+	/**
+	 * The meta object id for the '{@link den.domain.cliente.impl.FactoryClienteImpl <em>Factory Cliente</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see den.domain.cliente.impl.FactoryClienteImpl
+	 * @see den.domain.cliente.impl.ClientePackageImpl#getFactoryCliente()
+	 * @generated
+	 */
+	int FACTORY_CLIENTE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Owned By Domain</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_CLIENTE__OWNED_BY_DOMAIN = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id Clientes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_CLIENTE__ID_CLIENTES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Lst Persona</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_CLIENTE__LST_PERSONA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Lst Rol</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_CLIENTE__LST_ROL = 3;
+
+	/**
+	 * The number of structural features of the '<em>Factory Cliente</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FACTORY_CLIENTE_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link den.domain.cliente.impl.RolImpl <em>Rol</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see den.domain.cliente.impl.RolImpl
+	 * @see den.domain.cliente.impl.ClientePackageImpl#getRol()
+	 * @generated
+	 */
+	int ROL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Owned By Factory Cliente</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROL__OWNED_BY_FACTORY_CLIENTE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROL__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROL__NOMBRE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROL__DESCRIPCION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Lst Persona</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROL__LST_PERSONA = 4;
+
+	/**
+	 * The number of structural features of the '<em>Rol</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROL_FEATURE_COUNT = 5;
+
+
+	/**
+	 * Returns the meta object for class '{@link den.domain.cliente.Persona <em>Persona</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Persona</em>'.
+	 * @see den.domain.cliente.Persona
+	 * @generated
+	 */
+	EClass getPersona();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Persona#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see den.domain.cliente.Persona#getId()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EAttribute getPersona_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Persona#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see den.domain.cliente.Persona#getNombre()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EAttribute getPersona_Nombre();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Persona#getCedula <em>Cedula</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cedula</em>'.
+	 * @see den.domain.cliente.Persona#getCedula()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EAttribute getPersona_Cedula();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Persona#getDireccion <em>Direccion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Direccion</em>'.
+	 * @see den.domain.cliente.Persona#getDireccion()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EAttribute getPersona_Direccion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Persona#getTelefono <em>Telefono</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Telefono</em>'.
+	 * @see den.domain.cliente.Persona#getTelefono()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EAttribute getPersona_Telefono();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Persona#getEdad <em>Edad</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Edad</em>'.
+	 * @see den.domain.cliente.Persona#getEdad()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EAttribute getPersona_Edad();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Persona#getFechaNacimeinto <em>Fecha Nacimeinto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fecha Nacimeinto</em>'.
+	 * @see den.domain.cliente.Persona#getFechaNacimeinto()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EAttribute getPersona_FechaNacimeinto();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Persona#getGenero <em>Genero</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Genero</em>'.
+	 * @see den.domain.cliente.Persona#getGenero()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EAttribute getPersona_Genero();
+
+	/**
+	 * Returns the meta object for the reference list '{@link den.domain.cliente.Persona#getLstDenuncia <em>Lst Denuncia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lst Denuncia</em>'.
+	 * @see den.domain.cliente.Persona#getLstDenuncia()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EReference getPersona_LstDenuncia();
+
+	/**
+	 * Returns the meta object for the reference list '{@link den.domain.cliente.Persona#getLstPedido <em>Lst Pedido</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lst Pedido</em>'.
+	 * @see den.domain.cliente.Persona#getLstPedido()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EReference getPersona_LstPedido();
+
+	/**
+	 * Returns the meta object for the container reference '{@link den.domain.cliente.Persona#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owned By Factory Cliente</em>'.
+	 * @see den.domain.cliente.Persona#getOwnedByFactoryCliente()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EReference getPersona_OwnedByFactoryCliente();
+
+	/**
+	 * Returns the meta object for the reference '{@link den.domain.cliente.Persona#getTheRol <em>The Rol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>The Rol</em>'.
+	 * @see den.domain.cliente.Persona#getTheRol()
+	 * @see #getPersona()
+	 * @generated
+	 */
+	EReference getPersona_TheRol();
+
+	/**
+	 * Returns the meta object for class '{@link den.domain.cliente.FactoryCliente <em>Factory Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Factory Cliente</em>'.
+	 * @see den.domain.cliente.FactoryCliente
+	 * @generated
+	 */
+	EClass getFactoryCliente();
+
+	/**
+	 * Returns the meta object for the container reference '{@link den.domain.cliente.FactoryCliente#getOwnedByDomain <em>Owned By Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owned By Domain</em>'.
+	 * @see den.domain.cliente.FactoryCliente#getOwnedByDomain()
+	 * @see #getFactoryCliente()
+	 * @generated
+	 */
+	EReference getFactoryCliente_OwnedByDomain();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.FactoryCliente#getIdClientes <em>Id Clientes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Clientes</em>'.
+	 * @see den.domain.cliente.FactoryCliente#getIdClientes()
+	 * @see #getFactoryCliente()
+	 * @generated
+	 */
+	EAttribute getFactoryCliente_IdClientes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link den.domain.cliente.FactoryCliente#getLstPersona <em>Lst Persona</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lst Persona</em>'.
+	 * @see den.domain.cliente.FactoryCliente#getLstPersona()
+	 * @see #getFactoryCliente()
+	 * @generated
+	 */
+	EReference getFactoryCliente_LstPersona();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link den.domain.cliente.FactoryCliente#getLstRol <em>Lst Rol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lst Rol</em>'.
+	 * @see den.domain.cliente.FactoryCliente#getLstRol()
+	 * @see #getFactoryCliente()
+	 * @generated
+	 */
+	EReference getFactoryCliente_LstRol();
+
+	/**
+	 * Returns the meta object for class '{@link den.domain.cliente.Rol <em>Rol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rol</em>'.
+	 * @see den.domain.cliente.Rol
+	 * @generated
+	 */
+	EClass getRol();
+
+	/**
+	 * Returns the meta object for the container reference '{@link den.domain.cliente.Rol#getOwnedByFactoryCliente <em>Owned By Factory Cliente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Owned By Factory Cliente</em>'.
+	 * @see den.domain.cliente.Rol#getOwnedByFactoryCliente()
+	 * @see #getRol()
+	 * @generated
+	 */
+	EReference getRol_OwnedByFactoryCliente();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Rol#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see den.domain.cliente.Rol#getId()
+	 * @see #getRol()
+	 * @generated
+	 */
+	EAttribute getRol_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Rol#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see den.domain.cliente.Rol#getNombre()
+	 * @see #getRol()
+	 * @generated
+	 */
+	EAttribute getRol_Nombre();
+
+	/**
+	 * Returns the meta object for the attribute '{@link den.domain.cliente.Rol#getDescripcion <em>Descripcion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Descripcion</em>'.
+	 * @see den.domain.cliente.Rol#getDescripcion()
+	 * @see #getRol()
+	 * @generated
+	 */
+	EAttribute getRol_Descripcion();
+
+	/**
+	 * Returns the meta object for the reference list '{@link den.domain.cliente.Rol#getLstPersona <em>Lst Persona</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Lst Persona</em>'.
+	 * @see den.domain.cliente.Rol#getLstPersona()
+	 * @see #getRol()
+	 * @generated
+	 */
+	EReference getRol_LstPersona();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	ClienteFactory getClienteFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link den.domain.cliente.impl.PersonaImpl <em>Persona</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see den.domain.cliente.impl.PersonaImpl
+		 * @see den.domain.cliente.impl.ClientePackageImpl#getPersona()
+		 * @generated
+		 */
+		EClass PERSONA = eINSTANCE.getPersona();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONA__ID = eINSTANCE.getPersona_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONA__NOMBRE = eINSTANCE.getPersona_Nombre();
+
+		/**
+		 * The meta object literal for the '<em><b>Cedula</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONA__CEDULA = eINSTANCE.getPersona_Cedula();
+
+		/**
+		 * The meta object literal for the '<em><b>Direccion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONA__DIRECCION = eINSTANCE.getPersona_Direccion();
+
+		/**
+		 * The meta object literal for the '<em><b>Telefono</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONA__TELEFONO = eINSTANCE.getPersona_Telefono();
+
+		/**
+		 * The meta object literal for the '<em><b>Edad</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONA__EDAD = eINSTANCE.getPersona_Edad();
+
+		/**
+		 * The meta object literal for the '<em><b>Fecha Nacimeinto</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONA__FECHA_NACIMEINTO = eINSTANCE.getPersona_FechaNacimeinto();
+
+		/**
+		 * The meta object literal for the '<em><b>Genero</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSONA__GENERO = eINSTANCE.getPersona_Genero();
+
+		/**
+		 * The meta object literal for the '<em><b>Lst Denuncia</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSONA__LST_DENUNCIA = eINSTANCE.getPersona_LstDenuncia();
+
+		/**
+		 * The meta object literal for the '<em><b>Lst Pedido</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSONA__LST_PEDIDO = eINSTANCE.getPersona_LstPedido();
+
+		/**
+		 * The meta object literal for the '<em><b>Owned By Factory Cliente</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSONA__OWNED_BY_FACTORY_CLIENTE = eINSTANCE.getPersona_OwnedByFactoryCliente();
+
+		/**
+		 * The meta object literal for the '<em><b>The Rol</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSONA__THE_ROL = eINSTANCE.getPersona_TheRol();
+
+		/**
+		 * The meta object literal for the '{@link den.domain.cliente.impl.FactoryClienteImpl <em>Factory Cliente</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see den.domain.cliente.impl.FactoryClienteImpl
+		 * @see den.domain.cliente.impl.ClientePackageImpl#getFactoryCliente()
+		 * @generated
+		 */
+		EClass FACTORY_CLIENTE = eINSTANCE.getFactoryCliente();
+
+		/**
+		 * The meta object literal for the '<em><b>Owned By Domain</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FACTORY_CLIENTE__OWNED_BY_DOMAIN = eINSTANCE.getFactoryCliente_OwnedByDomain();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Clientes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FACTORY_CLIENTE__ID_CLIENTES = eINSTANCE.getFactoryCliente_IdClientes();
+
+		/**
+		 * The meta object literal for the '<em><b>Lst Persona</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FACTORY_CLIENTE__LST_PERSONA = eINSTANCE.getFactoryCliente_LstPersona();
+
+		/**
+		 * The meta object literal for the '<em><b>Lst Rol</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FACTORY_CLIENTE__LST_ROL = eINSTANCE.getFactoryCliente_LstRol();
+
+		/**
+		 * The meta object literal for the '{@link den.domain.cliente.impl.RolImpl <em>Rol</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see den.domain.cliente.impl.RolImpl
+		 * @see den.domain.cliente.impl.ClientePackageImpl#getRol()
+		 * @generated
+		 */
+		EClass ROL = eINSTANCE.getRol();
+
+		/**
+		 * The meta object literal for the '<em><b>Owned By Factory Cliente</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROL__OWNED_BY_FACTORY_CLIENTE = eINSTANCE.getRol_OwnedByFactoryCliente();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROL__ID = eINSTANCE.getRol_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROL__NOMBRE = eINSTANCE.getRol_Nombre();
+
+		/**
+		 * The meta object literal for the '<em><b>Descripcion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROL__DESCRIPCION = eINSTANCE.getRol_Descripcion();
+
+		/**
+		 * The meta object literal for the '<em><b>Lst Persona</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROL__LST_PERSONA = eINSTANCE.getRol_LstPersona();
+
+	}
+
+} //ClientePackage

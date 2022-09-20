@@ -1,0 +1,103 @@
+/**
+ */
+package den.domain.pedido;
+
+import den.domain.Domain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Factory Pedido</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.pedido.FactoryPedido#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.pedido.FactoryPedido#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.pedido.FactoryPedido#getLstPedido <em>Lst Pedido</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.pedido.PedidoPackage#getFactoryPedido()
+ * @model
+ * @generated
+ */
+public interface FactoryPedido extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Owned By Domain</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.Domain#getTheFactoryPedido <em>The Factory Pedido</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Domain</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #setOwnedByDomain(Domain)
+	 * @see den.domain.pedido.PedidoPackage#getFactoryPedido_OwnedByDomain()
+	 * @see den.domain.Domain#getTheFactoryPedido
+	 * @model opposite="theFactoryPedido" transient="false"
+	 * @generated
+	 */
+	Domain getOwnedByDomain();
+
+	/**
+	 * Sets the value of the '{@link den.domain.pedido.FactoryPedido#getOwnedByDomain <em>Owned By Domain</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #getOwnedByDomain()
+	 * @generated
+	 */
+	void setOwnedByDomain(Domain value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.pedido.PedidoPackage#getFactoryPedido_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.pedido.FactoryPedido#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Pedido</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.pedido.Pedido}.
+	 * It is bidirectional and its opposite is '{@link den.domain.pedido.Pedido#getOwnedByFactoryPedido <em>Owned By Factory Pedido</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Pedido</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Pedido</em>' containment reference list.
+	 * @see den.domain.pedido.PedidoPackage#getFactoryPedido_LstPedido()
+	 * @see den.domain.pedido.Pedido#getOwnedByFactoryPedido
+	 * @model opposite="ownedByFactoryPedido" containment="true"
+	 * @generated
+	 */
+	EList<Pedido> getLstPedido();
+
+} // FactoryPedido

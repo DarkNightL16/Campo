@@ -1,0 +1,103 @@
+/**
+ */
+package den.domain.transporte;
+
+import den.domain.Domain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Factory Ruta</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.transporte.FactoryRuta#getOwnedByDomain <em>Owned By Domain</em>}</li>
+ *   <li>{@link den.domain.transporte.FactoryRuta#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.transporte.FactoryRuta#getLstRuta <em>Lst Ruta</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.transporte.TransportePackage#getFactoryRuta()
+ * @model
+ * @generated
+ */
+public interface FactoryRuta extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Owned By Domain</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.Domain#getTheFactoryRuta <em>The Factory Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Domain</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #setOwnedByDomain(Domain)
+	 * @see den.domain.transporte.TransportePackage#getFactoryRuta_OwnedByDomain()
+	 * @see den.domain.Domain#getTheFactoryRuta
+	 * @model opposite="theFactoryRuta" transient="false"
+	 * @generated
+	 */
+	Domain getOwnedByDomain();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.FactoryRuta#getOwnedByDomain <em>Owned By Domain</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Domain</em>' container reference.
+	 * @see #getOwnedByDomain()
+	 * @generated
+	 */
+	void setOwnedByDomain(Domain value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.transporte.TransportePackage#getFactoryRuta_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.FactoryRuta#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Ruta</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.transporte.Ruta}.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.Ruta#getOwnedByFactoryRuta <em>Owned By Factory Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Ruta</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Ruta</em>' containment reference list.
+	 * @see den.domain.transporte.TransportePackage#getFactoryRuta_LstRuta()
+	 * @see den.domain.transporte.Ruta#getOwnedByFactoryRuta
+	 * @model opposite="ownedByFactoryRuta" containment="true"
+	 * @generated
+	 */
+	EList<Ruta> getLstRuta();
+
+} // FactoryRuta

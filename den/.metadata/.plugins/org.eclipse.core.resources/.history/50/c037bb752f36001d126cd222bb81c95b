@@ -1,0 +1,358 @@
+/**
+ */
+package den.domain.producto.impl;
+
+import den.denPackage;
+
+import den.domain.DomainPackage;
+
+import den.domain.cliente.ClientePackage;
+
+import den.domain.cliente.impl.ClientePackageImpl;
+
+import den.domain.denuncia.DenunciaPackage;
+
+import den.domain.denuncia.impl.DenunciaPackageImpl;
+
+import den.domain.impl.DomainPackageImpl;
+
+import den.domain.pedido.PedidoPackage;
+
+import den.domain.pedido.impl.PedidoPackageImpl;
+
+import den.domain.producto.FactoryProducto;
+import den.domain.producto.Producto;
+import den.domain.producto.ProductoFactory;
+import den.domain.producto.ProductoPackage;
+
+import den.domain.transporte.TransportePackage;
+
+import den.domain.transporte.impl.TransportePackageImpl;
+
+import den.domain.ubicacion.UbicacionPackage;
+
+import den.domain.ubicacion.impl.UbicacionPackageImpl;
+
+import den.impl.denPackageImpl;
+
+import den.ui.UiPackage;
+
+import den.ui.impl.UiPackageImpl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class ProductoPackageImpl extends EPackageImpl implements ProductoPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass factoryProductoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass productoEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see den.domain.producto.ProductoPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private ProductoPackageImpl() {
+		super(eNS_URI, ProductoFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * 
+	 * <p>This method is used to initialize {@link ProductoPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static ProductoPackage init() {
+		if (isInited) return (ProductoPackage)EPackage.Registry.INSTANCE.getEPackage(ProductoPackage.eNS_URI);
+
+		// Obtain or create and register package
+		ProductoPackageImpl theProductoPackage = (ProductoPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ProductoPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ProductoPackageImpl());
+
+		isInited = true;
+
+		// Obtain or create and register interdependencies
+		denPackageImpl thedenPackage = (denPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI) instanceof denPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI) : denPackage.eINSTANCE);
+		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
+		ClientePackageImpl theClientePackage = (ClientePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ClientePackage.eNS_URI) instanceof ClientePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ClientePackage.eNS_URI) : ClientePackage.eINSTANCE);
+		DenunciaPackageImpl theDenunciaPackage = (DenunciaPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DenunciaPackage.eNS_URI) instanceof DenunciaPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DenunciaPackage.eNS_URI) : DenunciaPackage.eINSTANCE);
+		TransportePackageImpl theTransportePackage = (TransportePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TransportePackage.eNS_URI) instanceof TransportePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TransportePackage.eNS_URI) : TransportePackage.eINSTANCE);
+		UbicacionPackageImpl theUbicacionPackage = (UbicacionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI) instanceof UbicacionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UbicacionPackage.eNS_URI) : UbicacionPackage.eINSTANCE);
+		PedidoPackageImpl thePedidoPackage = (PedidoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI) instanceof PedidoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI) : PedidoPackage.eINSTANCE);
+		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+
+		// Create package meta-data objects
+		theProductoPackage.createPackageContents();
+		thedenPackage.createPackageContents();
+		theDomainPackage.createPackageContents();
+		theClientePackage.createPackageContents();
+		theDenunciaPackage.createPackageContents();
+		theTransportePackage.createPackageContents();
+		theUbicacionPackage.createPackageContents();
+		thePedidoPackage.createPackageContents();
+		theUiPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theProductoPackage.initializePackageContents();
+		thedenPackage.initializePackageContents();
+		theDomainPackage.initializePackageContents();
+		theClientePackage.initializePackageContents();
+		theDenunciaPackage.initializePackageContents();
+		theTransportePackage.initializePackageContents();
+		theUbicacionPackage.initializePackageContents();
+		thePedidoPackage.initializePackageContents();
+		theUiPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theProductoPackage.freeze();
+
+  
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(ProductoPackage.eNS_URI, theProductoPackage);
+		return theProductoPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFactoryProducto() {
+		return factoryProductoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryProducto_OwnedByDomain() {
+		return (EReference)factoryProductoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFactoryProducto_Id() {
+		return (EAttribute)factoryProductoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFactoryProducto_LstProducto() {
+		return (EReference)factoryProductoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProducto() {
+		return productoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProducto_LstDetallePedido() {
+		return (EReference)productoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProducto_OwnedByFactoryProducto() {
+		return (EReference)productoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProducto_Id() {
+		return (EAttribute)productoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProducto_Nombre() {
+		return (EAttribute)productoEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProducto_Precio() {
+		return (EAttribute)productoEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProducto_Fecha() {
+		return (EAttribute)productoEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProducto_Cod() {
+		return (EAttribute)productoEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProductoFactory getProductoFactory() {
+		return (ProductoFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		factoryProductoEClass = createEClass(FACTORY_PRODUCTO);
+		createEReference(factoryProductoEClass, FACTORY_PRODUCTO__OWNED_BY_DOMAIN);
+		createEAttribute(factoryProductoEClass, FACTORY_PRODUCTO__ID);
+		createEReference(factoryProductoEClass, FACTORY_PRODUCTO__LST_PRODUCTO);
+
+		productoEClass = createEClass(PRODUCTO);
+		createEReference(productoEClass, PRODUCTO__LST_DETALLE_PEDIDO);
+		createEReference(productoEClass, PRODUCTO__OWNED_BY_FACTORY_PRODUCTO);
+		createEAttribute(productoEClass, PRODUCTO__ID);
+		createEAttribute(productoEClass, PRODUCTO__NOMBRE);
+		createEAttribute(productoEClass, PRODUCTO__PRECIO);
+		createEAttribute(productoEClass, PRODUCTO__FECHA);
+		createEAttribute(productoEClass, PRODUCTO__COD);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		DomainPackage theDomainPackage = (DomainPackage)EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI);
+		denPackage thedenPackage = (denPackage)EPackage.Registry.INSTANCE.getEPackage(denPackage.eNS_URI);
+		PedidoPackage thePedidoPackage = (PedidoPackage)EPackage.Registry.INSTANCE.getEPackage(PedidoPackage.eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+
+		// Initialize classes and features; add operations and parameters
+		initEClass(factoryProductoEClass, FactoryProducto.class, "FactoryProducto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFactoryProducto_OwnedByDomain(), theDomainPackage.getDomain(), theDomainPackage.getDomain_TheFactoryProducto(), "ownedByDomain", null, 0, 1, FactoryProducto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFactoryProducto_Id(), thedenPackage.getString(), "id", " ", 0, 1, FactoryProducto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFactoryProducto_LstProducto(), this.getProducto(), this.getProducto_OwnedByFactoryProducto(), "lstProducto", null, 0, -1, FactoryProducto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(productoEClass, Producto.class, "Producto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProducto_LstDetallePedido(), thePedidoPackage.getDetallePedido(), thePedidoPackage.getDetallePedido_TheProducto(), "lstDetallePedido", null, 0, -1, Producto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProducto_OwnedByFactoryProducto(), this.getFactoryProducto(), this.getFactoryProducto_LstProducto(), "ownedByFactoryProducto", null, 0, 1, Producto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProducto_Id(), thedenPackage.getString(), "id", " ", 0, 1, Producto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProducto_Nombre(), thedenPackage.getString(), "nombre", " ", 0, 1, Producto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProducto_Precio(), thedenPackage.getString(), "precio", " ", 0, 1, Producto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProducto_Fecha(), thedenPackage.getString(), "fecha", " ", 0, 1, Producto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProducto_Cod(), thedenPackage.getString(), "cod", " ", 0, 1, Producto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	}
+
+} //ProductoPackageImpl

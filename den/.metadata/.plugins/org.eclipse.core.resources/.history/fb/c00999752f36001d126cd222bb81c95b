@@ -1,0 +1,808 @@
+/**
+ */
+package den.domain.impl;
+
+import den.ModelFactory;
+import den.denPackage;
+
+import den.domain.Domain;
+import den.domain.DomainPackage;
+
+import den.domain.cliente.ClientePackage;
+import den.domain.cliente.FactoryCliente;
+
+import den.domain.denuncia.DenunciaPackage;
+import den.domain.denuncia.FactoryDenuncias;
+
+import den.domain.pedido.FactoryPedido;
+import den.domain.pedido.PedidoPackage;
+
+import den.domain.producto.FactoryProducto;
+import den.domain.producto.ProductoPackage;
+
+import den.domain.transporte.FactoryRuta;
+import den.domain.transporte.Ruta;
+import den.domain.transporte.TransportePackage;
+
+import den.domain.ubicacion.FactoryUbicacion;
+import den.domain.ubicacion.UbicacionPackage;
+
+import den.ui.UI;
+import den.ui.UiPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Domain</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheModelFactory <em>The Model Factory</em>}</li>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheFactoryCliente <em>The Factory Cliente</em>}</li>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheFactoryDenuncias <em>The Factory Denuncias</em>}</li>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheFactoryUbicacion <em>The Factory Ubicacion</em>}</li>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheRuta <em>The Ruta</em>}</li>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheFactoryRuta <em>The Factory Ruta</em>}</li>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheFactoryPedido <em>The Factory Pedido</em>}</li>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheFactoryProducto <em>The Factory Producto</em>}</li>
+ *   <li>{@link den.domain.impl.DomainImpl#getTheUI <em>The UI</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class DomainImpl extends EObjectImpl implements Domain {
+	/**
+	 * The cached value of the '{@link #getTheFactoryCliente() <em>The Factory Cliente</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheFactoryCliente()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactoryCliente theFactoryCliente;
+
+	/**
+	 * The cached value of the '{@link #getTheFactoryDenuncias() <em>The Factory Denuncias</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheFactoryDenuncias()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactoryDenuncias theFactoryDenuncias;
+
+	/**
+	 * The cached value of the '{@link #getTheFactoryUbicacion() <em>The Factory Ubicacion</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheFactoryUbicacion()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactoryUbicacion theFactoryUbicacion;
+
+	/**
+	 * The cached value of the '{@link #getTheRuta() <em>The Ruta</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected Ruta theRuta;
+
+	/**
+	 * The cached value of the '{@link #getTheFactoryRuta() <em>The Factory Ruta</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheFactoryRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactoryRuta theFactoryRuta;
+
+	/**
+	 * The cached value of the '{@link #getTheFactoryPedido() <em>The Factory Pedido</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheFactoryPedido()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactoryPedido theFactoryPedido;
+
+	/**
+	 * The cached value of the '{@link #getTheFactoryProducto() <em>The Factory Producto</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheFactoryProducto()
+	 * @generated
+	 * @ordered
+	 */
+	protected FactoryProducto theFactoryProducto;
+
+	/**
+	 * The cached value of the '{@link #getTheUI() <em>The UI</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheUI()
+	 * @generated
+	 * @ordered
+	 */
+	protected UI theUI;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return DomainPackage.Literals.DOMAIN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModelFactory getTheModelFactory() {
+		if (eContainerFeatureID() != DomainPackage.DOMAIN__THE_MODEL_FACTORY) return null;
+		return (ModelFactory)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheModelFactory(ModelFactory newTheModelFactory, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newTheModelFactory, DomainPackage.DOMAIN__THE_MODEL_FACTORY, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheModelFactory(ModelFactory newTheModelFactory) {
+		if (newTheModelFactory != eInternalContainer() || (eContainerFeatureID() != DomainPackage.DOMAIN__THE_MODEL_FACTORY && newTheModelFactory != null)) {
+			if (EcoreUtil.isAncestor(this, newTheModelFactory))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newTheModelFactory != null)
+				msgs = ((InternalEObject)newTheModelFactory).eInverseAdd(this, denPackage.MODEL_FACTORY__THE_DOMAIN, ModelFactory.class, msgs);
+			msgs = basicSetTheModelFactory(newTheModelFactory, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_MODEL_FACTORY, newTheModelFactory, newTheModelFactory));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryCliente getTheFactoryCliente() {
+		return theFactoryCliente;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheFactoryCliente(FactoryCliente newTheFactoryCliente, NotificationChain msgs) {
+		FactoryCliente oldTheFactoryCliente = theFactoryCliente;
+		theFactoryCliente = newTheFactoryCliente;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_CLIENTE, oldTheFactoryCliente, newTheFactoryCliente);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheFactoryCliente(FactoryCliente newTheFactoryCliente) {
+		if (newTheFactoryCliente != theFactoryCliente) {
+			NotificationChain msgs = null;
+			if (theFactoryCliente != null)
+				msgs = ((InternalEObject)theFactoryCliente).eInverseRemove(this, ClientePackage.FACTORY_CLIENTE__OWNED_BY_DOMAIN, FactoryCliente.class, msgs);
+			if (newTheFactoryCliente != null)
+				msgs = ((InternalEObject)newTheFactoryCliente).eInverseAdd(this, ClientePackage.FACTORY_CLIENTE__OWNED_BY_DOMAIN, FactoryCliente.class, msgs);
+			msgs = basicSetTheFactoryCliente(newTheFactoryCliente, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_CLIENTE, newTheFactoryCliente, newTheFactoryCliente));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryDenuncias getTheFactoryDenuncias() {
+		return theFactoryDenuncias;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheFactoryDenuncias(FactoryDenuncias newTheFactoryDenuncias, NotificationChain msgs) {
+		FactoryDenuncias oldTheFactoryDenuncias = theFactoryDenuncias;
+		theFactoryDenuncias = newTheFactoryDenuncias;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS, oldTheFactoryDenuncias, newTheFactoryDenuncias);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheFactoryDenuncias(FactoryDenuncias newTheFactoryDenuncias) {
+		if (newTheFactoryDenuncias != theFactoryDenuncias) {
+			NotificationChain msgs = null;
+			if (theFactoryDenuncias != null)
+				msgs = ((InternalEObject)theFactoryDenuncias).eInverseRemove(this, DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN, FactoryDenuncias.class, msgs);
+			if (newTheFactoryDenuncias != null)
+				msgs = ((InternalEObject)newTheFactoryDenuncias).eInverseAdd(this, DenunciaPackage.FACTORY_DENUNCIAS__OWNED_BY_DOMAIN, FactoryDenuncias.class, msgs);
+			msgs = basicSetTheFactoryDenuncias(newTheFactoryDenuncias, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS, newTheFactoryDenuncias, newTheFactoryDenuncias));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryUbicacion getTheFactoryUbicacion() {
+		return theFactoryUbicacion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheFactoryUbicacion(FactoryUbicacion newTheFactoryUbicacion, NotificationChain msgs) {
+		FactoryUbicacion oldTheFactoryUbicacion = theFactoryUbicacion;
+		theFactoryUbicacion = newTheFactoryUbicacion;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_UBICACION, oldTheFactoryUbicacion, newTheFactoryUbicacion);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheFactoryUbicacion(FactoryUbicacion newTheFactoryUbicacion) {
+		if (newTheFactoryUbicacion != theFactoryUbicacion) {
+			NotificationChain msgs = null;
+			if (theFactoryUbicacion != null)
+				msgs = ((InternalEObject)theFactoryUbicacion).eInverseRemove(this, UbicacionPackage.FACTORY_UBICACION__OWNED_BY_DOMAIN, FactoryUbicacion.class, msgs);
+			if (newTheFactoryUbicacion != null)
+				msgs = ((InternalEObject)newTheFactoryUbicacion).eInverseAdd(this, UbicacionPackage.FACTORY_UBICACION__OWNED_BY_DOMAIN, FactoryUbicacion.class, msgs);
+			msgs = basicSetTheFactoryUbicacion(newTheFactoryUbicacion, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_UBICACION, newTheFactoryUbicacion, newTheFactoryUbicacion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ruta getTheRuta() {
+		return theRuta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheRuta(Ruta newTheRuta, NotificationChain msgs) {
+		Ruta oldTheRuta = theRuta;
+		theRuta = newTheRuta;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_RUTA, oldTheRuta, newTheRuta);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheRuta(Ruta newTheRuta) {
+		if (newTheRuta != theRuta) {
+			NotificationChain msgs = null;
+			if (theRuta != null)
+				msgs = ((InternalEObject)theRuta).eInverseRemove(this, TransportePackage.RUTA__OWNED_BY_DOMAIN, Ruta.class, msgs);
+			if (newTheRuta != null)
+				msgs = ((InternalEObject)newTheRuta).eInverseAdd(this, TransportePackage.RUTA__OWNED_BY_DOMAIN, Ruta.class, msgs);
+			msgs = basicSetTheRuta(newTheRuta, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_RUTA, newTheRuta, newTheRuta));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryRuta getTheFactoryRuta() {
+		return theFactoryRuta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheFactoryRuta(FactoryRuta newTheFactoryRuta, NotificationChain msgs) {
+		FactoryRuta oldTheFactoryRuta = theFactoryRuta;
+		theFactoryRuta = newTheFactoryRuta;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_RUTA, oldTheFactoryRuta, newTheFactoryRuta);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheFactoryRuta(FactoryRuta newTheFactoryRuta) {
+		if (newTheFactoryRuta != theFactoryRuta) {
+			NotificationChain msgs = null;
+			if (theFactoryRuta != null)
+				msgs = ((InternalEObject)theFactoryRuta).eInverseRemove(this, TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN, FactoryRuta.class, msgs);
+			if (newTheFactoryRuta != null)
+				msgs = ((InternalEObject)newTheFactoryRuta).eInverseAdd(this, TransportePackage.FACTORY_RUTA__OWNED_BY_DOMAIN, FactoryRuta.class, msgs);
+			msgs = basicSetTheFactoryRuta(newTheFactoryRuta, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_RUTA, newTheFactoryRuta, newTheFactoryRuta));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryPedido getTheFactoryPedido() {
+		return theFactoryPedido;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheFactoryPedido(FactoryPedido newTheFactoryPedido, NotificationChain msgs) {
+		FactoryPedido oldTheFactoryPedido = theFactoryPedido;
+		theFactoryPedido = newTheFactoryPedido;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_PEDIDO, oldTheFactoryPedido, newTheFactoryPedido);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheFactoryPedido(FactoryPedido newTheFactoryPedido) {
+		if (newTheFactoryPedido != theFactoryPedido) {
+			NotificationChain msgs = null;
+			if (theFactoryPedido != null)
+				msgs = ((InternalEObject)theFactoryPedido).eInverseRemove(this, PedidoPackage.FACTORY_PEDIDO__OWNED_BY_DOMAIN, FactoryPedido.class, msgs);
+			if (newTheFactoryPedido != null)
+				msgs = ((InternalEObject)newTheFactoryPedido).eInverseAdd(this, PedidoPackage.FACTORY_PEDIDO__OWNED_BY_DOMAIN, FactoryPedido.class, msgs);
+			msgs = basicSetTheFactoryPedido(newTheFactoryPedido, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_PEDIDO, newTheFactoryPedido, newTheFactoryPedido));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryProducto getTheFactoryProducto() {
+		return theFactoryProducto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheFactoryProducto(FactoryProducto newTheFactoryProducto, NotificationChain msgs) {
+		FactoryProducto oldTheFactoryProducto = theFactoryProducto;
+		theFactoryProducto = newTheFactoryProducto;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO, oldTheFactoryProducto, newTheFactoryProducto);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheFactoryProducto(FactoryProducto newTheFactoryProducto) {
+		if (newTheFactoryProducto != theFactoryProducto) {
+			NotificationChain msgs = null;
+			if (theFactoryProducto != null)
+				msgs = ((InternalEObject)theFactoryProducto).eInverseRemove(this, ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN, FactoryProducto.class, msgs);
+			if (newTheFactoryProducto != null)
+				msgs = ((InternalEObject)newTheFactoryProducto).eInverseAdd(this, ProductoPackage.FACTORY_PRODUCTO__OWNED_BY_DOMAIN, FactoryProducto.class, msgs);
+			msgs = basicSetTheFactoryProducto(newTheFactoryProducto, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO, newTheFactoryProducto, newTheFactoryProducto));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UI getTheUI() {
+		if (theUI != null && theUI.eIsProxy()) {
+			InternalEObject oldTheUI = (InternalEObject)theUI;
+			theUI = (UI)eResolveProxy(oldTheUI);
+			if (theUI != oldTheUI) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DomainPackage.DOMAIN__THE_UI, oldTheUI, theUI));
+			}
+		}
+		return theUI;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UI basicGetTheUI() {
+		return theUI;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheUI(UI newTheUI, NotificationChain msgs) {
+		UI oldTheUI = theUI;
+		theUI = newTheUI;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_UI, oldTheUI, newTheUI);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheUI(UI newTheUI) {
+		if (newTheUI != theUI) {
+			NotificationChain msgs = null;
+			if (theUI != null)
+				msgs = ((InternalEObject)theUI).eInverseRemove(this, UiPackage.UI__THE_DOMAIN, UI.class, msgs);
+			if (newTheUI != null)
+				msgs = ((InternalEObject)newTheUI).eInverseAdd(this, UiPackage.UI__THE_DOMAIN, UI.class, msgs);
+			msgs = basicSetTheUI(newTheUI, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.DOMAIN__THE_UI, newTheUI, newTheUI));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void implementarModelo() {
+		//TODO implementarModelo
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetTheModelFactory((ModelFactory)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_CLIENTE:
+				if (theFactoryCliente != null)
+					msgs = ((InternalEObject)theFactoryCliente).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__THE_FACTORY_CLIENTE, null, msgs);
+				return basicSetTheFactoryCliente((FactoryCliente)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS:
+				if (theFactoryDenuncias != null)
+					msgs = ((InternalEObject)theFactoryDenuncias).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS, null, msgs);
+				return basicSetTheFactoryDenuncias((FactoryDenuncias)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_UBICACION:
+				if (theFactoryUbicacion != null)
+					msgs = ((InternalEObject)theFactoryUbicacion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__THE_FACTORY_UBICACION, null, msgs);
+				return basicSetTheFactoryUbicacion((FactoryUbicacion)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_RUTA:
+				if (theRuta != null)
+					msgs = ((InternalEObject)theRuta).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__THE_RUTA, null, msgs);
+				return basicSetTheRuta((Ruta)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_RUTA:
+				if (theFactoryRuta != null)
+					msgs = ((InternalEObject)theFactoryRuta).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__THE_FACTORY_RUTA, null, msgs);
+				return basicSetTheFactoryRuta((FactoryRuta)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_PEDIDO:
+				if (theFactoryPedido != null)
+					msgs = ((InternalEObject)theFactoryPedido).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__THE_FACTORY_PEDIDO, null, msgs);
+				return basicSetTheFactoryPedido((FactoryPedido)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO:
+				if (theFactoryProducto != null)
+					msgs = ((InternalEObject)theFactoryProducto).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO, null, msgs);
+				return basicSetTheFactoryProducto((FactoryProducto)otherEnd, msgs);
+			case DomainPackage.DOMAIN__THE_UI:
+				if (theUI != null)
+					msgs = ((InternalEObject)theUI).eInverseRemove(this, UiPackage.UI__THE_DOMAIN, UI.class, msgs);
+				return basicSetTheUI((UI)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				return basicSetTheModelFactory(null, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_CLIENTE:
+				return basicSetTheFactoryCliente(null, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS:
+				return basicSetTheFactoryDenuncias(null, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_UBICACION:
+				return basicSetTheFactoryUbicacion(null, msgs);
+			case DomainPackage.DOMAIN__THE_RUTA:
+				return basicSetTheRuta(null, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_RUTA:
+				return basicSetTheFactoryRuta(null, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_PEDIDO:
+				return basicSetTheFactoryPedido(null, msgs);
+			case DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO:
+				return basicSetTheFactoryProducto(null, msgs);
+			case DomainPackage.DOMAIN__THE_UI:
+				return basicSetTheUI(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				return eInternalContainer().eInverseRemove(this, denPackage.MODEL_FACTORY__THE_DOMAIN, ModelFactory.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				return getTheModelFactory();
+			case DomainPackage.DOMAIN__THE_FACTORY_CLIENTE:
+				return getTheFactoryCliente();
+			case DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS:
+				return getTheFactoryDenuncias();
+			case DomainPackage.DOMAIN__THE_FACTORY_UBICACION:
+				return getTheFactoryUbicacion();
+			case DomainPackage.DOMAIN__THE_RUTA:
+				return getTheRuta();
+			case DomainPackage.DOMAIN__THE_FACTORY_RUTA:
+				return getTheFactoryRuta();
+			case DomainPackage.DOMAIN__THE_FACTORY_PEDIDO:
+				return getTheFactoryPedido();
+			case DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO:
+				return getTheFactoryProducto();
+			case DomainPackage.DOMAIN__THE_UI:
+				if (resolve) return getTheUI();
+				return basicGetTheUI();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				setTheModelFactory((ModelFactory)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_CLIENTE:
+				setTheFactoryCliente((FactoryCliente)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS:
+				setTheFactoryDenuncias((FactoryDenuncias)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_UBICACION:
+				setTheFactoryUbicacion((FactoryUbicacion)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_RUTA:
+				setTheRuta((Ruta)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_RUTA:
+				setTheFactoryRuta((FactoryRuta)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_PEDIDO:
+				setTheFactoryPedido((FactoryPedido)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO:
+				setTheFactoryProducto((FactoryProducto)newValue);
+				return;
+			case DomainPackage.DOMAIN__THE_UI:
+				setTheUI((UI)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				setTheModelFactory((ModelFactory)null);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_CLIENTE:
+				setTheFactoryCliente((FactoryCliente)null);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS:
+				setTheFactoryDenuncias((FactoryDenuncias)null);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_UBICACION:
+				setTheFactoryUbicacion((FactoryUbicacion)null);
+				return;
+			case DomainPackage.DOMAIN__THE_RUTA:
+				setTheRuta((Ruta)null);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_RUTA:
+				setTheFactoryRuta((FactoryRuta)null);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_PEDIDO:
+				setTheFactoryPedido((FactoryPedido)null);
+				return;
+			case DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO:
+				setTheFactoryProducto((FactoryProducto)null);
+				return;
+			case DomainPackage.DOMAIN__THE_UI:
+				setTheUI((UI)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case DomainPackage.DOMAIN__THE_MODEL_FACTORY:
+				return getTheModelFactory() != null;
+			case DomainPackage.DOMAIN__THE_FACTORY_CLIENTE:
+				return theFactoryCliente != null;
+			case DomainPackage.DOMAIN__THE_FACTORY_DENUNCIAS:
+				return theFactoryDenuncias != null;
+			case DomainPackage.DOMAIN__THE_FACTORY_UBICACION:
+				return theFactoryUbicacion != null;
+			case DomainPackage.DOMAIN__THE_RUTA:
+				return theRuta != null;
+			case DomainPackage.DOMAIN__THE_FACTORY_RUTA:
+				return theFactoryRuta != null;
+			case DomainPackage.DOMAIN__THE_FACTORY_PEDIDO:
+				return theFactoryPedido != null;
+			case DomainPackage.DOMAIN__THE_FACTORY_PRODUCTO:
+				return theFactoryProducto != null;
+			case DomainPackage.DOMAIN__THE_UI:
+				return theUI != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //DomainImpl

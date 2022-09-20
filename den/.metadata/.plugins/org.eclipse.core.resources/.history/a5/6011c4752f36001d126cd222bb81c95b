@@ -1,0 +1,148 @@
+/**
+ */
+package den.domain.transporte;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Tarifa</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.transporte.Tarifa#getOwnedByRuta <em>Owned By Ruta</em>}</li>
+ *   <li>{@link den.domain.transporte.Tarifa#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.transporte.Tarifa#getPrecio <em>Precio</em>}</li>
+ *   <li>{@link den.domain.transporte.Tarifa#getLstTramoOrigen <em>Lst Tramo Origen</em>}</li>
+ *   <li>{@link den.domain.transporte.Tarifa#getLstTramoDestino <em>Lst Tramo Destino</em>}</li>
+ * </ul>
+ *
+ * @see den.domain.transporte.TransportePackage#getTarifa()
+ * @model
+ * @generated
+ */
+public interface Tarifa extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Owned By Ruta</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.Ruta#getLstTarifa <em>Lst Tarifa</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned By Ruta</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned By Ruta</em>' container reference.
+	 * @see #setOwnedByRuta(Ruta)
+	 * @see den.domain.transporte.TransportePackage#getTarifa_OwnedByRuta()
+	 * @see den.domain.transporte.Ruta#getLstTarifa
+	 * @model opposite="lstTarifa" transient="false"
+	 * @generated
+	 */
+	Ruta getOwnedByRuta();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Tarifa#getOwnedByRuta <em>Owned By Ruta</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owned By Ruta</em>' container reference.
+	 * @see #getOwnedByRuta()
+	 * @generated
+	 */
+	void setOwnedByRuta(Ruta value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see den.domain.transporte.TransportePackage#getTarifa_Id()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Tarifa#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Precio</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Precio</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Precio</em>' attribute.
+	 * @see #setPrecio(String)
+	 * @see den.domain.transporte.TransportePackage#getTarifa_Precio()
+	 * @model default=" " dataType="den.String"
+	 * @generated
+	 */
+	String getPrecio();
+
+	/**
+	 * Sets the value of the '{@link den.domain.transporte.Tarifa#getPrecio <em>Precio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Precio</em>' attribute.
+	 * @see #getPrecio()
+	 * @generated
+	 */
+	void setPrecio(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Lst Tramo Origen</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.transporte.Tramo}.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.Tramo#getOwnedByTarifaOrigen <em>Owned By Tarifa Origen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Tramo Origen</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Tramo Origen</em>' containment reference list.
+	 * @see den.domain.transporte.TransportePackage#getTarifa_LstTramoOrigen()
+	 * @see den.domain.transporte.Tramo#getOwnedByTarifaOrigen
+	 * @model opposite="ownedByTarifaOrigen" containment="true"
+	 * @generated
+	 */
+	EList<Tramo> getLstTramoOrigen();
+
+	/**
+	 * Returns the value of the '<em><b>Lst Tramo Destino</b></em>' containment reference list.
+	 * The list contents are of type {@link den.domain.transporte.Tramo}.
+	 * It is bidirectional and its opposite is '{@link den.domain.transporte.Tramo#getOwnedByTarifaDestino <em>Owned By Tarifa Destino</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lst Tramo Destino</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lst Tramo Destino</em>' containment reference list.
+	 * @see den.domain.transporte.TransportePackage#getTarifa_LstTramoDestino()
+	 * @see den.domain.transporte.Tramo#getOwnedByTarifaDestino
+	 * @model opposite="ownedByTarifaDestino" containment="true"
+	 * @generated
+	 */
+	EList<Tramo> getLstTramoDestino();
+
+} // Tarifa

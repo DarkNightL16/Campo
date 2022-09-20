@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<den:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:den="http:///den.ecore">
+  <theDomain>
+    <lstFactoryUbicacion>
+      <lstPais idPais=" Colombia" capital=" Bogotá D.C." codigoInternacional=" +57" idioma=" Español" coordenadas=" 4°36′35″N 74°04′54″O">
+        <lstDepartamento idDepartamento=" Quindio" capital=" Armenia" prefijoTelefonico=" 06" coordenadas="4°32′00″N 75°42′00″O ">
+          <lstCiudad idCiudad=" Armenia" coordenadas=" 4°32′20″N 75°40′21″O " lstRutaOrigen="//@theDomain/@lstFactoryRuta/@lstRuta.0" lstRutaDestino="//@theDomain/@lstFactoryRuta/@lstRuta.1 //@theDomain/@lstFactoryRuta/@lstRuta.5"/>
+        </lstDepartamento>
+        <lstDepartamento idDepartamento=" Tolima" capital=" Ibagué" prefijoTelefonico=" 08" coordenadas="4°26′16″N 75°12′02″O ">
+          <lstCiudad idCiudad=" Ibagué" coordenadas=" 4°26′16″N 75°12′02″O " lstRutaOrigen="//@theDomain/@lstFactoryRuta/@lstRuta.3" lstRutaDestino="//@theDomain/@lstFactoryRuta/@lstRuta.0 //@theDomain/@lstFactoryRuta/@lstRuta.2" theEnvioDestino="//@theDomain/@lstFactoryEnvio/@lstEnvio.1"/>
+        </lstDepartamento>
+        <lstDepartamento idDepartamento=" Antioquia" capital=" Medellin" prefijoTelefonico=" 04" coordenadas=" 6°13′00″N 75°34′00″O ">
+          <lstCiudad idCiudad=" Medellin" coordenadas=" 6°14′41″N 75°34′29″O" lstRutaOrigen="//@theDomain/@lstFactoryRuta/@lstRuta.4 //@theDomain/@lstFactoryRuta/@lstRuta.5" lstRutaDestino="//@theDomain/@lstFactoryRuta/@lstRuta.3" theEnvioOrigen="//@theDomain/@lstFactoryEnvio/@lstEnvio.2"/>
+        </lstDepartamento>
+        <lstDepartamento idDepartamento=" Cundinamarca" capital=" Bogotá D.C." prefijoTelefonico=" 05" coordenadas=" 5°00′00″N 74°10′00″O ">
+          <lstCiudad idCiudad=" Bogotá D.C." coordenadas=" 4°36′35″N 74°04′54″O " lstRutaOrigen="//@theDomain/@lstFactoryRuta/@lstRuta.1 //@theDomain/@lstFactoryRuta/@lstRuta.2" lstRutaDestino="//@theDomain/@lstFactoryRuta/@lstRuta.4" theEnvioDestino="//@theDomain/@lstFactoryEnvio/@lstEnvio.2"/>
+        </lstDepartamento>
+      </lstPais>
+    </lstFactoryUbicacion>
+    <lstFactoryPedido>
+      <lstPedido id=" 01 - Tomate de arbol y zanahoria" fecha=" 18/09/2022" total=" $65.150.000" iva=" 19%" descuento=" Envío gratis" lstPersona="//@theDomain/@lstFactoryPersona/@lstPersona.1" theEnvio="//@theDomain/@lstFactoryEnvio/@lstEnvio.0">
+        <lstDetallePedido idPedido=" 01 - Tomate de arbol y zanahoria" descripcion="10 toneladas de tomate de arbol y 7 de zanahoria" valorUnitario=" $3.400 kilo tomate arbol, $4.450 kilo zanahoria " valorTotal="$65.150.000" iva=" 19%" totalPagar=" $65.150.000" cantidadKilos=" 17000" lstProducto="//@theDomain/@lstFactoryProducto/@lstProducto.4 //@theDomain/@lstFactoryProducto/@lstProducto.1"/>
+      </lstPedido>
+      <lstPedido id=" 02 - Cebolla larga y cabezona" fecha=" 01/09/2022" total=" $87.750.000" iva=" 19%" descuento=" Envío gratis" lstPersona="//@theDomain/@lstFactoryPersona/@lstPersona.3" theEnvio="//@theDomain/@lstFactoryEnvio/@lstEnvio.1">
+        <lstDetallePedido idPedido=" 02 - Cebolla larga y cabezona" descripcion=" 15 toneladas de cebolla y 15 de cebolla cabezona" valorUnitario=" $4.250 cebolla larga, $1.600 cebolla cabezona" valorTotal=" $87.750.000" iva=" 19%" totalPagar=" $87.750.000" cantidadKilos=" 30000" lstProducto="//@theDomain/@lstFactoryProducto/@lstProducto.5 //@theDomain/@lstFactoryProducto/@lstProducto.6"/>
+      </lstPedido>
+      <lstPedido id=" 03 - Tomate de guiso y arbol" fecha=" 20/09/2022" total=" $75.000.000" iva=" 19%" descuento=" Envío gratis" lstPersona="//@theDomain/@lstFactoryPersona/@lstPersona.1" theEnvio="//@theDomain/@lstFactoryEnvio/@lstEnvio.2">
+        <lstDetallePedido idPedido=" 03 - Tomate de guiso y arbol" descripcion="10 Toneladas de tomate guiso y 7 tonaledas de tomate de arbol " valorTotal=" $75.000.000" iva=" 19%" totalPagar="$75.000.000" cantidadKilos=" 17000" lstProducto="//@theDomain/@lstFactoryProducto/@lstProducto.3 //@theDomain/@lstFactoryProducto/@lstProducto.4"/>
+      </lstPedido>
+    </lstFactoryPedido>
+    <lstFactoryTransporte>
+      <lstTransporte id=" Camión" marca=" Chevrolet" numeroPoliza=" 000234-17781" matricula=" ABD-187" tarjetaPropiedad=" 8000181762D" lstEnvio="//@theDomain/@lstFactoryEnvio/@lstEnvio.0 //@theDomain/@lstFactoryEnvio/@lstEnvio.2" lstConductor="//@theDomain/@lstFactoryPersona/@lstPersona.2/@lstConductor" lstPersona="//@theDomain/@lstFactoryPersona/@lstPersona.2"/>
+      <lstTransporte id=" Tractomula" marca=" Hino" numeroPoliza=" 83923289-83" matricula=" ACJ - 277" tarjetaPropiedad=" 28999228C" lstEnvio="//@theDomain/@lstFactoryEnvio/@lstEnvio.1" lstConductor="//@theDomain/@lstFactoryPersona/@lstPersona.3/@lstConductor" lstPersona="//@theDomain/@lstFactoryPersona/@lstPersona.3"/>
+    </lstFactoryTransporte>
+    <lstFactoryPersona>
+      <lstPersona idPersona=" Juan F. Londoño" numeroDocumento=" 1007531125" tipoDocumento=" CC" edad=" 22" fechaNacimiento=" 16/02/2000" genero=" Masculino" direccionResidencia=" Carrera 10N # 16 - 35" email=" juanf.lonodonob@uqvirtual.edu.co" telefono=" 3103003738" lugarResidencia=" Armenia - Quindio">
+        <lstCliente idCliente=" 01" estado=" Activo"/>
+      </lstPersona>
+      <lstPersona idPersona="Maira Alejandra Mendez" numeroDocumento=" 1105610511" tipoDocumento=" CC" edad=" 18" fechaNacimiento=" 11/07/2004" genero=" Femenino" direccionResidencia="Carrera 3 # 13 - 80" email=" mairamendez1107@gmail.com" telefono=" 3106687465" lugarResidencia=" Cajamarca - Tolima" lstPedido="//@theDomain/@lstFactoryPedido/@lstPedido.0 //@theDomain/@lstFactoryPedido/@lstPedido.2">
+        <lstCliente idCliente=" 02" estado="Activo"/>
+        <lstEmpleado idEmpleado=" ventas" fechaInicioContrato=" 17/04/2021" fechaTerminacionContrato=" 17/04/2022" cargo=" Empleada de ventas" descripcion=" Encargada de las ventas al por mayor" salario="$1.500.000"/>
+      </lstPersona>
+      <lstPersona idPersona=" Carlos Alberto Giraldo" numeroDocumento=" 28946378" tipoDocumento=" CC" edad=" 32 años" fechaNacimiento=" 16/07/1990" genero=" Masculino" direccionResidencia=" Carrera 16 # 32 - 18" email=" carlosg@hotmail.com" telefono=" 3197911841" lugarResidencia=" Bogotá D.C." lstTransporte="//@theDomain/@lstFactoryTransporte/@lstTransporte.0">
+        <lstConductor lstTransporte="//@theDomain/@lstFactoryTransporte/@lstTransporte.0" idConductor=" 01" categoriaLicencia=" C2" codigoLicencia=" 5308000-8801579-4"/>
+      </lstPersona>
+      <lstPersona idPersona=" Francisco Eduardo Bastidas" numeroDocumento=" 28948976" tipoDocumento=" CC" edad=" 40 años" fechaNacimiento=" 28/12/1982" genero="Masculino" direccionResidencia=" Carrera 9 # 20 - 80" email=" FranciscoE@gmail.com" telefono=" 3103889653" lugarResidencia=" Ibagué - Tolima" lstPedido="//@theDomain/@lstFactoryPedido/@lstPedido.1" lstTransporte="//@theDomain/@lstFactoryTransporte/@lstTransporte.1">
+        <lstCliente idCliente=" 03" estado=" Activo"/>
+        <lstConductor lstTransporte="//@theDomain/@lstFactoryTransporte/@lstTransporte.1" idConductor=" 02" categoriaLicencia=" C3" codigoLicencia=" 5009000-9901680-3"/>
+      </lstPersona>
+    </lstFactoryPersona>
+    <lstFactoryProducto>
+      <lstProducto idProducto="Papa" codigoProducto=" 01" pesoNeto=" 1 kilo" marca=" Campo" fechaVencimiento=" 12/09/2022" fechaElaboracion=" 12/07/2022" pesoBruto=" 1 kilo y 10 gr" Precio=" $4.200 "/>
+      <lstProducto idProducto="Zanahoria" codigoProducto=" 02" pesoNeto="1 kilo" marca=" Campo" fechaVencimiento=" 20/08/2022" fechaElaboracion=" 11/05/2022" pesoBruto=" 1 kilo y 10 gr" Precio=" $4.450" lstDetallePedido="//@theDomain/@lstFactoryPedido/@lstPedido.0/@lstDetallePedido.0"/>
+      <lstProducto idProducto=" Papa criolla" codigoProducto=" 03" pesoNeto=" 1 kilo" marca=" Campo" fechaVencimiento=" 26/05/2022" fechaElaboracion=" 03/02/2022" pesoBruto=" 1 kilo y 10 gr" Precio=" $5.000"/>
+      <lstProducto idProducto=" Tomate de guiso" codigoProducto=" 04" pesoNeto=" 1 kilo" marca=" Campo" fechaVencimiento="02/03/2022" fechaElaboracion=" 02/12/2021" pesoBruto="1 kilo y 10 gr" Precio=" $2.150" lstDetallePedido="//@theDomain/@lstFactoryPedido/@lstPedido.2/@lstDetallePedido.0"/>
+      <lstProducto idProducto=" Tomate de arbol" codigoProducto=" 05" pesoNeto=" 1 kilo" marca=" Campo" fechaVencimiento=" 08/12/2021" fechaElaboracion="08/09/2021" pesoBruto=" 1 kilo y 10 gr" Precio=" $3.400" lstDetallePedido="//@theDomain/@lstFactoryPedido/@lstPedido.0/@lstDetallePedido.0 //@theDomain/@lstFactoryPedido/@lstPedido.2/@lstDetallePedido.0"/>
+      <lstProducto idProducto="Cebolla larga" codigoProducto=" 06" pesoNeto=" 1 kilo" marca=" Campo" fechaVencimiento=" 07/03/2022" fechaElaboracion="07/12/2021" pesoBruto=" 1 kilo y 10 gr" Precio=" $4.250" lstDetallePedido="//@theDomain/@lstFactoryPedido/@lstPedido.1/@lstDetallePedido.0"/>
+      <lstProducto idProducto=" Cebolla cabezona" codigoProducto=" 07" pesoNeto=" 1 kilo " marca=" Campo" fechaVencimiento=" 15/04/2022" fechaElaboracion=" 15/01/2022" pesoBruto=" 1 kilo y 10 gr" Precio=" $1.600" lstDetallePedido="//@theDomain/@lstFactoryPedido/@lstPedido.1/@lstDetallePedido.0"/>
+    </lstFactoryProducto>
+    <lstFactoryEnvio>
+      <lstEnvio lstTransporte="//@theDomain/@lstFactoryTransporte/@lstTransporte.0" id=" 01" nitEmpresa="012344567890" direccionEmpresa=" Carrera 2A # 32 - 17, Armenia - Quindio" idFactura=" 001" fechaEnvio="10/09/2022" fechaVencimiento=" 10/10/2022" lstPedido="//@theDomain/@lstFactoryPedido/@lstPedido.0" lstRuta="//@theDomain/@lstFactoryRuta/@lstRuta.5"/>
+      <lstEnvio lstTransporte="//@theDomain/@lstFactoryTransporte/@lstTransporte.1" id=" 02" direccionEmpresa="  Carrera 2A # 32 - 17, Armenia - Quindio" idFactura=" 002" fechaEnvio=" 09/09/2022" fechaVencimiento=" 09/10/2022" theCiudadDestino="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.1/@lstCiudad.0" lstPedido="//@theDomain/@lstFactoryPedido/@lstPedido.1" lstRuta="//@theDomain/@lstFactoryRuta/@lstRuta.2"/>
+      <lstEnvio theCiudadOrigen="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.2/@lstCiudad.0" lstTransporte="//@theDomain/@lstFactoryTransporte/@lstTransporte.0" id=" 03" direccionEmpresa="   Carrera 2A # 32 - 17, Armenia - Quindio" idFactura=" 003" fechaEnvio="20/09/2022" fechaVencimiento=" 20/10/2022" theCiudadDestino="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.3/@lstCiudad.0" lstPedido="//@theDomain/@lstFactoryPedido/@lstPedido.2" lstRuta="//@theDomain/@lstFactoryRuta/@lstRuta.4"/>
+    </lstFactoryEnvio>
+    <lstFactoryRuta>
+      <lstRuta lstCiudadOrigen="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.0/@lstCiudad.0" lstCiudadDestino="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.1/@lstCiudad.0" id=" Armenia - Ibagué" nombre="Armenia - Ibagué" km=" 75"/>
+      <lstRuta lstCiudadOrigen="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.3/@lstCiudad.0" lstCiudadDestino="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.0/@lstCiudad.0" id=" Bogotá D.C. - Armenia" nombre=" Bogotá D.C. - Armenia" km=" 281"/>
+      <lstRuta lstCiudadOrigen="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.3/@lstCiudad.0" lstCiudadDestino="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.1/@lstCiudad.0" id=" Bogotá D.C. - Ibagué" nombre=" Bogotá D.C. - Ibagué" km=" 201" lstEnvio="//@theDomain/@lstFactoryEnvio/@lstEnvio.1"/>
+      <lstRuta lstCiudadOrigen="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.1/@lstCiudad.0" lstCiudadDestino="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.2/@lstCiudad.0" id=" Ibagué - Medellin" nombre="Ibagué - Medellin" km=" 486"/>
+      <lstRuta lstCiudadOrigen="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.2/@lstCiudad.0" lstCiudadDestino="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.3/@lstCiudad.0" id=" Medellin - Bogota D.C." nombre=" Medellin - Bogotá D.C." km="415" lstEnvio="//@theDomain/@lstFactoryEnvio/@lstEnvio.2"/>
+      <lstRuta lstCiudadOrigen="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.2/@lstCiudad.0" lstCiudadDestino="//@theDomain/@lstFactoryUbicacion/@lstPais.0/@lstDepartamento.0/@lstCiudad.0" id=" Medellin - Armenia" nombre=" Medellin - Armenia" km=" 290" lstEnvio="//@theDomain/@lstFactoryEnvio/@lstEnvio.0"/>
+    </lstFactoryRuta>
+  </theDomain>
+</den:ModelFactory>

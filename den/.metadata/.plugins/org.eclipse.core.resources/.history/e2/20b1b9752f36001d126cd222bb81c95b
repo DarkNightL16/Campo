@@ -1,0 +1,529 @@
+/**
+ */
+package den.domain.producto.impl;
+
+import den.domain.pedido.DetallePedido;
+import den.domain.pedido.PedidoPackage;
+
+import den.domain.producto.FactoryProducto;
+import den.domain.producto.Producto;
+import den.domain.producto.ProductoPackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Producto</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link den.domain.producto.impl.ProductoImpl#getLstDetallePedido <em>Lst Detalle Pedido</em>}</li>
+ *   <li>{@link den.domain.producto.impl.ProductoImpl#getOwnedByFactoryProducto <em>Owned By Factory Producto</em>}</li>
+ *   <li>{@link den.domain.producto.impl.ProductoImpl#getId <em>Id</em>}</li>
+ *   <li>{@link den.domain.producto.impl.ProductoImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link den.domain.producto.impl.ProductoImpl#getPrecio <em>Precio</em>}</li>
+ *   <li>{@link den.domain.producto.impl.ProductoImpl#getFecha <em>Fecha</em>}</li>
+ *   <li>{@link den.domain.producto.impl.ProductoImpl#getCod <em>Cod</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class ProductoImpl extends EObjectImpl implements Producto {
+	/**
+	 * The cached value of the '{@link #getLstDetallePedido() <em>Lst Detalle Pedido</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstDetallePedido()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DetallePedido> lstDetallePedido;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOMBRE_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNombre()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nombre = NOMBRE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrecio() <em>Precio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrecio()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PRECIO_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getPrecio() <em>Precio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrecio()
+	 * @generated
+	 * @ordered
+	 */
+	protected String precio = PRECIO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFecha() <em>Fecha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFecha()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FECHA_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getFecha() <em>Fecha</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFecha()
+	 * @generated
+	 * @ordered
+	 */
+	protected String fecha = FECHA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCod() <em>Cod</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCod()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String COD_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getCod() <em>Cod</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCod()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cod = COD_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProductoImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return ProductoPackage.Literals.PRODUCTO;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DetallePedido> getLstDetallePedido() {
+		if (lstDetallePedido == null) {
+			lstDetallePedido = new EObjectWithInverseResolvingEList<DetallePedido>(DetallePedido.class, this, ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO, PedidoPackage.DETALLE_PEDIDO__THE_PRODUCTO);
+		}
+		return lstDetallePedido;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FactoryProducto getOwnedByFactoryProducto() {
+		if (eContainerFeatureID() != ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO) return null;
+		return (FactoryProducto)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOwnedByFactoryProducto(FactoryProducto newOwnedByFactoryProducto, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOwnedByFactoryProducto, ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwnedByFactoryProducto(FactoryProducto newOwnedByFactoryProducto) {
+		if (newOwnedByFactoryProducto != eInternalContainer() || (eContainerFeatureID() != ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO && newOwnedByFactoryProducto != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedByFactoryProducto))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOwnedByFactoryProducto != null)
+				msgs = ((InternalEObject)newOwnedByFactoryProducto).eInverseAdd(this, ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO, FactoryProducto.class, msgs);
+			msgs = basicSetOwnedByFactoryProducto(newOwnedByFactoryProducto, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO, newOwnedByFactoryProducto, newOwnedByFactoryProducto));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProductoPackage.PRODUCTO__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNombre(String newNombre) {
+		String oldNombre = nombre;
+		nombre = newNombre;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProductoPackage.PRODUCTO__NOMBRE, oldNombre, nombre));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPrecio() {
+		return precio;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrecio(String newPrecio) {
+		String oldPrecio = precio;
+		precio = newPrecio;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProductoPackage.PRODUCTO__PRECIO, oldPrecio, precio));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getFecha() {
+		return fecha;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFecha(String newFecha) {
+		String oldFecha = fecha;
+		fecha = newFecha;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProductoPackage.PRODUCTO__FECHA, oldFecha, fecha));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCod() {
+		return cod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCod(String newCod) {
+		String oldCod = cod;
+		cod = newCod;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProductoPackage.PRODUCTO__COD, oldCod, cod));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstDetallePedido()).basicAdd(otherEnd, msgs);
+			case ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOwnedByFactoryProducto((FactoryProducto)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO:
+				return ((InternalEList<?>)getLstDetallePedido()).basicRemove(otherEnd, msgs);
+			case ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO:
+				return basicSetOwnedByFactoryProducto(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO:
+				return eInternalContainer().eInverseRemove(this, ProductoPackage.FACTORY_PRODUCTO__LST_PRODUCTO, FactoryProducto.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO:
+				return getLstDetallePedido();
+			case ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO:
+				return getOwnedByFactoryProducto();
+			case ProductoPackage.PRODUCTO__ID:
+				return getId();
+			case ProductoPackage.PRODUCTO__NOMBRE:
+				return getNombre();
+			case ProductoPackage.PRODUCTO__PRECIO:
+				return getPrecio();
+			case ProductoPackage.PRODUCTO__FECHA:
+				return getFecha();
+			case ProductoPackage.PRODUCTO__COD:
+				return getCod();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO:
+				getLstDetallePedido().clear();
+				getLstDetallePedido().addAll((Collection<? extends DetallePedido>)newValue);
+				return;
+			case ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO:
+				setOwnedByFactoryProducto((FactoryProducto)newValue);
+				return;
+			case ProductoPackage.PRODUCTO__ID:
+				setId((String)newValue);
+				return;
+			case ProductoPackage.PRODUCTO__NOMBRE:
+				setNombre((String)newValue);
+				return;
+			case ProductoPackage.PRODUCTO__PRECIO:
+				setPrecio((String)newValue);
+				return;
+			case ProductoPackage.PRODUCTO__FECHA:
+				setFecha((String)newValue);
+				return;
+			case ProductoPackage.PRODUCTO__COD:
+				setCod((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO:
+				getLstDetallePedido().clear();
+				return;
+			case ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO:
+				setOwnedByFactoryProducto((FactoryProducto)null);
+				return;
+			case ProductoPackage.PRODUCTO__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case ProductoPackage.PRODUCTO__NOMBRE:
+				setNombre(NOMBRE_EDEFAULT);
+				return;
+			case ProductoPackage.PRODUCTO__PRECIO:
+				setPrecio(PRECIO_EDEFAULT);
+				return;
+			case ProductoPackage.PRODUCTO__FECHA:
+				setFecha(FECHA_EDEFAULT);
+				return;
+			case ProductoPackage.PRODUCTO__COD:
+				setCod(COD_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ProductoPackage.PRODUCTO__LST_DETALLE_PEDIDO:
+				return lstDetallePedido != null && !lstDetallePedido.isEmpty();
+			case ProductoPackage.PRODUCTO__OWNED_BY_FACTORY_PRODUCTO:
+				return getOwnedByFactoryProducto() != null;
+			case ProductoPackage.PRODUCTO__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case ProductoPackage.PRODUCTO__NOMBRE:
+				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case ProductoPackage.PRODUCTO__PRECIO:
+				return PRECIO_EDEFAULT == null ? precio != null : !PRECIO_EDEFAULT.equals(precio);
+			case ProductoPackage.PRODUCTO__FECHA:
+				return FECHA_EDEFAULT == null ? fecha != null : !FECHA_EDEFAULT.equals(fecha);
+			case ProductoPackage.PRODUCTO__COD:
+				return COD_EDEFAULT == null ? cod != null : !COD_EDEFAULT.equals(cod);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", nombre: ");
+		result.append(nombre);
+		result.append(", precio: ");
+		result.append(precio);
+		result.append(", fecha: ");
+		result.append(fecha);
+		result.append(", cod: ");
+		result.append(cod);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ProductoImpl
